@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include "file.h"
-astrinh0@astrinh0:~/Documents/AEDII/TP1/AED2_TP1_Ver_2.0$ 
 #ifndef LINE2_H
 #define LINE2_H
 
