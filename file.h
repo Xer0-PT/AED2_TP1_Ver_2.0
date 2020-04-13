@@ -1,57 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
-
-
-/* CONSTANTES */
-/* #define FILE "slate-tagged.txt" */
-/* #define FILE "ficheiro_teste_1M.txt" */
-#define _TEXT_FILE "texto.txt"
-
-
-/* ESTRUTURAS DE data */
-typedef struct _CumCol3
-{
-    char analyze[100];
-    int count;
-    struct _CumCol3 *left, *right;
-} CumCol3;
-
-/* data da word */
-typedef struct _Data
-{
-    /* data presentes no ficheiro */
-    char word[100];
-    char motto[100];
-    char analyze[100];
-    float prob;
-
-    /* Contagem de data em relação a cada word */
-    int totalOccurrences; /*Total de vezes que a word aparece no ficheiro*/
-    int lenghtWord; /*Número de letras na word*/
-}Data;
-
-typedef struct _Btree
-{
-    Data data;
-
-    struct _Btree *left, *right;
-}BTree;
-
-
-/* ASSINATURAS */
-BTree *ReadFile(BTree *tempTree, int *ptrTotalWords);
-void Small_Letters(char *treeWord);
-int Special_Characters(char *analyzeTree);
-void Print_Tree(BTree *tree);
-BTree *Insert_File_Tree(BTree *tree, Data tempData, int *ptrTotalWords);
-
-
-
-
-
-
+#include "library.h"
 
 void Small_Letters(char *treeWord)
 {
@@ -89,7 +36,7 @@ BTree *ReadFile(BTree *tempTree, int *ptrTotalWords)
 {
     FILE *file;
     Data tempData;
-    
+
     file = fopen(_TEXT_FILE, "r");
 
     rewind(file);

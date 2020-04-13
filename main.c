@@ -1,8 +1,7 @@
 #include "file.h"
-#ifdef FILE_H
-#define FILE_H
+#include "line2.h"
 
-
+/* #include "library.h" */
 
 int main()
 {    
@@ -38,5 +37,3 @@ int main()
 
     return 0;
 }
-
-#endif

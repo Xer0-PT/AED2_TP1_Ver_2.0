@@ -1,18 +1,7 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
-#include "file.h"
 #ifndef LINE2_H
 #define LINE2_H
 
-
-
-
-void GenerateByClassification(BTree * tree,  CumCol3 * treeClassification);
-CumCol3 *InsertOrCount(CumCol3 * treeClass,  char * classification);
-void InOrderClassification(CumCol3 * treeClassification);
-
+#include "library.h"
 
 CumCol3 *InsertOrCount(CumCol3 * treeClass,  char * classification)
 {   
