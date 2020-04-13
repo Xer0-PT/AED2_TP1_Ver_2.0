@@ -14,7 +14,7 @@
 typedef struct _CumCol3
 {
     char analyze[100];
-    int cont;
+    int count;
     struct _CumCol3 *left, *right;
 } CumCol3;
 
