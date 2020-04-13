@@ -7,7 +7,7 @@
 /* CONSTANTES */
 /* #define FILE "slate-tagged.txt" */
 /* #define FILE "ficheiro_teste_1M.txt" */
-#define _FILE "texto.txt"
+#define _TEXT_FILE "texto.txt"
 
 
 /* ESTRUTURAS DE data */
@@ -87,9 +87,10 @@ int Special_Characters(char *analyzeTree)
 
 BTree *ReadFile(BTree *tempTree, int *ptrTotalWords)
 {
-    FILE *file = fopen(_FILE, "r");
-
+    FILE *file;
     Data tempData;
+    
+    file = fopen(_TEXT_FILE, "r");
 
     rewind(file);
 
