@@ -10,7 +10,7 @@ int main()
 {    
     BTree *tree = NULL;
 
-    CumCol3 *treeClass = (CumCol3 *) malloc (sizeof(CumCol3)); 
+    CumCol3 *treeClass = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
 
 
     int totalWords = 0;
@@ -22,18 +22,17 @@ int main()
     tree = ReadFile(tree, ptrTotalWords);
 
 
-    Print_Tree(tree);
+    /* Print_Tree(tree); */
 
+    printf("\n\nTotal palavras: %d\n\n", totalWords);
+
+    treeClass->analyze = (char*) malloc   (strlen(tree->data.analyze)    *   sizeof(char) + 1); 
     
-
     strcpy(treeClass->analyze, tree->data.analyze);
     treeClass->count = 0;
 
-  
-
 
     GenerateByClassification(tree, treeClass);
-
 
     InOrderClassification(treeClass);
 

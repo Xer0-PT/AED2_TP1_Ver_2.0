@@ -16,42 +16,58 @@ void Small_Letters(char *treeWord)
     }
 }
 
-
 int Special_Characters(char *analyzeTree)
 {
-    if (analyzeTree[0] == 'F')
+    /* Ignorar pontuação e moeda */
+    if (analyzeTree[0] == 'F' || analyzeTree[0] == 'Z')
+    {
+        return 1;
+    }
+    /* Ignorar data e hora */
+    if (analyzeTree[0] == 'W' && analyzeTree[1] == '\0')
     {
         return 1;
     }
     return 0;
 }
 
-
-
-
-
-
-
 BTree *ReadFile(BTree *tempTree, int *ptrTotalWords)
 {
     FILE *file;
     Data tempData;
 
+    char auxWord[100];
+    char auxMotto[100];
+    char auxAnalyze[100];
+
+    int total = 0;
+
     file = fopen(_TEXT_FILE, "r");
 
     rewind(file);
 
-    while (fscanf(file, "%s %s %s %f", tempData.word, tempData.motto, tempData.analyze, &tempData.prob) != EOF)
+    while (fscanf(file, "%s %s %s %f", auxWord, auxMotto, auxAnalyze, &tempData.prob) != EOF)
     {
-        if (Special_Characters(tempData.analyze) == 0)
+        if (Special_Characters(auxAnalyze) == 0)
         {            
-            Small_Letters(tempData.word);
+            total++;
+            Small_Letters(auxWord);
+
+            tempData.word =     (char*) malloc(strlen(auxWord)*sizeof(char) + 1);
+            tempData.motto =    (char*) malloc(strlen(auxMotto)*sizeof(char) + 1);
+            tempData.analyze =  (char*) malloc(strlen(auxAnalyze)*sizeof(char) + 1);
+
+            strcpy(tempData.word, auxWord);
+            strcpy(tempData.motto, auxMotto);
+            strcpy(tempData.analyze, auxAnalyze);
 
             tempTree = Insert_File_Tree(tempTree, tempData, ptrTotalWords);
         }
     }
 
     fclose(file);
+
+    printf("\n\nTotal linhas validas: %d\n\n", total);
     
     return tempTree;
 }
@@ -61,15 +77,12 @@ void Print_Tree(BTree *tree)
 {
     if (tree)
     {
-        Print_Tree(tree->left);
+        Print_Tree(tree->right);
         printf("%-15s %-15s %-15s\t%f\tAparece %d vezes e tem %d letras.\n", tree->data.word, tree->data.motto, tree->data.analyze,
                                                                         tree->data.prob, tree->data.totalOccurrences, tree->data.lenghtWord);
-        Print_Tree(tree->right);
+        Print_Tree(tree->left);
     }
 }
-
-
-
 
 BTree *Insert_File_Tree(BTree *tree, Data tempData, int *ptrTotalWords)
 {
@@ -90,6 +103,10 @@ BTree *Insert_File_Tree(BTree *tree, Data tempData, int *ptrTotalWords)
     else
     {
         tree = (BTree*) malloc(sizeof(BTree));
+
+        tree->data.word     =   (char*) malloc(strlen(tempData.word)    *   sizeof(char) + 1);
+        tree->data.motto    =   (char*) malloc(strlen(tempData.motto)   *   sizeof(char) + 1);
+        tree->data.analyze  =   (char*) malloc(strlen(tempData.analyze) *   sizeof(char) + 1);
 
 
         strcpy(tree->data.word,       tempData.word);

@@ -10,16 +10,16 @@
 
 /* File Constant */
 
-/* #define FILE "slate-tagged.txt" */
-/* #define FILE "ficheiro_teste_1M.txt" */
-#define _TEXT_FILE "texto.txt"
+#define _TEXT_FILE "slate-tagged.txt"
+/* #define _TEXT_FILE "ficheiro_teste_1M.txt" */
+/* #define _TEXT_FILE "texto.txt" */
 
 
 /* Data Structures */
 
 typedef struct _CumCol3
 {
-    char analyze[100];
+    char *analyze;
     int count;
     struct _CumCol3 *left, *right;
 } CumCol3;
@@ -28,9 +28,9 @@ typedef struct _CumCol3
 typedef struct _Data
 {
     /* data presentes no ficheiro */
-    char word[100];
-    char motto[100];
-    char analyze[100];
+    char *word;
+    char *motto;
+    char *analyze;
     float prob;
 
     /* Contagem de data em relação a cada word */

@@ -20,11 +20,12 @@ CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree)
     {
         treeClass = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
 
+        treeClass->analyze     =   (char*) malloc   (strlen(tree->data.analyze)    *   sizeof(char) + 1);
+
         strcpy(treeClass->analyze, tree->data.analyze);
         treeClass->count = tree->data.totalOccurrences;
 
         treeClass->left = treeClass->right = NULL ;
-
     }
     return treeClass;
 }
@@ -34,7 +35,7 @@ void GenerateByClassification(BTree * tree,  CumCol3 * treeClassification)
     if(tree != NULL)
     {
 
-        /*         printf("%s", tree->data.analyze);*/
+        /* printf("%s", tree->data.analyze); */
         GenerateByClassification(tree->left, treeClassification);
 
         treeClassification  = InsertOrCount(treeClassification, tree);
