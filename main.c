@@ -1,6 +1,9 @@
 #include "file.h"
 #include "line2.h"
 
+
+  
+
 /* #include "library.h" */
 
 int main()
@@ -19,17 +22,18 @@ int main()
     tree = ReadFile(tree, ptrTotalWords);
 
 
-    Print_Tree(tree);
+    /*Print_Tree(tree);*/
 
     
 
     strcpy(treeClass->analyze, tree->data.analyze);
     treeClass->count = 0;
 
-    printf("1 %s %d \n", treeClass->analyze, treeClass->count);
+  
+
+
     GenerateByClassification(tree, treeClass);
 
-    printf("2 %s %d \n", treeClass->analyze, treeClass->count);
 
     InOrderClassification(treeClass);
 

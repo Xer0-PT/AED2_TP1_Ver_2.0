@@ -3,30 +3,29 @@
 
 #include "library.h"
 
-CumCol3 *InsertOrCount(CumCol3 * treeClass,  char * classification)
-{   
+CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree)
+{
     if(treeClass)
     {
-		if(strcmp(treeClass->analyze, classification) == 0)
-			treeClass->count ++;
+        if(strcmp(treeClass->analyze, tree->data.analyze) == 0)
+            treeClass->count = treeClass->count + tree->data.totalOccurrences;
 
-		if(strcmp(classification, treeClass->analyze) < 0)
-				treeClass->left = InsertOrCount( treeClass->left , classification ) ;
+        if(strcmp(treeClass->analyze, tree->data.analyze) < 0)
+                treeClass->left = InsertOrCount( treeClass->left , tree ) ;
 
-		if(strcmp(classification, treeClass->analyze) > 0)
-				treeClass->right = InsertOrCount( treeClass->right , classification ) ;
-
+        if(strcmp(treeClass->analyze, tree->data.analyze) > 0)
+                treeClass->right = InsertOrCount( treeClass->right , tree ) ;
     }
     else
     {
         treeClass = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
 
-		strcpy(treeClass->analyze, classification);
-		treeClass->count = 1;
+        strcpy(treeClass->analyze, tree->data.analyze);
+        treeClass->count = 1;
 
-		treeClass->left = treeClass->right = NULL ;  
+        treeClass->left = treeClass->right = NULL ;
+
     }
-    
     return treeClass;
 }
 
@@ -34,18 +33,13 @@ void GenerateByClassification(BTree * tree,  CumCol3 * treeClassification)
 {
     if(tree != NULL)
     {
-        
- 
+
+        /*         printf("%s", tree->data.analyze);*/
         GenerateByClassification(tree->left, treeClassification);
 
-
-        printf("1.5 %s %d \n", treeClassification->analyze, treeClassification->count);
-
-
-        treeClassification  = InsertOrCount(treeClassification, tree->data.analyze);
+        treeClassification  = InsertOrCount(treeClassification, tree);
         
         GenerateByClassification(tree->right, treeClassification);
-        
     }
     
 }

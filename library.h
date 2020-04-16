@@ -58,7 +58,7 @@ BTree *Insert_File_Tree(BTree *tree, Data tempData, int *ptrTotalWords);
 
 /* Line 2 */
 void GenerateByClassification(BTree * tree,  CumCol3 * treeClassification);
-CumCol3 *InsertOrCount(CumCol3 * treeClass,  char * classification);
+CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree);
 void InOrderClassification(CumCol3 * treeClassification);
 
 
