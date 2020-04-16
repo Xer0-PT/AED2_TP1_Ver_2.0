@@ -8,7 +8,7 @@ CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree)
     if(treeClass)
     {
         if(strcmp(treeClass->analyze, tree->data.analyze) == 0)
-            treeClass->count = treeClass->count + tree->data.totalOccurrences;
+            treeClass->count += tree->data.totalOccurrences;
 
         if(strcmp(treeClass->analyze, tree->data.analyze) < 0)
                 treeClass->left = InsertOrCount( treeClass->left , tree ) ;
@@ -21,7 +21,7 @@ CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree)
         treeClass = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
 
         strcpy(treeClass->analyze, tree->data.analyze);
-        treeClass->count = 1;
+        treeClass->count = tree->data.totalOccurrences;
 
         treeClass->left = treeClass->right = NULL ;
 

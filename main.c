@@ -22,7 +22,7 @@ int main()
     tree = ReadFile(tree, ptrTotalWords);
 
 
-    /*Print_Tree(tree);*/
+    Print_Tree(tree);
 
     
 
