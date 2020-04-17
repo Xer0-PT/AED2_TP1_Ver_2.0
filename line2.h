@@ -79,7 +79,7 @@ void InOrderClassification(CumCol3 * treeClassification)
                 auxNi = treeClassification->count;
                 totalNi += auxNi;
                 totalFi += auxFi;
-                printf("%s: %lf, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
+                printf("%s: %f, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
             
             ThroughTree(treeClassification->right, ptrTotalLines);
         }

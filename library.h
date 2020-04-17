@@ -10,9 +10,9 @@
 
 /* File Constant */
 
-#define _TEXT_FILE "slate-tagged.txt"
-/* #define _TEXT_FILE "ficheiro_teste_1M.txt" */
-/*#define _TEXT_FILE "texto.txt" */
+/* #define _TEXT_FILE "slate-tagged.txt" */
+#define _TEXT_FILE "ficheiro_teste_1M.txt"
+/* #define _TEXT_FILE "texto.txt" */
 
 
 /* Data Structures */
@@ -64,6 +64,8 @@ void Table_line_2(CumCol3 * treeClassification);
 void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines);
 
 /* Line 3 */
+void Line_3_Word_Frequency_Table(BTree *tree);
+void TreeTraversal_Line_3(BTree *tree, int *ptr20, int *ptr40, int *ptr60, int *ptr80, int *ptr100);
 
 
 

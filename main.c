@@ -1,5 +1,6 @@
 #include "file.h"
 #include "line2.h"
+#include "line3.h"
 
 
 
@@ -31,11 +32,10 @@ int main()
         puts("0 - Exit");
         puts("");
         printf("Opcao: ");
-        scanf("%d", opMenu);
+        scanf("%d", &opMenu);
     
         switch (opMenu)
         {
-        
             case 1:
                 tree = ReadFile(tree, ptrTotalWords, ptrTotalLines);
                 
@@ -57,14 +57,14 @@ int main()
                 ThroughTree(treeClass, ptrTotalLines);
                 break;
 
+            case 3:
+                Line_3_Word_Frequency_Table(tree);
+                break;
+
             default:
                 break;
         }
     } while (opMenu != 0);
-    
-
-
-
 
     return 0;
 }
