@@ -11,10 +11,10 @@ CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree)
             treeClass->count += tree->data.totalOccurrences;
 
         if(strcmp(treeClass->analyze, tree->data.analyze) < 0)
-                treeClass->left = InsertOrCount( treeClass->left , tree ) ;
+                treeClass->left = InsertOrCount( treeClass->left , tree );
 
         if(strcmp(treeClass->analyze, tree->data.analyze) > 0)
-                treeClass->right = InsertOrCount( treeClass->right , tree ) ;
+                treeClass->right = InsertOrCount( treeClass->right , tree );
     }
     else
     {
@@ -50,41 +50,81 @@ void InOrderClassification(CumCol3 * treeClassification)
 {
 	if (treeClassification)
 	{
-
-		InOrderClassification (treeClassification->left) ;
-
+        InOrderClassification (treeClassification->right);
 	
 		printf("A classification '%s' tem  %d palavras.\n", treeClassification->analyze, treeClassification->count);
 
-
-		InOrderClassification (treeClassification->right) ;
+        InOrderClassification (treeClassification->left);
+		
 	}
     
 }
 
 
 
-  void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines)
+void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines)
+{
+    int auxNi = 0;
+    double auxFi = 0;
+    int totalNi;
+    double totalFi;
+    
+    if (treeClassification)
     {
-        int auxNi = 0;
-        double auxFi = 0;
-        int totalNi;
-        double totalFi;
+        ThroughTree(treeClassification->left, ptrTotalLines);
+
+            auxFi = (double)treeClassification->count / *ptrTotalLines;
+            auxNi = treeClassification->count;
+            totalNi += auxNi;
+            totalFi += auxFi;
+            printf("%s: %f, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
         
-        if (treeClassification)
-        {
-            ThroughTree(treeClassification->left, ptrTotalLines);
-
-                auxFi = (double)treeClassification->count / *ptrTotalLines;
-                auxNi = treeClassification->count;
-                totalNi += auxNi;
-                totalFi += auxFi;
-                printf("%s: %f, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-            
-            ThroughTree(treeClassification->right, ptrTotalLines);
-        }
+        ThroughTree(treeClassification->right, ptrTotalLines);
     }
+}
 
+
+void ordenarArvore(CumCol3 * treeClassification)
+{
+    puts("1");
+
+    char auxAnalyse[100];
+    int auxCount = 0;
+
+    if (treeClassification->count < treeClassification->left->count)
+    {
+        /* testeOrdenar = treeClassification->left; */
+        strcpy(auxAnalyse, treeClassification->left->analyze);
+        auxCount = treeClassification->left->count;
+
+
+        /* treeClassification->left = treeClassification; */
+        strcpy(treeClassification->left->analyze, treeClassification->analyze);
+        treeClassification->left->count = treeClassification->count;
+
+        /* treeClassification = testeOrdenar; */
+        strcpy(treeClassification->analyze, auxAnalyse);
+        treeClassification->count = auxCount;
+    }
+    else
+    {
+        /* testeOrdenar = treeClassification->right; */
+        strcpy(auxAnalyse, treeClassification->right->analyze);
+        auxCount = treeClassification->right->count;
+
+
+        /* treeClassification->right = treeClassification; */
+        strcpy(treeClassification->right->analyze, treeClassification->analyze);
+        treeClassification->right->count = treeClassification->count;
+
+        /* treeClassification = testeOrdenar; */
+        strcpy(treeClassification->analyze, auxAnalyse);
+        treeClassification->count = auxCount;
+    }
+    
+    ordenarArvore(treeClassification->left);
+    ordenarArvore(treeClassification->right);
+}
 
 
 #endif

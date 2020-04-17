@@ -14,6 +14,8 @@ int main()
 
     CumCol3 *treeClass = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
 
+    CumCol3 *testeOrdenar = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
+
     int opMenu;
 
     int totalWords = 0;
@@ -46,7 +48,7 @@ int main()
                 break;
             
             case 2:
-                treeClass->analyze = (char*) malloc   (strlen(tree->data.analyze)    *   sizeof(char) + 1); 
+                treeClass->analyze = (char*) malloc   (strlen(tree->data.analyze)    *   sizeof(char) + 1);
                 strcpy(treeClass->analyze, tree->data.analyze);
                 treeClass->count = 0;
 
@@ -54,7 +56,14 @@ int main()
 
                 InOrderClassification(treeClass);
 
-                ThroughTree(treeClass, ptrTotalLines);
+                ordenarArvore(treeClass);
+
+
+                InOrderClassification(treeClass);
+
+                /* ThroughTree(treeClass, ptrTotalLines); */
+
+
                 break;
 
             case 3:

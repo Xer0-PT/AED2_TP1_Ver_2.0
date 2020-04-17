@@ -11,8 +11,8 @@
 /* File Constant */
 
 /* #define _TEXT_FILE "slate-tagged.txt" */
-#define _TEXT_FILE "ficheiro_teste_1M.txt"
-/* #define _TEXT_FILE "texto.txt" */
+/* #define _TEXT_FILE "ficheiro_teste_1M.txt" */
+#define _TEXT_FILE "texto.txt"
 
 
 /* Data Structures */
@@ -62,6 +62,7 @@ CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree);
 void InOrderClassification(CumCol3 * treeClassification);
 void Table_line_2(CumCol3 * treeClassification);
 void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines);
+void ordenarArvore(CumCol3 * treeClassification);
 
 /* Line 3 */
 void Line_3_Word_Frequency_Table(BTree *tree);
