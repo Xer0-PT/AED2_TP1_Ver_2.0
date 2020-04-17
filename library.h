@@ -63,6 +63,8 @@ void InOrderClassification(CumCol3 * treeClassification);
 void Table_line_2(CumCol3 * treeClassification);
 void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines);
 void ordenarArvore(CumCol3 * treeClassification);
+CumCol3 *InsertOrClass(CumCol3 * treeClass,  CumCol3 * treeOcurrences);
+void GenerateByClass(CumCol3 * treeOcurrences,  CumCol3 * treeClassification);
 
 /* Line 3 */
 void Line_3_Word_Frequency_Table(BTree *tree);

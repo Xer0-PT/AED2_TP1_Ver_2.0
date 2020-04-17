@@ -56,10 +56,15 @@ int main()
 
                 InOrderClassification(treeClass);
 
-                ordenarArvore(treeClass);
+                testeOrdenar->analyze = (char*) malloc   (strlen(treeClass->analyze)    *   sizeof(char) + 1);
+                strcpy(testeOrdenar->analyze, treeClass->analyze);
+                testeOrdenar->count = treeClass->count;
 
+                GenerateByClass(testeOrdenar, treeClass);
 
-                InOrderClassification(treeClass);
+                printf("\n\n");
+                
+                InOrderClassification(testeOrdenar);
 
                 /* ThroughTree(treeClass, ptrTotalLines); */
 

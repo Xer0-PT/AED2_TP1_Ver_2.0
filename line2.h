@@ -84,7 +84,7 @@ void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines)
 }
 
 
-void ordenarArvore(CumCol3 * treeClassification)
+/*void ordenarArvore(CumCol3 * treeClassification)
 {
     puts("1");
 
@@ -93,31 +93,31 @@ void ordenarArvore(CumCol3 * treeClassification)
 
     if (treeClassification->count < treeClassification->left->count)
     {
-        /* testeOrdenar = treeClassification->left; */
+         testeOrdenar = treeClassification->left; 
         strcpy(auxAnalyse, treeClassification->left->analyze);
         auxCount = treeClassification->left->count;
 
 
-        /* treeClassification->left = treeClassification; */
+         treeClassification->left = treeClassification; 
         strcpy(treeClassification->left->analyze, treeClassification->analyze);
         treeClassification->left->count = treeClassification->count;
 
-        /* treeClassification = testeOrdenar; */
+         treeClassification = testeOrdenar; 
         strcpy(treeClassification->analyze, auxAnalyse);
         treeClassification->count = auxCount;
     }
     else
     {
-        /* testeOrdenar = treeClassification->right; */
+         testeOrdenar = treeClassification->right; 
         strcpy(auxAnalyse, treeClassification->right->analyze);
         auxCount = treeClassification->right->count;
 
 
-        /* treeClassification->right = treeClassification; */
+         treeClassification->right = treeClassification; 
         strcpy(treeClassification->right->analyze, treeClassification->analyze);
         treeClassification->right->count = treeClassification->count;
 
-        /* treeClassification = testeOrdenar; */
+         treeClassification = testeOrdenar; 
         strcpy(treeClassification->analyze, auxAnalyse);
         treeClassification->count = auxCount;
     }
@@ -125,6 +125,44 @@ void ordenarArvore(CumCol3 * treeClassification)
     ordenarArvore(treeClassification->left);
     ordenarArvore(treeClassification->right);
 }
+*/
 
+CumCol3 *InsertOrClass(CumCol3 * treeOcurrences,  CumCol3 * treeClass)
+{
+    if(treeOcurrences)
+    {
+        
+        if( (treeOcurrences->count) < (treeClass->count) )
+                treeOcurrences->left = InsertOrClass( treeOcurrences->left , treeClass );
+
+        if( (treeOcurrences->count) > (treeClass->count) )
+                treeOcurrences->right = InsertOrClass( treeOcurrences->right , treeClass );
+    }
+    else
+    {
+        treeOcurrences = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
+
+        treeOcurrences->analyze     =   (char*) malloc   (strlen(treeClass->analyze)    *   sizeof(char) + 1);
+
+        strcpy(treeOcurrences->analyze, treeClass->analyze);
+        treeOcurrences->count = treeClass->count;
+
+        treeOcurrences->left = treeOcurrences->right = NULL ;
+    }
+    return treeOcurrences;
+}
+
+void GenerateByClass(CumCol3 * treeClass,  CumCol3 * treeOcurrences)
+{
+    if(treeClass != NULL)
+    {
+        /* printf("%s", tree->data.analyze); */
+        GenerateByClass(treeClass->left, treeOcurrences);
+
+        treeOcurrences  = InsertOrClass(treeOcurrences, treeClass);
+
+        GenerateByClass(treeClass->right, treeOcurrences);
+    }
+}
 
 #endif
