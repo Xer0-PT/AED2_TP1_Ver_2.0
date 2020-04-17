@@ -12,7 +12,7 @@
 
 #define _TEXT_FILE "slate-tagged.txt"
 /* #define _TEXT_FILE "ficheiro_teste_1M.txt" */
-/* #define _TEXT_FILE "texto.txt" */
+/*#define _TEXT_FILE "texto.txt" */
 
 
 /* Data Structures */
@@ -50,7 +50,7 @@ typedef struct _Btree
 /* Signatures */
 
 /* File */
-BTree *ReadFile(BTree *tempTree, int *ptrTotalWords);
+BTree *ReadFile(BTree *tempTree, int *ptrTotalWords, int *ptrTotalLines);
 void Small_Letters(char *treeWord);
 int Special_Characters(char *analyzeTree);
 void Print_Tree(BTree *tree);
@@ -60,6 +60,8 @@ BTree *Insert_File_Tree(BTree *tree, Data tempData, int *ptrTotalWords);
 void GenerateByClassification(BTree * tree,  CumCol3 * treeClassification);
 CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree);
 void InOrderClassification(CumCol3 * treeClassification);
+void Table_line_2(CumCol3 * treeClassification);
+void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines);
 
 
 

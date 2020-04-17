@@ -18,20 +18,15 @@ void Small_Letters(char *treeWord)
 
 int Special_Characters(char *analyzeTree)
 {
-    /* Ignorar pontuação e moeda */
-    if (analyzeTree[0] == 'F' || analyzeTree[0] == 'Z')
-    {
-        return 1;
-    }
-    /* Ignorar data e hora */
-    if (analyzeTree[0] == 'W' && analyzeTree[1] == '\0')
+    /* Ignorar pontuação */
+    if (analyzeTree[0] == 'F')
     {
         return 1;
     }
     return 0;
 }
 
-BTree *ReadFile(BTree *tempTree, int *ptrTotalWords)
+BTree *ReadFile(BTree *tempTree, int *ptrTotalWords, int *ptrTotalLines)
 {
     FILE *file;
     Data tempData;
@@ -50,7 +45,7 @@ BTree *ReadFile(BTree *tempTree, int *ptrTotalWords)
     {
         if (Special_Characters(auxAnalyze) == 0)
         {            
-            total++;
+            ++total;
             Small_Letters(auxWord);
 
             tempData.word =     (char*) malloc(strlen(auxWord)*sizeof(char) + 1);
@@ -67,7 +62,7 @@ BTree *ReadFile(BTree *tempTree, int *ptrTotalWords)
 
     fclose(file);
 
-    printf("\n\nTotal linhas validas: %d\n\n", total);
+    *ptrTotalLines = total;
     
     return tempTree;
 }
@@ -124,4 +119,7 @@ BTree *Insert_File_Tree(BTree *tree, Data tempData, int *ptrTotalWords)
         ++*ptrTotalWords;
     }
     return tree;
+
+
+
 }
