@@ -75,114 +75,12 @@ void InOrderClassification(CumCol3 * treeClassification)
         {
             ThroughTree(treeClassification->left, ptrTotalLines);
 
-            if (strcmp(treeClassification->analyze, "CC") == 0 )
-            {
                 auxFi = (double)treeClassification->count / *ptrTotalLines;
                 auxNi = treeClassification->count;
                 totalNi += auxNi;
                 totalFi += auxFi;
                 printf("%s: %lf, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-            }
-
-            if (strcmp(treeClassification->analyze, "DT") == 0 )
-            {
-                auxFi = (double)treeClassification->count / *ptrTotalLines;
-                auxNi = treeClassification->count;
-                totalNi += auxNi;
-                totalFi += auxFi;
-                printf("%s: %lf, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-            }
-
-            if (strcmp(treeClassification->analyze, "EX") == 0 )
-            {
-                auxFi = (double)treeClassification->count / *ptrTotalLines;
-                auxNi = treeClassification->count;
-                totalNi += auxNi;
-                totalFi += auxFi;
-                printf("%s: %lf, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-            }
-
-            if (strcmp(treeClassification->analyze, "IN") == 0 )
-            {
-                auxFi = (double)treeClassification->count / *ptrTotalLines;
-                auxNi = treeClassification->count;
-                totalNi += auxNi;
-                totalFi += auxFi;
-                printf("%s: %lf, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-            }
-
-            if (strcmp(treeClassification->analyze, "JJ") == 0 )
-            {
-                auxFi = (double)treeClassification->count / *ptrTotalLines;
-                auxNi = treeClassification->count;
-                totalNi += auxNi;
-                totalFi += auxFi;
-                printf("%s: %lf, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-            }
-
-            if (strcmp(treeClassification->analyze, "JJR") == 0 )
-            {
-                auxFi = (double)treeClassification->count / *ptrTotalLines;
-                auxNi = treeClassification->count;
-                totalNi += auxNi;
-                totalFi += auxFi;
-                printf("%s: %lf, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-            }
-
-            if (strcmp(treeClassification->analyze, "JJS") == 0 )
-            {
-                auxFi = (double)treeClassification->count / *ptrTotalLines;
-                auxNi = treeClassification->count;
-                totalNi += auxNi;
-                totalFi += auxFi;
-                printf("%s: %lf, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-            }
-
-            if (strcmp(treeClassification->analyze, "MD") == 0 )
-            {
-                auxFi = (double)treeClassification->count / *ptrTotalLines;
-                auxNi = treeClassification->count;
-                totalNi += auxNi;
-                totalFi += auxFi;
-                printf("%s: %lf, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-            }
-
-            if (strcmp(treeClassification->analyze, "NN") == 0 )
-            {
-                auxFi = (double)treeClassification->count / *ptrTotalLines;
-                auxNi = treeClassification->count;
-                totalNi += auxNi;
-                totalFi += auxFi;
-                printf("%s: %lf, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-            }
-
-            if (strcmp(treeClassification->analyze, "NNS") == 0 )
-            {
-                auxFi = (double)treeClassification->count / *ptrTotalLines;
-                auxNi = treeClassification->count;
-                totalNi += auxNi;
-                totalFi += auxFi;
-                printf("%s: %lf, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-            }
             
-            if (strcmp(treeClassification->analyze, "POS") == 0 )
-            {
-                auxFi = (double)treeClassification->count / *ptrTotalLines;
-                auxNi = treeClassification->count;
-                totalNi += auxNi;
-                totalFi += auxFi;
-                printf("%s: %lf, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-            }
-
-            if (strcmp(treeClassification->analyze, "PRP") == 0 )
-            {
-                auxFi = (double)treeClassification->count / *ptrTotalLines;
-                auxNi = treeClassification->count;
-                totalNi += auxNi;
-                totalFi += auxFi;
-                printf("%s: %lf, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-            }
-
             ThroughTree(treeClassification->right, ptrTotalLines);
         }
     }
