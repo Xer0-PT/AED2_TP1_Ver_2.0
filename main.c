@@ -13,36 +13,55 @@ int main()
 
     CumCol3 *treeClass = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
 
+    int opMenu;
+
     int totalWords = 0;
 
     int *ptrTotalWords = &totalWords;
 
     int totalLines = 0;
 
-    int *ptrTotalLines = &totalLines;
+    int *ptrTotalLines = &totalLines;    
 
-
-    printf("\n------------------------\n\tA ler ficheiro\n------------------------\n");
-
-    tree = ReadFile(tree, ptrTotalWords, ptrTotalLines);
-
-
-    /* Print_Tree(tree); */
-
-    printf("\n\nTotal palavras: %d\n\n", totalWords);
-    printf("\n\nTotal linhas: %d\n\n", totalLines);
-
-    treeClass->analyze = (char*) malloc   (strlen(tree->data.analyze)    *   sizeof(char) + 1); 
+    do
+    {
+        puts("1 - Read File");
+        puts("2 - Line 2");
+        puts("3 - Line 3");
+        puts("0 - Exit");
+        puts("");
+        printf("Opcao: ");
+        scanf("%d", opMenu);
     
-    strcpy(treeClass->analyze, tree->data.analyze);
-    treeClass->count = 0;
+        switch (opMenu)
+        {
+        
+            case 1:
+                tree = ReadFile(tree, ptrTotalWords, ptrTotalLines);
+                
+                /* Print_Tree(tree); */
 
+                printf("\n\nTotal palavras: %d\n\n", totalWords);
+                printf("\n\nTotal linhas: %d\n\n", totalLines);
+                break;
+            
+            case 2:
+                treeClass->analyze = (char*) malloc   (strlen(tree->data.analyze)    *   sizeof(char) + 1); 
+                strcpy(treeClass->analyze, tree->data.analyze);
+                treeClass->count = 0;
 
-    GenerateByClassification(tree, treeClass);
+                GenerateByClassification(tree, treeClass);
 
-    InOrderClassification(treeClass);
+                InOrderClassification(treeClass);
 
-    ThroughTree(treeClass, ptrTotalLines);
+                ThroughTree(treeClass, ptrTotalLines);
+                break;
+
+            default:
+                break;
+        }
+    } while (opMenu != 0);
+    
 
 
 

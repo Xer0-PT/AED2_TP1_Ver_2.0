@@ -63,6 +63,9 @@ void InOrderClassification(CumCol3 * treeClassification);
 void Table_line_2(CumCol3 * treeClassification);
 void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines);
 
+/* Line 3 */
+
+
 
 
 
