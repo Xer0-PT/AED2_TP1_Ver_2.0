@@ -10,9 +10,10 @@
 
 /* File Constant */
 
+/* #define _TEXT_FILE "teste_alinea_5.txt" */
 /* #define _TEXT_FILE "slate-tagged.txt" */
-#define _TEXT_FILE "ficheiro_teste_1M.txt"
-/* #define _TEXT_FILE "texto.txt" */
+/* #define _TEXT_FILE "ficheiro_teste_1M.txt" */
+#define _TEXT_FILE "texto.txt"
 
 
 /* Data Structures */
@@ -45,6 +46,16 @@ typedef struct _Btree
     struct _Btree *left, *right;
 }BTree;
 
+/* Mode Line 5 */
+typedef struct _BtreeMode
+{
+    int wordLength;
+    int wordCount;
+
+    struct _BtreeMode *left, *right;
+}BtreeMode;
+
+
 
 
 /* Signatures */
@@ -62,23 +73,24 @@ CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree);
 void InOrderClassification(CumCol3 * treeClassification);
 void Table_line_2(CumCol3 * treeClassification);
 void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines);
-<<<<<<< HEAD
 
 void ordenarArvore(CumCol3 * treeClassification, CumCol3 * testeOrdenar);
 CumCol3 *NovaArvore (CumCol3 * treeClass, CumCol3 *testeOrdenar);
 
 
-=======
-void ordenarArvore(CumCol3 * treeClassification);
-CumCol3 *InsertOrClass(CumCol3 * treeClass,  CumCol3 * treeOcurrences);
-void GenerateByClass(CumCol3 * treeOcurrences,  CumCol3 * treeClassification);
->>>>>>> 64771917c0b2f5fcf2ce4c9c0577114a6b9a0a5a
 
 /* Line 3 */
 void Line_3_Word_Frequency_Table(BTree *tree);
 void TreeTraversal_Line_3(BTree *tree, int *ptr20, int *ptr40, int *ptr60, int *ptr80, int *ptr100);
 
 
+/* Line 5 */
+void TreeTraversal_Total_Letters(BTree *tree, unsigned long int *totalLength);
+float Average_Line_5(unsigned long int totalLength, int totalWords);
+void PrintResults_Line_5(unsigned long int totalLetters ,float averageLength);
+void TreeTraversal_Mode_Letters(BTree *tree, BtreeMode *treeMode);
+BtreeMode * ModeCalculus(BTree * tree, BtreeMode * treeMode);
+void PrintMode(BtreeMode *treeMode);
 
 
 

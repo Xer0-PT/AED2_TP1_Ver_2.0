@@ -18,29 +18,39 @@ void Line_3_Word_Frequency_Table(BTree *tree)
 
     int totalNi = 0;
 
+    /* Integers to each Class */
     int ni20    = 0;
     int ni40    = 0;
     int ni60    = 0;
     int ni80    = 0;
     int ni100   = 0;
 
+    /* Pointers to each Class */
     int *ptr20  = &ni20;
     int *ptr40  = &ni40;
     int *ptr60  = &ni60;
     int *ptr80  = &ni80;
     int *ptr100 = &ni100;
 
+    int totalFi;
+
+    float fi20;
+    float fi40;
+    float fi60;
+    float fi80;
+    float fi100;
+
     TreeTraversal_Line_3(tree, ptr20, ptr40, ptr60, ptr80, ptr100);
 
     totalNi = ni20 + ni40 + ni60 + ni80 + ni100;
 
     /* Relative Frequency Calculation */
-    float fi20  = (float)ni20   / totalNi;
-    float fi40  = (float)ni40   / totalNi;
-    float fi60  = (float)ni60   / totalNi;
-    float fi80  = (float)ni80   / totalNi;
-    float fi100 = (float)ni100  / totalNi;
-    int totalFi = fi20 + fi40 + fi60 + fi80 + fi100;
+    fi20  = (float)ni20   / totalNi;
+    fi40  = (float)ni40   / totalNi;
+    fi60  = (float)ni60   / totalNi;
+    fi80  = (float)ni80   / totalNi;
+    fi100 = (float)ni100  / totalNi;
+    totalFi = fi20 + fi40 + fi60 + fi80 + fi100;
 
     /* Relative Frequency Table */
     printf("---------------------------------------------------------------------------------------------------------\n");
@@ -51,6 +61,7 @@ void Line_3_Word_Frequency_Table(BTree *tree)
     printf("|\t[ 40 ; 60  [\t|\t%d\t|\t%f\t|\t%d\t|\t%f\t|\n", ni60,   fi60,   ni20 + ni40 + ni60, fi20 + fi40 + fi60);
     printf("|\t[ 60 ; 80  [\t|\t%d\t|\t%f\t|\t%d\t|\t%f\t|\n", ni80,   fi80,   ni20 + ni40 + ni60 + ni80, fi20 + fi40 + fi60 + fi80);
     printf("|\t[ 80 ; 100 [\t|\t%d\t|\t%f\t|\t%d\t|\t%.1f\t\t|\n", ni100,  fi100,  ni20 + ni40 + ni60 + ni80 + ni100, fi20 + fi40 + fi60 + fi80 + fi100);
+    printf("|-------------------------------------------------------------------------------------------------------|\n");
     printf("|\t TOTAL \t\t|\t%d\t|\t%d\t\t|---------------|-----------------------|\n", totalNi, totalFi);
     printf("---------------------------------------------------------------------------------------------------------\n");
 }

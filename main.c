@@ -2,11 +2,8 @@
 #include "line2.h"
 #include "line3.h"
 
+#include "line5.h"
 
-
-  
-
-/* #include "library.h" */
 
 int main()
 {    
@@ -16,6 +13,8 @@ int main()
 
     CumCol3 *testeOrdenar = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
 
+    BtreeMode *treeMode = (BtreeMode*) malloc (sizeof(BtreeMode));
+
     int opMenu;
 
     int totalWords = 0;
@@ -24,13 +23,23 @@ int main()
 
     int totalLines = 0;
 
-    int *ptrTotalLines = &totalLines;    
+    int *ptrTotalLines = &totalLines;
+
+    /* Line 5 Variables */
+    /* Como sabemos que o valor é sempre positivo e se trata de muitos dados */
+    /* declaramos o totalLength como unsigned long int */
+    unsigned long int totalLetters = 0;
+    unsigned long int *ptrTotalLetters = &totalLetters;
+    float averageLength;
 
     do
     {
+        puts("");
+        puts("");
         puts("1 - Read File");
         puts("2 - Line 2");
         puts("3 - Line 3");
+        puts("5 - Line 5");
         puts("0 - Exit");
         puts("");
         printf("Opcao: ");
@@ -72,6 +81,15 @@ int main()
 
             case 3:
                 Line_3_Word_Frequency_Table(tree);
+                break;
+
+            case 5:
+                TreeTraversal_Total_Letters(tree, ptrTotalLetters);
+                averageLength = Average_Line_5(totalLetters, totalLines);
+                PrintResults_Line_5(totalLetters, averageLength);
+                TreeTraversal_Mode_Letters(tree, treeMode);
+                PrintMode(treeMode);               
+
                 break;
 
             default:
