@@ -12,10 +12,9 @@
 
 /* #define _TEXT_FILE "teste_alinea_5.txt" */
 /* #define _TEXT_FILE "slate-tagged.txt" */
-/* #define _TEXT_FILE "ficheiro_teste_1M.txt" */
-#define _TEXT_FILE "texto.txt"
-/*#define _TEXT_FILE "ficheiro_teste_1M.txt" */
- #define _TEXT_FILE "texto.txt" 
+#define _TEXT_FILE "ficheiro_teste_1M.txt"
+/* #define _TEXT_FILE "texto.txt" */
+
 
 
 /* Data Structures */
@@ -84,7 +83,6 @@ void GenerateByClassification(BTree * tree,  CumCol3 * treeClassification);
 CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree);
 void InOrderClassification(CumCol3 * treeClassification);
 void Table_line_2(CumCol3 * treeClassification);
-void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines);
 
 void ordenarArvore(CumCol3 * treeClassification, CumCol3 * testeOrdenar);
 CumCol3 *NovaArvore (CumCol3 * treeClass, CumCol3 *testeOrdenar);

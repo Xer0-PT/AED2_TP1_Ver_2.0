@@ -51,8 +51,8 @@ int main()
         puts("1 - Read File");
         puts("2 - Line 2");
         puts("3 - Line 3");
-        puts("5 - Line 5");
         puts("4 - Line 4");
+        puts("5 - Line 5");
         puts("0 - Exit");
         puts("");
         printf("Opcao: ");
@@ -96,12 +96,6 @@ int main()
                 Line_3_Word_Frequency_Table(tree);
                 break;
 
-            case 5:
-                TreeTraversal_Total_Letters(tree, ptrTotalLetters);
-                averageLength = Average_Line_5(totalLetters, totalLines);
-                PrintResults_Line_5(totalLetters, averageLength);
-                TreeTraversal_Mode_Letters(tree, treeMode);
-                PrintMode(treeMode);               
             case 4:
                 treeLine4Aux->analyze = (char*) malloc   (strlen(tree->data.analyze)    *   sizeof(char) + 1);
                 strcpy(treeLine4Aux->analyze, tree->data.analyze);
@@ -121,6 +115,14 @@ int main()
                 InOrderFinal(treeLine4Aux);
 
 
+                break;
+
+            case 5:
+                TreeTraversal_Total_Letters(tree, ptrTotalLetters);
+                averageLength = Average_Line_5(totalLetters, totalLines);
+                PrintResults_Line_5(totalLetters, averageLength);
+                TreeTraversal_Mode_Letters(tree, treeMode);
+                PrintMode(treeMode);               
                 break;
 
             default:

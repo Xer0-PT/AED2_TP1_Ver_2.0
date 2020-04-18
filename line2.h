@@ -77,7 +77,7 @@ void InOrderAscending(CumCol3 * treeClassification, int *ptrTotalLines, int *tot
             auxNi = treeClassification->count;
             *totalNi = *totalNi + auxNi;
             *totalFi = *totalFi + auxFi;
-            printf("|\t%s\t\t|\t%d\t|\t%f\t\| \t%d\t\|  \t%f\t|\n", treeClassification->analyze, auxNi, auxFi, *totalNi, *totalFi);
+            printf("|\t%s\t\t|\t%d\t|\t%f\t| \t%d\t|  \t%f\t|\n", treeClassification->analyze, auxNi, auxFi, *totalNi, *totalFi);
         }
         InOrderAscending (treeClassification->right, ptrTotalLines, totalNi, totalFi);
 		
