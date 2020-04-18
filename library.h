@@ -14,6 +14,8 @@
 /* #define _TEXT_FILE "slate-tagged.txt" */
 /* #define _TEXT_FILE "ficheiro_teste_1M.txt" */
 #define _TEXT_FILE "texto.txt"
+/*#define _TEXT_FILE "ficheiro_teste_1M.txt" */
+ #define _TEXT_FILE "texto.txt" 
 
 
 /* Data Structures */
@@ -21,6 +23,7 @@
 typedef struct _CumCol3
 {
     char *analyze;
+    float prob;
     int count;
     struct _CumCol3 *left, *right;
 } CumCol3;
@@ -56,6 +59,15 @@ typedef struct _BtreeMode
 }BtreeMode;
 
 
+typedef struct _CumCol4
+{
+    char *analyze;
+    float prob;
+    int count;
+    float media;
+    float totalStrDev;
+    struct _CumCol4 *left, *right;
+} CumCol4;
 
 
 /* Signatures */
@@ -78,10 +90,27 @@ void ordenarArvore(CumCol3 * treeClassification, CumCol3 * testeOrdenar);
 CumCol3 *NovaArvore (CumCol3 * treeClass, CumCol3 *testeOrdenar);
 
 
+void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines, int *totalNi, double *totalFi);
+void SortTree(CumCol3 * treeClassification, CumCol3 * treeClassOcur);
+CumCol3 *NewTreeAscending (CumCol3 * treeClass, CumCol3 *treeClassOcur);
+void PrintHeadTable();
+void PrintEndTable(int totalNiLine3, double totalFiLine3);
 
 /* Line 3 */
 void Line_3_Word_Frequency_Table(BTree *tree);
 void TreeTraversal_Line_3(BTree *tree, int *ptr20, int *ptr40, int *ptr60, int *ptr80, int *ptr100);
+
+/* Line 4*/
+CumCol4 *SortTree_4_Media(CumCol4 * treeLine4,  BTree * tree);
+void GenerateLine4_Media(BTree * tree,  CumCol4 * treeLine4);
+void InOrderMedia(CumCol4 * treeLine4);
+void InOrderStrDev(CumCol4 * treeLine4);
+CumCol4 *SortTree_4_StrDev(CumCol4 * treeLine4,  BTree * tree);
+void GenerateLine4_StrDev(BTree * tree,  CumCol4 * treeLine4);
+void InOrderFinal(CumCol4 * treeLine4);
+CumCol4 *SortTree_4_Final(CumCol4 * treeLine4Aux,  CumCol4 * treeLine4);
+void GenerateLine4_Final(CumCol4 * treeLine4,  CumCol4 * treeLine4Aux);
+
 
 
 /* Line 5 */

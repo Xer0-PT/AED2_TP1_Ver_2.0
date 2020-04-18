@@ -1,6 +1,7 @@
 #include "file.h"
 #include "line2.h"
 #include "line3.h"
+#include "line4.h"
 
 #include "line5.h"
 
@@ -11,7 +12,11 @@ int main()
 
     CumCol3 *treeClass = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
 
-    CumCol3 *testeOrdenar = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
+    CumCol3 *treeClassOcur = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
+
+    CumCol4 *treeLine4Aux = (CumCol4 *) malloc ( sizeof ( CumCol4 ) ) ;
+
+    CumCol4 *treeLine4Aux2 = (CumCol4 *) malloc ( sizeof ( CumCol4 ) ) ;
 
     BtreeMode *treeMode = (BtreeMode*) malloc (sizeof(BtreeMode));
 
@@ -31,6 +36,13 @@ int main()
     unsigned long int totalLetters = 0;
     unsigned long int *ptrTotalLetters = &totalLetters;
     float averageLength;
+    int totalNiLine3 = 0;
+
+    int *ptrTotalNiLine3 = &totalNiLine3;
+
+    double totalFiLine3 = 0;
+
+    double *ptrTotalFiLine3 = &totalFiLine3;   
 
     do
     {
@@ -40,6 +52,7 @@ int main()
         puts("2 - Line 2");
         puts("3 - Line 3");
         puts("5 - Line 5");
+        puts("4 - Line 4");
         puts("0 - Exit");
         puts("");
         printf("Opcao: ");
@@ -60,6 +73,7 @@ int main()
                 treeClass->analyze = (char*) malloc   (strlen(tree->data.analyze)    *   sizeof(char) + 1);
                 strcpy(treeClass->analyze, tree->data.analyze);
                 treeClass->count = 0;
+                treeClass->prob = tree->data.prob;
 
                 GenerateByClassification(tree, treeClass);
 
@@ -69,13 +83,12 @@ int main()
                 printf("\n\nNova Ordem\n\n");
 
 
-                ordenarArvore(treeClass, testeOrdenar);
+                SortTree(treeClass, treeClassOcur);
 
 
-                InOrderClassification(testeOrdenar);
-
-                /* ThroughTree(treeClass, ptrTotalLines); */
-
+                PrintHeadTable();
+                InOrderAscending(treeClassOcur, ptrTotalLines, ptrTotalNiLine3, ptrTotalFiLine3);
+                PrintEndTable(totalNiLine3, totalFiLine3);
 
                 break;
 
@@ -89,6 +102,24 @@ int main()
                 PrintResults_Line_5(totalLetters, averageLength);
                 TreeTraversal_Mode_Letters(tree, treeMode);
                 PrintMode(treeMode);               
+            case 4:
+                treeLine4Aux->analyze = (char*) malloc   (strlen(tree->data.analyze)    *   sizeof(char) + 1);
+                strcpy(treeLine4Aux->analyze, tree->data.analyze);
+                treeLine4Aux->count = tree->data.totalOccurrences;
+                treeLine4Aux->prob = tree->data.prob; 
+                GenerateLine4_Media(tree, treeLine4Aux);
+
+                InOrderMedia(treeLine4Aux);
+
+                treeLine4Aux2->analyze = (char*) malloc   (strlen(tree->data.analyze)    *   sizeof(char) + 1);
+                strcpy(treeLine4Aux2->analyze, tree->data.analyze);
+                treeLine4Aux2->count = tree->data.totalOccurrences;
+                treeLine4Aux2->prob = tree->data.prob; 
+                GenerateLine4_StrDev(tree, treeLine4Aux2);
+                
+                GenerateLine4_Final(treeLine4Aux2, treeLine4Aux);
+                InOrderFinal(treeLine4Aux);
+
 
                 break;
 
