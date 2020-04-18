@@ -24,6 +24,7 @@ CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree)
 
         strcpy(treeClass->analyze, tree->data.analyze);
         treeClass->count = tree->data.totalOccurrences;
+        treeClass->prob = tree->data.prob;
 
         treeClass->left = treeClass->right = NULL ;
     }
@@ -54,68 +55,86 @@ void InOrderClassification(CumCol3 * treeClassification)
 	
         /* Sem este if está a imprimir o nodo que está NULL. PORQUÊ? */
         if(treeClassification->count != 0)
-		    printf("A classification '%s' tem  %d palavras.\n", treeClassification->analyze, treeClassification->count);
+		    printf("A classification '%s' tem  %d palavras. Media aritmetica: %f\n", treeClassification->analyze, treeClassification->count, treeClassification->prob);
 
         InOrderClassification (treeClassification->right);
 		
 	}
 }
 
-void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines)
+void InOrderAscending(CumCol3 * treeClassification, int *ptrTotalLines, int *totalNi, double *totalFi)
 {
-    int auxNi = 0;
     double auxFi = 0;
-    int totalNi;
-    double totalFi;
-    
-    if (treeClassification)
-    {
-        ThroughTree(treeClassification->left, ptrTotalLines);
-
-            auxFi = (double)treeClassification->count / *ptrTotalLines;
+    int auxNi = 0;
+	if (treeClassification)
+	{
+        InOrderAscending (treeClassification->left, ptrTotalLines, totalNi, totalFi);
+	
+        /* Sem este if está a imprimir o nodo que está NULL. PORQUÊ? */
+        if(treeClassification->count != 0)
+        {
+		    auxFi = (double)treeClassification->count / *ptrTotalLines;
             auxNi = treeClassification->count;
-            totalNi += auxNi;
-            totalFi += auxFi;
-            printf("%s: %f, %d, %d, %f, %d\n", treeClassification->analyze, auxFi, auxNi, totalNi, totalFi, *ptrTotalLines);
-        
-        ThroughTree(treeClassification->right, ptrTotalLines);
-    }
+            *totalNi = *totalNi + auxNi;
+            *totalFi = *totalFi + auxFi;
+            printf("|\t%s\t\t|\t%d\t|\t%f\t\| \t%d\t\|  \t%f\t|\n", treeClassification->analyze, auxNi, auxFi, *totalNi, *totalFi);
+        }
+        InOrderAscending (treeClassification->right, ptrTotalLines, totalNi, totalFi);
+		
+	}
 }
 
-void ordenarArvore(CumCol3 * treeClassification, CumCol3 * testeOrdenar)
+
+void SortTree(CumCol3 * treeClassification, CumCol3 * treeClassOcur)
 {
     if (treeClassification)
     {        
-        ordenarArvore(treeClassification->left, testeOrdenar);
+        SortTree(treeClassification->left, treeClassOcur);
 
-        testeOrdenar = NovaArvore(treeClassification, testeOrdenar);
+        treeClassOcur = NewTreeAscending(treeClassification, treeClassOcur);
 
-        ordenarArvore(treeClassification->right, testeOrdenar);
+        SortTree(treeClassification->right, treeClassOcur);
     }
 }
 
-CumCol3 *NovaArvore (CumCol3 * treeClass, CumCol3 *testeOrdenar)
+CumCol3 *NewTreeAscending (CumCol3 * treeClass, CumCol3 *treeClassOcur)
 {
-    if (testeOrdenar)
+    if (treeClassOcur)
     {
-        if (treeClass->count < testeOrdenar->count)
-            testeOrdenar->left = NovaArvore(treeClass, testeOrdenar->left);
+        if (treeClass->count < treeClassOcur->count)
+            treeClassOcur->left = NewTreeAscending(treeClass, treeClassOcur->left);
         
-        if (treeClass->count > testeOrdenar->count)
-            testeOrdenar->right = NovaArvore(treeClass, testeOrdenar->right);
+        if (treeClass->count > treeClassOcur->count)
+            treeClassOcur->right = NewTreeAscending(treeClass, treeClassOcur->right);
     }
     else
     {
-        testeOrdenar = (CumCol3 *) malloc (sizeof (CumCol3));
+        treeClassOcur = (CumCol3 *) malloc (sizeof (CumCol3));
 
-        testeOrdenar->analyze = (char *) malloc (strlen(treeClass->analyze) * sizeof(char) + 1);
+        treeClassOcur->analyze = (char *) malloc (strlen(treeClass->analyze) * sizeof(char) + 1);
 
-        strcpy(testeOrdenar->analyze, treeClass->analyze);
-        testeOrdenar->count = treeClass->count;
+        strcpy(treeClassOcur->analyze, treeClass->analyze);
+        treeClassOcur->count = treeClass->count;
 
-        testeOrdenar->left = testeOrdenar->right = NULL;
+        treeClassOcur->left = treeClassOcur->right = NULL;
     }
-    return testeOrdenar;    
+    return treeClassOcur;    
+}
+
+
+void PrintHeadTable()
+{
+    printf("---------------------------------------------------------------------------------------------------------\n");
+    printf("|   Classification\t|\tni\t|\tfi\t\t|\tCum ni\t|\tCum fi\t\t|\n");
+    printf("---------------------------------------------------------------------------------------------------------\n");
+}
+
+
+void PrintEndTable(int totalNiLine3, double totalFiLine3)
+{
+    printf("---------------------------------------------------------------------------------------------------------\n");
+    printf("|\tTOTAL  \t\t|\t%d\t|\t%f\t|               |                       |\n", totalNiLine3, totalFiLine3);
+    printf("---------------------------------------------------------------------------------------------------------\n");
 }
 
 #endif
