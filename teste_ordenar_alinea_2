@@ -50,16 +50,17 @@ void InOrderClassification(CumCol3 * treeClassification)
 {
 	if (treeClassification)
 	{
-        InOrderClassification (treeClassification->left);
-	
-        /* Sem este if está a imprimir o nodo que está NULL. PORQUÊ? */
-        /* if(treeClassification->count != 0) */
-		    printf("A classification '%s' tem  %d palavras.\n", treeClassification->analyze, treeClassification->count);
-
         InOrderClassification (treeClassification->right);
+	
+		printf("A classification '%s' tem  %d palavras.\n", treeClassification->analyze, treeClassification->count);
+
+        InOrderClassification (treeClassification->left);
 		
 	}
+    
 }
+
+
 
 void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines)
 {
@@ -82,40 +83,47 @@ void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines)
     }
 }
 
-void ordenarArvore(CumCol3 * treeClassification, CumCol3 * testeOrdenar)
+
+void ordenarArvore(CumCol3 * treeClassification, CumCol3 * NovaTree)
 {
+    puts("1");
+
     if (treeClassification)
-    {        
-        ordenarArvore(treeClassification->left, testeOrdenar);
+    {
+        ordenarArvore(treeClassification->left, NovaTree);
 
-        testeOrdenar = NovaArvore(treeClassification, testeOrdenar);
 
-        ordenarArvore(treeClassification->right, testeOrdenar);
+        NovaTree = novaOrdem(treeClassification, NovaTree);
+
+
+        ordenarArvore(treeClassification->right, NovaTree);
     }
 }
 
-CumCol3 *NovaArvore (CumCol3 * treeClass, CumCol3 *testeOrdenar)
+CumCol3 *novaOrdem(CumCol3 * treeClassification, CumCol3 * NovaTree)
 {
-    if (testeOrdenar)
+    puts("2");
+
+    if(NovaTree)
     {
-        if (treeClass->count < testeOrdenar->count)
-            testeOrdenar->left = NovaArvore(treeClass, testeOrdenar->left);
-        
-        if (treeClass->count > testeOrdenar->count)
-            testeOrdenar->right = NovaArvore(treeClass, testeOrdenar->right);
+        if(treeClassification->count < NovaTree->count)
+                NovaTree->left = novaOrdem(treeClassification->left, NovaTree);
+
+        if(treeClassification->count > NovaTree->count)
+                NovaTree->right = novaOrdem(treeClassification->right, NovaTree);
     }
     else
     {
-        testeOrdenar = (CumCol3 *) malloc (sizeof (CumCol3));
+        NovaTree = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
 
-        testeOrdenar->analyze = (char *) malloc (strlen(treeClass->analyze) * sizeof(char) + 1);
+        NovaTree->analyze     =   (char*) malloc   (strlen(treeClassification->analyze)    *   sizeof(char) + 1);
 
-        strcpy(testeOrdenar->analyze, treeClass->analyze);
-        testeOrdenar->count = treeClass->count;
+        strcpy(NovaTree->analyze, treeClassification->analyze);
+        NovaTree->count = treeClassification->count;
 
-        testeOrdenar->left = testeOrdenar->right = NULL;
+        NovaTree->left = NovaTree->right = NULL ;
     }
-    return testeOrdenar;    
+    return NovaTree;
 }
 
 

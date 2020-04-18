@@ -56,10 +56,14 @@ int main()
 
                 InOrderClassification(treeClass);
 
-                ordenarArvore(treeClass);
+
+                printf("\n\nNova Ordem\n\n");
 
 
-                InOrderClassification(treeClass);
+                ordenarArvore(treeClass, testeOrdenar);
+
+
+                InOrderClassification(testeOrdenar);
 
                 /* ThroughTree(treeClass, ptrTotalLines); */
 
