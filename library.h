@@ -62,11 +62,17 @@ CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree);
 void InOrderClassification(CumCol3 * treeClassification);
 void Table_line_2(CumCol3 * treeClassification);
 void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines);
+<<<<<<< HEAD
 
 void ordenarArvore(CumCol3 * treeClassification, CumCol3 * testeOrdenar);
 CumCol3 *NovaArvore (CumCol3 * treeClass, CumCol3 *testeOrdenar);
 
 
+=======
+void ordenarArvore(CumCol3 * treeClassification);
+CumCol3 *InsertOrClass(CumCol3 * treeClass,  CumCol3 * treeOcurrences);
+void GenerateByClass(CumCol3 * treeOcurrences,  CumCol3 * treeClassification);
+>>>>>>> 64771917c0b2f5fcf2ce4c9c0577114a6b9a0a5a
 
 /* Line 3 */
 void Line_3_Word_Frequency_Table(BTree *tree);

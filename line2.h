@@ -53,7 +53,7 @@ void InOrderClassification(CumCol3 * treeClassification)
         InOrderClassification (treeClassification->left);
 	
         /* Sem este if está a imprimir o nodo que está NULL. PORQUÊ? */
-        /* if(treeClassification->count != 0) */
+        if(treeClassification->count != 0)
 		    printf("A classification '%s' tem  %d palavras.\n", treeClassification->analyze, treeClassification->count);
 
         InOrderClassification (treeClassification->right);
@@ -117,6 +117,5 @@ CumCol3 *NovaArvore (CumCol3 * treeClass, CumCol3 *testeOrdenar)
     }
     return testeOrdenar;    
 }
-
 
 #endif
