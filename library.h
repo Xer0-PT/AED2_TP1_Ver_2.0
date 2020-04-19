@@ -68,12 +68,28 @@ typedef struct _CumCol4
     struct _CumCol4 *left, *right;
 } CumCol4;
 
+/* This function is needed in more than 1 file */
+/* So in this file is accessible anywhere */
+void Small_Letters(char *treeWord)
+{
+    char aux;
+    int i = 0;
+
+    while (treeWord[i] != '\0')
+    {
+        aux = treeWord[i];
+        if (aux >= 'A' && aux <= 'Z')
+        {
+            treeWord[i] = treeWord[i] + 32;
+        }
+        i++;
+    }
+}
 
 /* Signatures */
 
 /* File */
 BTree *ReadFile(BTree *tempTree, int *ptrTotalWords, int *ptrTotalLines);
-void Small_Letters(char *treeWord);
 int Special_Characters(char *analyzeTree);
 void Print_Tree(BTree *tree);
 BTree *Insert_File_Tree(BTree *tree, Data tempData, int *ptrTotalWords);
@@ -119,6 +135,9 @@ void TreeTraversal_Mode_Letters(BTree *tree, BtreeMode *treeMode);
 BtreeMode * ModeCalculus(BTree * tree, BtreeMode * treeMode);
 void PrintMode(BtreeMode *treeMode);
 
+
+/* Line 6 */
+void IsInTree(BTree *tree, char *word, int *ptrLine6);
 
 
 #endif

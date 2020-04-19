@@ -2,8 +2,8 @@
 #include "line2.h"
 #include "line3.h"
 #include "line4.h"
-
 #include "line5.h"
+#include "line6.h"
 
 
 int main()
@@ -42,7 +42,14 @@ int main()
 
     double totalFiLine3 = 0;
 
-    double *ptrTotalFiLine3 = &totalFiLine3;   
+    double *ptrTotalFiLine3 = &totalFiLine3;
+
+    int line6 = -1;
+    int *ptrLine6 = &line6;
+
+    char *wordLine6;
+    
+
 
     do
     {
@@ -53,6 +60,7 @@ int main()
         puts("3 - Line 3");
         puts("4 - Line 4");
         puts("5 - Line 5");
+        puts("6 - Line 6");
         puts("0 - Exit");
         puts("");
         printf("Opcao: ");
@@ -123,6 +131,19 @@ int main()
                 PrintResults_Line_5(totalLetters, averageLength);
                 TreeTraversal_Mode_Letters(tree, treeMode);
                 PrintMode(treeMode);               
+                break;
+
+            case 6:
+                printf("\nIndique a palavra: ");
+                scanf("%s", wordLine6);
+
+                Small_Letters(wordLine6);
+
+                IsInTree(tree, wordLine6, ptrLine6);
+
+                printf("\n%d", line6);
+
+
                 break;
 
             default:

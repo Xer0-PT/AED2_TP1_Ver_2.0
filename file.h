@@ -1,21 +1,5 @@
 #include "library.h"
 
-void Small_Letters(char *treeWord)
-{
-    char aux;
-    int i = 0;
-
-    while (treeWord[i] != '\0')
-    {
-        aux = treeWord[i];
-        if (aux >= 'A' && aux <= 'Z')
-        {
-            treeWord[i] = treeWord[i] + 32;
-        }
-        i++;
-    }
-}
-
 int Special_Characters(char *analyzeTree)
 {
     /* Ignorar pontuação */
