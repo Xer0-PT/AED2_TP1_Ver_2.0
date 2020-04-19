@@ -3,7 +3,6 @@
 
 #include "library.h"
 
-
 /*Vindo da segunda arvore comeca a copiar para outra arvore*/
 CumCol4 *SortTree_4_Media(CumCol4 * treeLine4,  BTree * tree)
 {
@@ -13,7 +12,6 @@ CumCol4 *SortTree_4_Media(CumCol4 * treeLine4,  BTree * tree)
         {
             treeLine4->count += tree->data.totalOccurrences;
             treeLine4->prob += tree->data.prob;
-            treeLine4->StrDev += ((tree->data.prob * tree->data.prob));
         }
 
         if(strcmp(treeLine4->analyze, tree->data.analyze) < 0)
@@ -31,7 +29,6 @@ CumCol4 *SortTree_4_Media(CumCol4 * treeLine4,  BTree * tree)
         strcpy(treeLine4->analyze, tree->data.analyze);
         treeLine4->count = tree->data.totalOccurrences;
         treeLine4->prob = tree->data.prob;
-        treeLine4->StrDev = tree->data.prob * tree->data.prob;
 
         treeLine4->left = treeLine4->right = NULL ;
     }
@@ -44,17 +41,13 @@ void GenerateLine4_Media(BTree * tree,  CumCol4 * treeLine4)
 {
     if(tree != NULL)
     {
-
-        /* printf("%s", tree->data.analyze); */
         GenerateLine4_Media(tree->left, treeLine4);
 
         treeLine4  = SortTree_4_Media(treeLine4, tree);
         
         GenerateLine4_Media(tree->right, treeLine4);
     }
-    
 }
-
 
 /* Imprime a media da categoria 3 existente*/
 void InOrderMedia(CumCol4 * treeLine4)
@@ -68,17 +61,10 @@ void InOrderMedia(CumCol4 * treeLine4)
         {
 		    treeLine4->media=(float) treeLine4->prob / treeLine4->count;
             
-            printf("%s: %f, %f\n", treeLine4->analyze, treeLine4->media, treeLine4->totalStrDev);
+            printf("%s:\t%f\n", treeLine4->analyze, treeLine4->media);
         }
         InOrderMedia (treeLine4->right);
-		
 	}
 }
-
-
-
-
-
-
 
 #endif

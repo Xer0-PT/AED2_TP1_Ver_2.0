@@ -3,7 +3,6 @@
 
 #include "library.h"
 
-
 /*Insere noutra Arcvore faz comparacao alfabetica. Se for maior manda pa direita, se for menor manda pa esquerda e se for igual
 adiciona as vezes que aparece a contagem*/
 CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree)
@@ -38,8 +37,6 @@ void GenerateByClassification(BTree * tree,  CumCol3 * treeClassification)
 {
     if(tree != NULL)
     {
-
-        /* printf("%s", tree->data.analyze); */
         GenerateByClassification(tree->left, treeClassification);
 
         treeClassification  = InsertOrCount(treeClassification, tree);
@@ -50,7 +47,6 @@ void GenerateByClassification(BTree * tree,  CumCol3 * treeClassification)
 }
 
 /*Imprime a arvore de forma ascendente*/
-
 void InOrderAscending(CumCol3 * treeClassification, int *ptrTotalLines, int *totalNi, double *totalFi)
 {
     double auxFi = 0;

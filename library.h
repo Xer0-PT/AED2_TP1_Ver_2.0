@@ -11,8 +11,8 @@
 /* File Constant */
 
 /* #define _TEXT_FILE "teste_alinea_5.txt" */
-#define _TEXT_FILE "slate-tagged.txt"
-/* #define _TEXT_FILE "ficheiro_teste_1M.txt" */
+/* #define _TEXT_FILE "slate-tagged.txt" */
+#define _TEXT_FILE "ficheiro_teste_1M.txt"
 /* #define _TEXT_FILE "texto.txt" */
 
 
@@ -87,7 +87,13 @@ void Small_Letters(char *treeWord)
     }
 }
 
-/* Signatures */
+/* ------------ SIGNATURES ------------ */
+
+/* Main */
+void BTree_free(BTree* root);
+void Cumcol3_free(CumCol3* root);
+void BtreeMode_free(BtreeMode* root);
+void CumCol4_free(CumCol4* root);
 
 /* File */
 BTree *ReadFile(BTree *tempTree, int *ptrTotalWords, int *ptrTotalLines);
@@ -132,6 +138,7 @@ void PrintMode(BtreeMode *treeMode);
 
 /* Line 6 */
 void IsInTree(BTree *tree, char *word, int *ptrLine6);
-
+void MaxCount(BTree *tree, int *ptrMaxCount);
+int Quartiles(int maxCount, int totalOcurrencesLine6);
 
 #endif
