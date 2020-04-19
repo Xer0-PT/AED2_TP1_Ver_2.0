@@ -10,9 +10,11 @@
 
 /* File Constant */
 
+/* #define _TEXT_FILE "teste_alinea_5.txt" */
 /* #define _TEXT_FILE "slate-tagged.txt" */
-/*#define _TEXT_FILE "ficheiro_teste_1M.txt" */
- #define _TEXT_FILE "texto.txt" 
+#define _TEXT_FILE "ficheiro_teste_1M.txt"
+/* #define _TEXT_FILE "texto.txt" */
+
 
 
 /* Data Structures */
@@ -46,6 +48,16 @@ typedef struct _Btree
     struct _Btree *left, *right;
 }BTree;
 
+/* Mode Line 5 */
+typedef struct _BtreeMode
+{
+    int wordLength;
+    int wordCount;
+
+    struct _BtreeMode *left, *right;
+}BtreeMode;
+
+
 typedef struct _CumCol4
 {
     char *analyze;
@@ -57,12 +69,28 @@ typedef struct _CumCol4
     struct _CumCol4 *left, *right;
 } CumCol4;
 
+/* This function is needed in more than 1 file */
+/* So in this file is accessible anywhere */
+void Small_Letters(char *treeWord)
+{
+    char aux;
+    int i = 0;
+
+    while (treeWord[i] != '\0')
+    {
+        aux = treeWord[i];
+        if (aux >= 'A' && aux <= 'Z')
+        {
+            treeWord[i] = treeWord[i] + 32;
+        }
+        i++;
+    }
+}
 
 /* Signatures */
 
 /* File */
 BTree *ReadFile(BTree *tempTree, int *ptrTotalWords, int *ptrTotalLines);
-void Small_Letters(char *treeWord);
 int Special_Characters(char *analyzeTree);
 void Print_Tree(BTree *tree);
 BTree *Insert_File_Tree(BTree *tree, Data tempData, int *ptrTotalWords);
@@ -72,6 +100,11 @@ void GenerateByClassification(BTree * tree,  CumCol3 * treeClassification);
 CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree);
 void InOrderClassification(CumCol3 * treeClassification);
 void Table_line_2(CumCol3 * treeClassification);
+
+void ordenarArvore(CumCol3 * treeClassification, CumCol3 * testeOrdenar);
+CumCol3 *NovaArvore (CumCol3 * treeClass, CumCol3 *testeOrdenar);
+
+
 void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines, int *totalNi, double *totalFi);
 void SortTree(CumCol3 * treeClassification, CumCol3 * treeClassOcur);
 CumCol3 *NewTreeAscending (CumCol3 * treeClass, CumCol3 *treeClassOcur);
@@ -95,7 +128,17 @@ void GenerateLine4_Final(CumCol4 * treeLine4,  CumCol4 * treeLine4Aux);
 
 
 
+/* Line 5 */
+void TreeTraversal_Total_Letters(BTree *tree, unsigned long int *totalLength);
+float Average_Line_5(unsigned long int totalLength, int totalWords);
+void PrintResults_Line_5(unsigned long int totalLetters ,float averageLength);
+void TreeTraversal_Mode_Letters(BTree *tree, BtreeMode *treeMode);
+BtreeMode * ModeCalculus(BTree * tree, BtreeMode * treeMode);
+void PrintMode(BtreeMode *treeMode);
 
+
+/* Line 6 */
+void IsInTree(BTree *tree, char *word, int *ptrLine6);
 
 
 #endif

@@ -2,12 +2,9 @@
 #include "line2.h"
 #include "line3.h"
 #include "line4.h"
+#include "line5.h"
+#include "line6.h"
 
-
-
-  
-
-/* #include "library.h" */
 
 int main()
 {    
@@ -21,6 +18,8 @@ int main()
 
     CumCol4 *treeLine42 = (CumCol4 *) malloc ( sizeof ( CumCol4 ) ) ;
 
+    BtreeMode *treeMode = (BtreeMode*) malloc (sizeof(BtreeMode));
+
     int opMenu;
 
     int totalWords = 0;
@@ -31,20 +30,37 @@ int main()
 
     int *ptrTotalLines = &totalLines;
 
+    /* Line 5 Variables */
+    /* Como sabemos que o valor é sempre positivo e se trata de muitos dados */
+    /* declaramos o totalLength como unsigned long int */
+    unsigned long int totalLetters = 0;
+    unsigned long int *ptrTotalLetters = &totalLetters;
+    float averageLength;
     int totalNiLine3 = 0;
 
     int *ptrTotalNiLine3 = &totalNiLine3;
 
     double totalFiLine3 = 0;
 
-    double *ptrTotalFiLine3 = &totalFiLine3;   
+    double *ptrTotalFiLine3 = &totalFiLine3;
+
+    int line6 = -1;
+    int *ptrLine6 = &line6;
+
+    char *wordLine6;
+    
+
 
     do
     {
+        puts("");
+        puts("");
         puts("1 - Read File");
         puts("2 - Line 2");
         puts("3 - Line 3");
         puts("4 - Line 4");
+        puts("5 - Line 5");
+        puts("6 - Line 6");
         puts("0 - Exit");
         puts("");
         printf("Opcao: ");
@@ -97,6 +113,27 @@ int main()
 
                 InOrderMedia(treeLine4);
 
+
+
+                break;
+
+            case 5:
+                TreeTraversal_Total_Letters(tree, ptrTotalLetters);
+                averageLength = Average_Line_5(totalLetters, totalLines);
+                PrintResults_Line_5(totalLetters, averageLength);
+                TreeTraversal_Mode_Letters(tree, treeMode);
+                PrintMode(treeMode);               
+                break;
+
+            case 6:
+                printf("\nIndique a palavra: ");
+                scanf("%s", wordLine6);
+
+                Small_Letters(wordLine6);
+
+                IsInTree(tree, wordLine6, ptrLine6);
+
+                printf("\n%d", line6);
 
 
                 break;
