@@ -52,6 +52,7 @@ typedef struct _CumCol4
     float prob;
     int count;
     float media;
+    float StrDev;
     float totalStrDev;
     struct _CumCol4 *left, *right;
 } CumCol4;
