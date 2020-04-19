@@ -42,8 +42,8 @@ int main()
 
     double *ptrTotalFiLine3 = &totalFiLine3;
 
-    int line6;
-    int *ptrLine6 = &line6;
+    int totalOcurrencesLine6;
+    int *ptrTotalOcurrencesLine6 = &totalOcurrencesLine6;
 
     int maxCount = 0;
     int *ptrMaxCount = &maxCount;
@@ -56,7 +56,7 @@ int main()
 
     do
     {
-        line6 = -1;
+        totalOcurrencesLine6 = -1;
 
         puts("");
         puts("");
@@ -129,14 +129,14 @@ int main()
 
                 Small_Letters(wordLine6);
 
-                IsInTree(tree, wordLine6, ptrLine6);
+                IsInTree(tree, wordLine6, ptrTotalOcurrencesLine6);
 
-                if (line6 != -1)
+                if (totalOcurrencesLine6 != -1)
                 {
                     MaxCount(tree, ptrMaxCount);
-                    quartile = Quartiles(maxCount, line6);
+                    quartile = Quartiles(maxCount, totalOcurrencesLine6);
 
-                    printf("\n\nA palavra ' %s ' tem ' %d ' ocorrencias e pertence ao quartil ' %d '.", wordLine6, line6, quartile);
+                    printf("\n\nA palavra ' %s ' tem ' %d ' ocorrencias e pertence ao quartil ' %d '.", wordLine6, totalOcurrencesLine6, quartile);
                 }
                 else
                     printf("\nPalavra nao existe!");
