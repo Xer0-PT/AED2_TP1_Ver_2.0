@@ -3,6 +3,9 @@
 
 #include "library.h"
 
+
+/*Insere noutra Arcvore faz comparacao alfabetica. Se for maior manda pa direita, se for menor manda pa esquerda e se for igual
+adiciona as vezes que aparece a contagem*/
 CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree)
 {
     if(treeClass)
@@ -30,7 +33,7 @@ CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree)
     }
     return treeClass;
 }
-
+/*Funcao que percorre a arvore orginal para copiar para a segunda*/
 void GenerateByClassification(BTree * tree,  CumCol3 * treeClassification)
 {
     if(tree != NULL)
@@ -46,21 +49,7 @@ void GenerateByClassification(BTree * tree,  CumCol3 * treeClassification)
     
 }
 
-
-void InOrderClassification(CumCol3 * treeClassification)
-{
-	if (treeClassification)
-	{
-        InOrderClassification (treeClassification->left);
-	
-        /* Sem este if está a imprimir o nodo que está NULL. PORQUÊ? */
-        if(treeClassification->count != 0)
-		    printf("A classification '%s' tem  %d palavras. Media aritmetica: %f\n", treeClassification->analyze, treeClassification->count, treeClassification->prob);
-
-        InOrderClassification (treeClassification->right);
-		
-	}
-}
+/*Imprime a arvore de forma ascendente*/
 
 void InOrderAscending(CumCol3 * treeClassification, int *ptrTotalLines, int *totalNi, double *totalFi)
 {
@@ -84,7 +73,7 @@ void InOrderAscending(CumCol3 * treeClassification, int *ptrTotalLines, int *tot
 	}
 }
 
-
+/*Funcao para percorrer a primeira arvore e mandar para a segunda*/
 void SortTree(CumCol3 * treeClassification, CumCol3 * treeClassOcur)
 {
     if (treeClassification)
@@ -97,6 +86,8 @@ void SortTree(CumCol3 * treeClassification, CumCol3 * treeClassOcur)
     }
 }
 
+
+/*Ordena a arvore pelas vezes em que aparece*/
 CumCol3 *NewTreeAscending (CumCol3 * treeClass, CumCol3 *treeClassOcur)
 {
     if (treeClassOcur)
@@ -121,7 +112,7 @@ CumCol3 *NewTreeAscending (CumCol3 * treeClass, CumCol3 *treeClassOcur)
     return treeClassOcur;    
 }
 
-
+/*Impressao da cabeca da tabela*/
 void PrintHeadTable()
 {
     printf("---------------------------------------------------------------------------------------------------------\n");
@@ -129,7 +120,7 @@ void PrintHeadTable()
     printf("---------------------------------------------------------------------------------------------------------\n");
 }
 
-
+/*Impressao do fim da tabela*/
 void PrintEndTable(int totalNiLine3, double totalFiLine3)
 {
     printf("---------------------------------------------------------------------------------------------------------\n");

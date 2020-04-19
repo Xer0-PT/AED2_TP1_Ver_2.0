@@ -64,6 +64,7 @@ typedef struct _CumCol4
     float prob;
     int count;
     float media;
+    float StrDev;
     float totalStrDev;
     struct _CumCol4 *left, *right;
 } CumCol4;
@@ -97,14 +98,7 @@ BTree *Insert_File_Tree(BTree *tree, Data tempData, int *ptrTotalWords);
 /* Line 2 */
 void GenerateByClassification(BTree * tree,  CumCol3 * treeClassification);
 CumCol3 *InsertOrCount(CumCol3 * treeClass,  BTree * tree);
-void InOrderClassification(CumCol3 * treeClassification);
-void Table_line_2(CumCol3 * treeClassification);
-
-void ordenarArvore(CumCol3 * treeClassification, CumCol3 * testeOrdenar);
-CumCol3 *NovaArvore (CumCol3 * treeClass, CumCol3 *testeOrdenar);
-
-
-void ThroughTree(CumCol3 *treeClassification, int *ptrTotalLines, int *totalNi, double *totalFi);
+void InOrderAscending(CumCol3 * treeClassification, int *ptrTotalLines, int *totalNi, double *totalFi);
 void SortTree(CumCol3 * treeClassification, CumCol3 * treeClassOcur);
 CumCol3 *NewTreeAscending (CumCol3 * treeClass, CumCol3 *treeClassOcur);
 void PrintHeadTable();

@@ -14,9 +14,7 @@ int main()
 
     CumCol3 *treeClassOcur = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
 
-    CumCol4 *treeLine4Aux = (CumCol4 *) malloc ( sizeof ( CumCol4 ) ) ;
-
-    CumCol4 *treeLine4Aux2 = (CumCol4 *) malloc ( sizeof ( CumCol4 ) ) ;
+    CumCol4 *treeLine4 = (CumCol4 *) malloc ( sizeof ( CumCol4 ) ) ;
 
     BtreeMode *treeMode = (BtreeMode*) malloc (sizeof(BtreeMode));
 
@@ -90,17 +88,10 @@ int main()
                 treeClass->count = 0;
                 treeClass->prob = tree->data.prob;
 
+
                 GenerateByClassification(tree, treeClass);
 
-                InOrderClassification(treeClass);
-
-
-                printf("\n\nNova Ordem\n\n");
-
-
                 SortTree(treeClass, treeClassOcur);
-
-
                 PrintHeadTable();
                 InOrderAscending(treeClassOcur, ptrTotalLines, ptrTotalNiLine3, ptrTotalFiLine3);
                 PrintEndTable(totalNiLine3, totalFiLine3);
@@ -112,22 +103,14 @@ int main()
                 break;
 
             case 4:
-                treeLine4Aux->analyze = (char*) malloc   (strlen(tree->data.analyze)    *   sizeof(char) + 1);
-                strcpy(treeLine4Aux->analyze, tree->data.analyze);
-                treeLine4Aux->count = tree->data.totalOccurrences;
-                treeLine4Aux->prob = tree->data.prob; 
-                GenerateLine4_Media(tree, treeLine4Aux);
+                treeLine4->analyze = (char*) malloc   (strlen(tree->data.analyze)    *   sizeof(char) + 1);
+                strcpy(treeLine4->analyze, tree->data.analyze);
+                treeLine4->count = tree->data.totalOccurrences;
+                treeLine4->prob = tree->data.prob; 
+                GenerateLine4_Media(tree, treeLine4);
 
-                InOrderMedia(treeLine4Aux);
+                InOrderMedia(treeLine4);
 
-                treeLine4Aux2->analyze = (char*) malloc   (strlen(tree->data.analyze)    *   sizeof(char) + 1);
-                strcpy(treeLine4Aux2->analyze, tree->data.analyze);
-                treeLine4Aux2->count = tree->data.totalOccurrences;
-                treeLine4Aux2->prob = tree->data.prob; 
-                GenerateLine4_StrDev(tree, treeLine4Aux2);
-                
-                GenerateLine4_Final(treeLine4Aux2, treeLine4Aux);
-                InOrderFinal(treeLine4Aux);
 
 
                 break;
