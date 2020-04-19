@@ -16,8 +16,6 @@ int main()
 
     CumCol4 *treeLine4 = (CumCol4 *) malloc ( sizeof ( CumCol4 ) ) ;
 
-    CumCol4 *treeLine42 = (CumCol4 *) malloc ( sizeof ( CumCol4 ) ) ;
-
     BtreeMode *treeMode = (BtreeMode*) malloc (sizeof(BtreeMode));
 
     int opMenu;
@@ -83,17 +81,10 @@ int main()
                 treeClass->count = 0;
                 treeClass->prob = tree->data.prob;
 
+
                 GenerateByClassification(tree, treeClass);
 
-                InOrderClassification(treeClass);
-
-
-                printf("\n\nNova Ordem\n\n");
-
-
                 SortTree(treeClass, treeClassOcur);
-
-
                 PrintHeadTable();
                 InOrderAscending(treeClassOcur, ptrTotalLines, ptrTotalNiLine3, ptrTotalFiLine3);
                 PrintEndTable(totalNiLine3, totalFiLine3);

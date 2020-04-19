@@ -4,7 +4,7 @@
 #include "library.h"
 
 
-
+/*Vindo da segunda arvore comeca a copiar para outra arvore*/
 CumCol4 *SortTree_4_Media(CumCol4 * treeLine4,  BTree * tree)
 {
     if(treeLine4)
@@ -38,6 +38,8 @@ CumCol4 *SortTree_4_Media(CumCol4 * treeLine4,  BTree * tree)
     return treeLine4;
 }
 
+
+/*Percorre a primeira arvore e manda para a segunda*/
 void GenerateLine4_Media(BTree * tree,  CumCol4 * treeLine4)
 {
     if(tree != NULL)
@@ -53,6 +55,8 @@ void GenerateLine4_Media(BTree * tree,  CumCol4 * treeLine4)
     
 }
 
+
+/* Imprime a media da categoria 3 existente*/
 void InOrderMedia(CumCol4 * treeLine4)
 {
 	if (treeLine4)

@@ -10,6 +10,8 @@ int Special_Characters(char *analyzeTree)
     return 0;
 }
 
+/* Le o ficheiro */
+
 BTree *ReadFile(BTree *tempTree, int *ptrTotalWords, int *ptrTotalLines)
 {
     FILE *file;
@@ -51,7 +53,7 @@ BTree *ReadFile(BTree *tempTree, int *ptrTotalWords, int *ptrTotalLines)
     return tempTree;
 }
 
-
+/* Imprime a Arvore*/
 void Print_Tree(BTree *tree)
 {
     if (tree)
@@ -63,6 +65,8 @@ void Print_Tree(BTree *tree)
     }
 }
 
+
+/*Insere o ficheiro na Arvore */
 BTree *Insert_File_Tree(BTree *tree, Data tempData, int *ptrTotalWords)
 {
     if (tree)
