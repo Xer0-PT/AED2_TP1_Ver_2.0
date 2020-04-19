@@ -15,7 +15,7 @@ int main()
 
     CumCol4 *treeLine4 = (CumCol4 *) malloc ( sizeof ( CumCol4 ) ) ;
 
-    BtreeMode *treeMode = NULL;
+    BtreeMode *treeMode = (BtreeMode *) malloc ( sizeof ( BtreeMode ) );
 
     int opMenu;
     int totalWords = 0;
@@ -109,6 +109,7 @@ int main()
                 averageLength = Average_Line_5(totalLetters, totalLines);
                 PrintResults_Line_5(totalLetters, averageLength);
                 TreeTraversal_Mode_Letters(tree, treeMode);
+                printf("\n\nTeste moda: %d", treeMode->wordCount);
                 PrintMode(treeMode);               
                 break;
 

@@ -35,7 +35,7 @@ void PrintResults_Line_5(unsigned long int totalLetters ,float averageLength)
 /* Travessia da árvore do ficheiro para o cálculo da Moda */
 void TreeTraversal_Mode_Letters(BTree * tree, BtreeMode * treeMode)
 {
-    if (tree)
+    if (tree != NULL)
     {
         TreeTraversal_Mode_Letters(tree->left, treeMode);
 
