@@ -44,23 +44,30 @@ int main()
 
     double *ptrTotalFiLine3 = &totalFiLine3;
 
-    int line6 = -1;
+    int line6;
     int *ptrLine6 = &line6;
 
+    int maxCount = 0;
+    int *ptrMaxCount = &maxCount;
+
     char *wordLine6;
+
+    int quartile;
     
 
 
     do
     {
+        line6 = -1;
+
         puts("");
         puts("");
-        puts("1 - Read File");
-        puts("2 - Line 2");
-        puts("3 - Line 3");
-        puts("4 - Line 4");
-        puts("5 - Line 5");
-        puts("6 - Line 6");
+        puts("1 - Ler Ficheiro");
+        puts("2 - Tabela Frequencias - Categoria Gramatical");
+        puts("3 - Tabela Frequencias - Tamanho Palavras");
+        puts("4 - Media - Categoria Gramatical");
+        puts("5 - Media - Tamanho Palavras");
+        puts("6 - Quartis - Frequencia Palavras");
         puts("0 - Exit");
         puts("");
         printf("Opcao: ");
@@ -141,9 +148,16 @@ int main()
 
                 IsInTree(tree, wordLine6, ptrLine6);
 
-                printf("\n%d", line6);
+                if (line6 != -1)
+                {
+                    MaxCount(tree, ptrMaxCount);
+                    quartile = Quartiles(maxCount, line6);
 
-
+                    printf("\n\nA palavra ' %s ' tem ' %d ' ocorrencias e pertence ao quartil ' %d '.", wordLine6, line6, quartile);
+                }
+                else
+                    printf("\nPalavra nao existe!");
+                
                 break;
 
             default:
