@@ -11,9 +11,9 @@
 /* File Constant */
 
 /* #define _TEXT_FILE "teste_alinea_5.txt" */
-/* #define _TEXT_FILE "slate-tagged.txt" */
+#define _TEXT_FILE "slate-tagged.txt"
 /* #define _TEXT_FILE "ficheiro_teste_1M.txt" */
-#define _TEXT_FILE "texto.txt"
+/* #define _TEXT_FILE "texto.txt" */
 
 
 

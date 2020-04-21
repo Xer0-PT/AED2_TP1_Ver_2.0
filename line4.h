@@ -1,7 +1,13 @@
 #ifndef LINE_4_H
 #define LINE_4_H
 
+
+
 #include "library.h"
+
+//percorres uma vez e ficas SUM(Probabilidade) &  numero de registos
+//Com isto encontras a media
+// (xi - media) ^ 2
 
 /*Vindo da segunda arvore comeca a copiar para outra arvore*/
 CumCol4 *SortTree_4_Media(CumCol4 * treeLine4,  BTree * tree)
