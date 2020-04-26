@@ -1,11 +1,11 @@
 #include "library.h"
-/* 
+/*!  
 percorres uma vez e ficas SUM(Probabilidade) &  numero de registos
 Com isto encontras a media
 (xi - media) ^ 2
  */
 
-/*Vindo da segunda arvore comeca a copiar para outra arvore*/
+/*! Vindo da segunda arvore comeca a copiar para outra arvore*/
 CumCol4 *SortTree_4_Media(CumCol4 * treeLine4,  BTree * tree)
 {
     if(treeLine4)
@@ -38,7 +38,7 @@ CumCol4 *SortTree_4_Media(CumCol4 * treeLine4,  BTree * tree)
 }
 
 
-/*Percorre a primeira arvore e manda para a segunda*/
+/*! Percorre a primeira arvore e manda para a segunda*/
 void GenerateLine4_Media(BTree * tree,  CumCol4 * treeLine4)
 {
     if(tree != NULL)
@@ -51,14 +51,14 @@ void GenerateLine4_Media(BTree * tree,  CumCol4 * treeLine4)
     }
 }
 
-/* Imprime a media da categoria 3 existente*/
+/*!  Imprime a media da categoria 3 existente*/
 void InOrderMedia(CumCol4 * treeLine4)
 {
 	if (treeLine4)
 	{
         InOrderMedia (treeLine4->left);
 	
-        /* Sem este if está a imprimir o nodo que está NULL. PORQUÊ? */
+        /*!  Sem este if está a imprimir o nodo que está NULL. PORQUÊ? */
         if(treeLine4->count != 0)
         {
 		    treeLine4->media = (float) treeLine4->prob / treeLine4->count;

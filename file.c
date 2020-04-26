@@ -2,7 +2,7 @@
 
 int Special_Characters(char *analyzeTree)
 {
-    /* Ignorar pontuação */
+    /*! Ignorar pontuação */
     if (analyzeTree[0] == 'F')
     {
         return 1;
@@ -10,7 +10,7 @@ int Special_Characters(char *analyzeTree)
     return 0;
 }
 
-/* Le o ficheiro */
+/*! Le o ficheiro */
 
 BTree *ReadFile(BTree *tempTree, int *ptrTotalWords, int *ptrTotalLines)
 {
@@ -53,7 +53,7 @@ BTree *ReadFile(BTree *tempTree, int *ptrTotalWords, int *ptrTotalLines)
     return tempTree;
 }
 
-/* Imprime a Arvore*/
+/*! Imprime a Arvore*/
 void Print_Tree(BTree *tree)
 {
     if (tree)
@@ -66,7 +66,7 @@ void Print_Tree(BTree *tree)
 }
 
 
-/*Insere o ficheiro na Arvore */
+/*!Insere o ficheiro na Arvore */
 BTree *Insert_File_Tree(BTree *tree, Data tempData, int *ptrTotalWords)
 {
     if (tree)
@@ -102,8 +102,8 @@ BTree *Insert_File_Tree(BTree *tree, Data tempData, int *ptrTotalWords)
 
         tree->left = tree->right       =   NULL;
 
-        /* Se entra aqui é porque é uma word diferente. */
-        /* Então vamos incrementar o total de words. */
+        /*! Se entra aqui é porque é uma word diferente. */
+        /*! Então vamos incrementar o total de words. */
         ++*ptrTotalWords;
     }
     return tree;

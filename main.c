@@ -17,16 +17,16 @@ int main()
     int *ptrTotalLines = &totalLines;
 
 
-    /* Variaveis Line 2 */
+    /*!  Variaveis Line 2 */
     int totalNiLine2 = 0;
     int *ptrTotalNiLine2 = &totalNiLine2;
     double totalFiLine2 = 0;
     double *ptrTotalFiLine2 = &totalFiLine2;
-    /* ------------------- */
+    /*!  ------------------- */
 
-    /* Variaveis Line 5 */
-    /* Como sabemos que o valor é sempre positivo e se trata de muitos dados */
-    /* declaramos o totalLength como unsigned long int */
+    /*!  Variaveis Line 5 */
+    /*!  Como sabemos que o valor é sempre positivo e se trata de muitos dados */
+    /*!  declaramos o totalLength como unsigned long int */
     unsigned long int totalLetters = 0;
     unsigned long int *ptrTotalLetters = &totalLetters;
     float averageLength;
@@ -39,20 +39,18 @@ int main()
     int k = 0;
     int medianeArray[100];
 
-    int soma = 0;
-    double desvioPadrao;
-    double raiz;
+    /*!  ------------------- */
 
-    /* ------------------- */
-
-    /* Variaveis Line 6 */
+    /*!  Variaveis Line 6 */
     int totalOcurrencesLine6;
     int *ptrTotalOcurrencesLine6 = &totalOcurrencesLine6;
     int maxCount = 0;
     int *ptrMaxCount = &maxCount;
+    /*!  Este char dá-nos um warning ao compilar */
+    /*!  char *wordLine6; */
     char wordLine6[100];
     int quartile;
-    /* ------------------- */
+    /*!  ------------------- */
     
     do
     {
@@ -77,7 +75,7 @@ int main()
                 puts("A ler ficheiro. Aguarde um momento.");
                 tree = ReadFile(tree, ptrTotalWords, ptrTotalLines);
                 
-                /* Print_Tree(tree); */
+                /*!  Print_Tree(tree); */
                 printf("\n\n|\tFicheiro Carregado!\t\t\t\t\t|");
                 printf("\n|\tTotal palavras (nao inclui repeticoes):\t%d\t\t|", totalWords);
                 printf("\n|\tTotal linhas com conteudo valido:\t%d\t\t|", totalLines);
@@ -264,8 +262,8 @@ void CumCol4_free(CumCol4* root)
     }
 }
 
-/* This function is needed in more than 1 file */
-/* So in this file is accessible anywhere */
+/*!  This function is needed in more than 1 file */
+/*!  So in this file is accessible anywhere */
 void Small_Letters(char *treeWord)
 {
     char aux;

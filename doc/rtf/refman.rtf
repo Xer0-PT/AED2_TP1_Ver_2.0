@@ -1,0 +1,3008 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\info 
+{\title {\comment AEDII_TP1  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+1.0 \par
+}}AEDII_TP1}
+{\comment Generated by doxygen1.8.18.}
+{\creatim \yr2020\mo4\dy26\hr16\min47\sec12}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt AEDII_TP1}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Version 1.0\par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Sun Apr 26 2020 }}\par
+\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Table of Contents\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Data Structure Index\par \pard\plain 
+{\tc \v Data Structure Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Data Structures\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the data structures with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b _Btree} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b _CumCol3} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACY \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b _CumCol4} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b _Data} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADN \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Index\par \pard\plain 
+{\tc \v File Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+File List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here is a list of all files with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b file.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b library.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b line2.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABR \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b line3.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABZ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b line4.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b line5.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACG \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b line6.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b main.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACO \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Data Structure Documentation{\tc \v Data Structure Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+_Btree Struct Reference\par \pard\plain 
+{\tc\tcl2 \v _Btree}
+{\xe \v _Btree}
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
+\par
+{
+{\f2 #include <library.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Data} {\b data}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b _Btree} * {\b left}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b _Btree} * {\b right}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v data\:_Btree}
+{\xe \v _Btree\:data}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Data} data}}
+\par
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v left\:_Btree}
+{\xe \v _Btree\:left}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b _Btree}* left}}
+\par
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v right\:_Btree}
+{\xe \v _Btree\:right}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b _Btree} * right}}
+\par
+{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b library.h}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+_CumCol3 Struct Reference\par \pard\plain 
+{\tc\tcl2 \v _CumCol3}
+{\xe \v _CumCol3}
+{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
+\par
+{
+{\f2 #include <library.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char * {\b analyze}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b prob}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b count}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b _CumCol3} * {\b left}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b _CumCol3} * {\b right}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+#define _TEXT_FILE "ficheiro_teste_1M.txt"\par
+#define _TEXT_FILE "texto.txt"\par
+Data Structures \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v analyze\:_CumCol3}
+{\xe \v _CumCol3\:analyze}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char* analyze}}
+\par
+{\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v count\:_CumCol3}
+{\xe \v _CumCol3\:count}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int count}}
+\par
+{\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v left\:_CumCol3}
+{\xe \v _CumCol3\:left}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b _CumCol3}* left}}
+\par
+{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v prob\:_CumCol3}
+{\xe \v _CumCol3\:prob}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float prob}}
+\par
+{\bkmkstart AAAAAAAADC}
+{\bkmkend AAAAAAAADC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v right\:_CumCol3}
+{\xe \v _CumCol3\:right}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b _CumCol3} * right}}
+\par
+{\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b library.h}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+_CumCol4 Struct Reference\par \pard\plain 
+{\tc\tcl2 \v _CumCol4}
+{\xe \v _CumCol4}
+{\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
+\par
+{
+{\f2 #include <library.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char * {\b analyze}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b prob}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b count}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b media}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b StrDev}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b totalStrDev}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b _CumCol4} * {\b left}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b _CumCol4} * {\b right}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v analyze\:_CumCol4}
+{\xe \v _CumCol4\:analyze}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char* analyze}}
+\par
+{\bkmkstart AAAAAAAADF}
+{\bkmkend AAAAAAAADF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v count\:_CumCol4}
+{\xe \v _CumCol4\:count}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int count}}
+\par
+{\bkmkstart AAAAAAAADG}
+{\bkmkend AAAAAAAADG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v left\:_CumCol4}
+{\xe \v _CumCol4\:left}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b _CumCol4}* left}}
+\par
+{\bkmkstart AAAAAAAADH}
+{\bkmkend AAAAAAAADH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v media\:_CumCol4}
+{\xe \v _CumCol4\:media}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float media}}
+\par
+{\bkmkstart AAAAAAAADI}
+{\bkmkend AAAAAAAADI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v prob\:_CumCol4}
+{\xe \v _CumCol4\:prob}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float prob}}
+\par
+{\bkmkstart AAAAAAAADJ}
+{\bkmkend AAAAAAAADJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v right\:_CumCol4}
+{\xe \v _CumCol4\:right}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b _CumCol4} * right}}
+\par
+{\bkmkstart AAAAAAAADK}
+{\bkmkend AAAAAAAADK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v StrDev\:_CumCol4}
+{\xe \v _CumCol4\:StrDev}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float StrDev}}
+\par
+{\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v totalStrDev\:_CumCol4}
+{\xe \v _CumCol4\:totalStrDev}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float totalStrDev}}
+\par
+{\bkmkstart AAAAAAAADM}
+{\bkmkend AAAAAAAADM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b library.h}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+_Data Struct Reference\par \pard\plain 
+{\tc\tcl2 \v _Data}
+{\xe \v _Data}
+{\bkmkstart AAAAAAAADN}
+{\bkmkend AAAAAAAADN}
+\par
+{
+{\f2 #include <library.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char * {\b word}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char * {\b motto}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char * {\b analyze}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b prob}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b totalOccurrences}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b lenghtWord}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+data da word \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v analyze\:_Data}
+{\xe \v _Data\:analyze}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char* analyze}}
+\par
+{\bkmkstart AAAAAAAADO}
+{\bkmkend AAAAAAAADO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v lenghtWord\:_Data}
+{\xe \v _Data\:lenghtWord}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int lenghtWord}}
+\par
+{\bkmkstart AAAAAAAADP}
+{\bkmkend AAAAAAAADP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Total de vezes que a word aparece no ficheiro \par
+}}
+{\xe \v motto\:_Data}
+{\xe \v _Data\:motto}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char* motto}}
+\par
+{\bkmkstart AAAAAAAADQ}
+{\bkmkend AAAAAAAADQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v prob\:_Data}
+{\xe \v _Data\:prob}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float prob}}
+\par
+{\bkmkstart AAAAAAAADR}
+{\bkmkend AAAAAAAADR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v totalOccurrences\:_Data}
+{\xe \v _Data\:totalOccurrences}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int totalOccurrences}}
+\par
+{\bkmkstart AAAAAAAADS}
+{\bkmkend AAAAAAAADS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Contagem de data em rela\'E7\'E3o a cada word \par
+}}
+{\xe \v word\:_Data}
+{\xe \v _Data\:word}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char* word}}
+\par
+{\bkmkstart AAAAAAAADT}
+{\bkmkend AAAAAAAADT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+data presentes no ficheiro \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b library.h}\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Documentation{\tc \v File Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+file.c File Reference\par \pard\plain 
+{\tc\tcl2 \v file.c}
+{\xe \v file.c}
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "library.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b Special_Characters} (char *analyzeTree)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b BTree} * {\b ReadFile} ({\b BTree} *tempTree, int *ptrTotalWords, int *ptrTotalLines)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Print_Tree} ({\b BTree} *tree)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b BTree} * {\b Insert_File_Tree} ({\b BTree} *tree, {\b Data} tempData, int *ptrTotalWords)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v Insert_File_Tree\:file.c}
+{\xe \v file.c\:Insert_File_Tree}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b BTree}* Insert_File_Tree ({\b BTree} *  {\i tree}, {\b Data}  {\i tempData}, int *  {\i ptrTotalWords})}}
+\par
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Insere o ficheiro na Arvore \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Se entra aqui \'E9 porque \'E9 uma word diferente.\par
+Ent\'E3o vamos incrementar o total de words.\par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 71 \{\par
+72     {\cf19 if} (tree)\par
+73     \{\par
+74         {\cf19 if} (strcmp(tree->data.word, tempData.word) < 0)\par
+75             tree->left = Insert_File_Tree(tree->left, tempData, ptrTotalWords);\par
+76 \par
+77         {\cf19 if} (strcmp(tree->data.word, tempData.word) > 0)\par
+78             tree->right = Insert_File_Tree(tree->right, tempData, ptrTotalWords);\par
+79         \par
+80         {\cf19 if} ((strcmp(tree->data.word, tempData.word) == 0) && (strcmp(tree->data.analyze, tempData.analyze) == 0))\par
+81             tree->data.totalOccurrences ++;\par
+82 \par
+83         {\cf19 if} ((strcmp(tree->data.word, tempData.word) == 0) && (strcmp(tree->data.analyze, tempData.analyze) != 0))\par
+84             tree->right = Insert_File_Tree(tree->right, tempData, ptrTotalWords);\par
+85     \}\par
+86     {\cf19 else}\par
+87     \{\par
+88         tree = (BTree*) malloc({\cf17 sizeof}(BTree));\par
+89 \par
+90         tree->data.word     =   ({\cf18 char}*) malloc(strlen(tempData.word)    *   {\cf17 sizeof}(char) + 1);\par
+91         tree->data.motto    =   ({\cf18 char}*) malloc(strlen(tempData.motto)   *   {\cf17 sizeof}(char) + 1);\par
+92         tree->data.analyze  =   ({\cf18 char}*) malloc(strlen(tempData.analyze) *   {\cf17 sizeof}(char) + 1);\par
+93 \par
+94 \par
+95         strcpy(tree->data.word,       tempData.word);\par
+96         strcpy(tree->data.motto,          tempData.motto);\par
+97         strcpy(tree->data.analyze,       tempData.analyze);\par
+98         \par
+99         tree->data.prob     =   tempData.prob;\par
+100         tree->data.totalOccurrences  =   1;\par
+101         tree->data.lenghtWord    =   strlen(tempData.word);\par
+102 \par
+103         tree->left = tree->right       =   NULL;\par
+104 \par
+107         ++*ptrTotalWords;\par
+108     \}\par
+109     {\cf19 return} tree;\par
+110 \}\par
+}
+}
+{\xe \v Print_Tree\:file.c}
+{\xe \v file.c\:Print_Tree}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Print_Tree ({\b BTree} *  {\i tree})}}
+\par
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Imprime a Arvore \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 58 \{\par
+59     {\cf19 if} (tree)\par
+60     \{\par
+61         Print_Tree(tree->right);\par
+62         printf({\cf22 "%-15s %-15s %-15s\\t%f\\tAparece %d vezes e tem %d letras.\\n"}, tree->data.word, tree->data.motto, tree->data.analyze,\par
+63                                                                         tree->data.prob, tree->data.totalOccurrences, tree->data.lenghtWord);\par
+64         Print_Tree(tree->left);\par
+65     \}\par
+66 \}\par
+}
+}
+{\xe \v ReadFile\:file.c}
+{\xe \v file.c\:ReadFile}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b BTree}* ReadFile ({\b BTree} *  {\i tempTree}, int *  {\i ptrTotalWords}, int *  {\i ptrTotalLines})}}
+\par
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Le o ficheiro \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 16 \{\par
+17     FILE *file;\par
+18     Data tempData;\par
+19 \par
+20     {\cf18 char} auxWord[100];\par
+21     {\cf18 char} auxMotto[100];\par
+22     {\cf18 char} auxAnalyze[100];\par
+23 \par
+24     {\cf18 int} total = 0;\par
+25 \par
+26     file = fopen(_TEXT_FILE, {\cf22 "r"});\par
+27 \par
+28     rewind(file);\par
+29 \par
+30     {\cf19 while} (fscanf(file, {\cf22 "%s %s %s %f"}, auxWord, auxMotto, auxAnalyze, &tempData.prob) != EOF)\par
+31     \{\par
+32         {\cf19 if} (Special_Characters(auxAnalyze) == 0)\par
+33         \{            \par
+34             ++total;\par
+35             Small_Letters(auxWord);\par
+36 \par
+37             tempData.word =     ({\cf18 char}*) malloc(strlen(auxWord)*{\cf17 sizeof}(char) + 1);\par
+38             tempData.motto =    ({\cf18 char}*) malloc(strlen(auxMotto)*{\cf17 sizeof}(char) + 1);\par
+39             tempData.analyze =  ({\cf18 char}*) malloc(strlen(auxAnalyze)*{\cf17 sizeof}(char) + 1);\par
+40 \par
+41             strcpy(tempData.word, auxWord);\par
+42             strcpy(tempData.motto, auxMotto);\par
+43             strcpy(tempData.analyze, auxAnalyze);\par
+44 \par
+45             tempTree = Insert_File_Tree(tempTree, tempData, ptrTotalWords);\par
+46         \}\par
+47     \}\par
+48 \par
+49     fclose(file);\par
+50 \par
+51     *ptrTotalLines = total;\par
+52     \par
+53     {\cf19 return} tempTree;\par
+54 \}\par
+}
+}
+{\xe \v Special_Characters\:file.c}
+{\xe \v file.c\:Special_Characters}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Special_Characters (char *  {\i analyzeTree})}}
+\par
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Ignorar pontua\'E7\'E3o\par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 4 \{\par
+6     {\cf19 if} (analyzeTree[0] == {\cf23 'F'})\par
+7     \{\par
+8         {\cf19 return} 1;\par
+9     \}\par
+10     {\cf19 return} 0;\par
+11 \}\par
+}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+library.h File Reference\par \pard\plain 
+{\tc\tcl2 \v library.h}
+{\xe \v library.h}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <stdio.h>}\par
+{\f2 #include <string.h>}\par
+{\f2 #include <stdlib.h>}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Structures\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b _CumCol3}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b _Data}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b _Btree}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b _CumCol4}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b _TEXT_FILE}\~ "slate-tagged.txt"\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Typedefs\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b _CumCol3} {\b CumCol3}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b _Data} {\b Data}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b _Btree} {\b BTree}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b _CumCol4} {\b CumCol4}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b BTree_free} ({\b BTree} *root)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Cumcol3_free} ({\b CumCol3} *root)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b CumCol4_free} ({\b CumCol4} *root)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Small_Letters} (char *treeWord)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b BTree} * {\b ReadFile} ({\b BTree} *tempTree, int *ptrTotalWords, int *ptrTotalLines)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b Special_Characters} (char *analyzeTree)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Print_Tree} ({\b BTree} *tree)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b BTree} * {\b Insert_File_Tree} ({\b BTree} *tree, {\b Data} tempData, int *ptrTotalWords)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b GenerateByClassification} ({\b BTree} *tree, {\b CumCol3} *treeClassification)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b CumCol3} * {\b InsertOrCount} ({\b CumCol3} *treeClass, {\b BTree} *tree)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b InOrderAscending} ({\b CumCol3} *treeClassification, int *ptrTotalLines, int *totalNi, double *totalFi)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b SortTree} ({\b CumCol3} *treeClassification, {\b CumCol3} *treeClassOcur)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b CumCol3} * {\b NewTreeAscending} ({\b CumCol3} *treeClass, {\b CumCol3} *treeClassOcur)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b PrintHeadTable} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b PrintEndTable} (int totalNiLine3, double totalFiLine3)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Line_3_Word_Frequency_Table} ({\b BTree} *tree)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b TreeTraversal_Line_3} ({\b BTree} *tree, int *ptr20, int *ptr40, int *ptr60, int *ptr80, int *ptr100)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b CumCol4} * {\b SortTree_4_Media} ({\b CumCol4} *treeLine4, {\b BTree} *tree)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b GenerateLine4_Media} ({\b BTree} *tree, {\b CumCol4} *treeLine4)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b InOrderMedia} ({\b CumCol4} *treeLine4)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b InOrderStrDev} ({\b CumCol4} *treeLine4)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b CumCol4} * {\b SortTree_4_StrDev} ({\b CumCol4} *treeLine4, {\b BTree} *tree)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b GenerateLine4_StrDev} ({\b BTree} *tree, {\b CumCol4} *treeLine4)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b InOrderFinal} ({\b CumCol4} *treeLine4)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b CumCol4} * {\b SortTree_4_Final} ({\b CumCol4} *treeLine4Aux, {\b CumCol4} *treeLine4)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b GenerateLine4_Final} ({\b CumCol4} *treeLine4, {\b CumCol4} *treeLine4Aux)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b TreeTraversal_Total_Letters} ({\b BTree} *tree, unsigned long int *totalLength)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b Average_Line_5} (unsigned long int totalLength, int totalWords)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b TreeTraversal_Mode_Letters} ({\b BTree} *tree, int wordSize[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b IsInTree} ({\b BTree} *tree, char *word, int *ptrLine6)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b MaxCount} ({\b BTree} *tree, int *ptrMaxCount)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b Quartiles} (int maxCount, int totalOcurrencesLine6)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v _TEXT_FILE\:library.h}
+{\xe \v library.h\:_TEXT_FILE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define _TEXT_FILE\~ "slate-tagged.txt"}}
+\par
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Include Libraries\par
+File Constant\par
+#define _TEXT_FILE "teste_alinea_5.txt" \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Typedef Documentation\par
+\pard\plain 
+{\xe \v BTree\:library.h}
+{\xe \v library.h\:BTree}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b _Btree} {\b BTree}}}
+\par
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v CumCol3\:library.h}
+{\xe \v library.h\:CumCol3}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b _CumCol3} {\b CumCol3}}}
+\par
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+#define _TEXT_FILE "ficheiro_teste_1M.txt"\par
+#define _TEXT_FILE "texto.txt"\par
+Data Structures \par
+}}
+{\xe \v CumCol4\:library.h}
+{\xe \v library.h\:CumCol4}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b _CumCol4} {\b CumCol4}}}
+\par
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Data\:library.h}
+{\xe \v library.h\:Data}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b _Data} {\b Data}}}
+\par
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+data da word \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v Average_Line_5\:library.h}
+{\xe \v library.h\:Average_Line_5}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float Average_Line_5 (unsigned long int  {\i totalLetters}, int  {\i totalWords})}}
+\par
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+C\'E1lculo da M\'E9dia do tamanho das palavras \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 32 \{\par
+33     {\cf19 return} ({\cf18 float})totalLetters / totalWords;\par
+34 \}\par
+}
+}
+{\xe \v BTree_free\:library.h}
+{\xe \v library.h\:BTree_free}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void BTree_free ({\b BTree} *  {\i root})}}
+\par
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+---------\'97 SIGNATURES ---------\'97\par
+Main \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 210 \{\par
+211     {\cf19 if} (root)\par
+212     \{\par
+213         BTree_free(root->left);\par
+214         BTree_free(root->right);\par
+215         free(root);\par
+216     \}\par
+217 \}\par
+}
+}
+{\xe \v Cumcol3_free\:library.h}
+{\xe \v library.h\:Cumcol3_free}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Cumcol3_free ({\b CumCol3} *  {\i root})}}
+\par
+{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 220 \{\par
+221     {\cf19 if} (root)\par
+222     \{\par
+223         Cumcol3_free(root->left);\par
+224         Cumcol3_free(root->right);\par
+225         free(root);\par
+226     \}\par
+227 \}\par
+}
+}
+{\xe \v CumCol4_free\:library.h}
+{\xe \v library.h\:CumCol4_free}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void CumCol4_free ({\b CumCol4} *  {\i root})}}
+\par
+{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 230 \{\par
+231     {\cf19 if} (root)\par
+232     \{\par
+233         CumCol4_free(root->left);\par
+234         CumCol4_free(root->right);\par
+235         free(root);\par
+236     \}\par
+237 \}\par
+}
+}
+{\xe \v GenerateByClassification\:library.h}
+{\xe \v library.h\:GenerateByClassification}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void GenerateByClassification ({\b BTree} *  {\i tree}, {\b CumCol3} *  {\i treeClassification})}}
+\par
+{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Line 2\par
+Funcao que percorre a arvore orginal para copiar para a segunda \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 34 \{\par
+35     {\cf19 if}(tree != NULL)\par
+36     \{\par
+37         GenerateByClassification(tree->left, treeClassification);\par
+38 \par
+39         treeClassification  = InsertOrCount(treeClassification, tree);\par
+40         \par
+41         GenerateByClassification(tree->right, treeClassification);\par
+42     \}\par
+43     \par
+44 \}\par
+}
+}
+{\xe \v GenerateLine4_Final\:library.h}
+{\xe \v library.h\:GenerateLine4_Final}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void GenerateLine4_Final ({\b CumCol4} *  {\i treeLine4}, {\b CumCol4} *  {\i treeLine4Aux})}}
+\par
+{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v GenerateLine4_Media\:library.h}
+{\xe \v library.h\:GenerateLine4_Media}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void GenerateLine4_Media ({\b BTree} *  {\i tree}, {\b CumCol4} *  {\i treeLine4})}}
+\par
+{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Percorre a primeira arvore e manda para a segunda \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 43 \{\par
+44     {\cf19 if}(tree != NULL)\par
+45     \{\par
+46         GenerateLine4_Media(tree->left, treeLine4);\par
+47 \par
+48         treeLine4  = SortTree_4_Media(treeLine4, tree);\par
+49         \par
+50         GenerateLine4_Media(tree->right, treeLine4);\par
+51     \}\par
+52 \}\par
+}
+}
+{\xe \v GenerateLine4_StrDev\:library.h}
+{\xe \v library.h\:GenerateLine4_StrDev}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void GenerateLine4_StrDev ({\b BTree} *  {\i tree}, {\b CumCol4} *  {\i treeLine4})}}
+\par
+{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v InOrderAscending\:library.h}
+{\xe \v library.h\:InOrderAscending}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void InOrderAscending ({\b CumCol3} *  {\i treeClassification}, int *  {\i ptrTotalLines}, int *  {\i totalNi}, double *  {\i totalFi})}}
+\par
+{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Imprime a arvore de forma ascendente \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Sem este if est\'E1 a imprimir o nodo que est\'E1 NULL. PORQU\'CA?\par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 48 \{\par
+49     {\cf18 double} auxFi = 0;\par
+50     {\cf18 int} auxNi = 0;\par
+51     {\cf19 if} (treeClassification)\par
+52     \{\par
+53         InOrderAscending (treeClassification->left, ptrTotalLines, totalNi, totalFi);\par
+54     \par
+56         {\cf19 if}(treeClassification->count != 0)\par
+57         \{\par
+58             auxFi = (double)treeClassification->count / *ptrTotalLines;\par
+59             auxNi = treeClassification->count;\par
+60             *totalNi = *totalNi + auxNi;\par
+61             *totalFi = *totalFi + auxFi;\par
+62             printf({\cf22 "|\\t%s\\t\\t|\\t%d\\t|\\t%f\\t| \\t%d\\t|  \\t%f\\t|\\n"}, treeClassification->analyze, auxNi, auxFi, *totalNi, *totalFi);\par
+63         \}\par
+64         InOrderAscending (treeClassification->right, ptrTotalLines, totalNi, totalFi);\par
+65         \par
+66     \}\par
+67 \}\par
+}
+}
+{\xe \v InOrderFinal\:library.h}
+{\xe \v library.h\:InOrderFinal}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void InOrderFinal ({\b CumCol4} *  {\i treeLine4})}}
+\par
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v InOrderMedia\:library.h}
+{\xe \v library.h\:InOrderMedia}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void InOrderMedia ({\b CumCol4} *  {\i treeLine4})}}
+\par
+{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Imprime a media da categoria 3 existente \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Sem este if est\'E1 a imprimir o nodo que est\'E1 NULL. PORQU\'CA?\par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 56 \{\par
+57     {\cf19 if} (treeLine4)\par
+58     \{\par
+59         InOrderMedia (treeLine4->left);\par
+60     \par
+62         {\cf19 if}(treeLine4->count != 0)\par
+63         \{\par
+64             treeLine4->media = (float) treeLine4->prob / treeLine4->count;\par
+65             \par
+66             printf({\cf22 "%s:\\t%f\\n"}, treeLine4->analyze, treeLine4->media);\par
+67         \}\par
+68         InOrderMedia (treeLine4->right);\par
+69     \}\par
+70 \}\par
+}
+}
+{\xe \v InOrderStrDev\:library.h}
+{\xe \v library.h\:InOrderStrDev}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void InOrderStrDev ({\b CumCol4} *  {\i treeLine4})}}
+\par
+{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Insert_File_Tree\:library.h}
+{\xe \v library.h\:Insert_File_Tree}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b BTree}* Insert_File_Tree ({\b BTree} *  {\i tree}, {\b Data}  {\i tempData}, int *  {\i ptrTotalWords})}}
+\par
+{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Insere o ficheiro na Arvore \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Se entra aqui \'E9 porque \'E9 uma word diferente.\par
+Ent\'E3o vamos incrementar o total de words.\par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 71 \{\par
+72     {\cf19 if} (tree)\par
+73     \{\par
+74         {\cf19 if} (strcmp(tree->data.word, tempData.word) < 0)\par
+75             tree->left = Insert_File_Tree(tree->left, tempData, ptrTotalWords);\par
+76 \par
+77         {\cf19 if} (strcmp(tree->data.word, tempData.word) > 0)\par
+78             tree->right = Insert_File_Tree(tree->right, tempData, ptrTotalWords);\par
+79         \par
+80         {\cf19 if} ((strcmp(tree->data.word, tempData.word) == 0) && (strcmp(tree->data.analyze, tempData.analyze) == 0))\par
+81             tree->data.totalOccurrences ++;\par
+82 \par
+83         {\cf19 if} ((strcmp(tree->data.word, tempData.word) == 0) && (strcmp(tree->data.analyze, tempData.analyze) != 0))\par
+84             tree->right = Insert_File_Tree(tree->right, tempData, ptrTotalWords);\par
+85     \}\par
+86     {\cf19 else}\par
+87     \{\par
+88         tree = (BTree*) malloc({\cf17 sizeof}(BTree));\par
+89 \par
+90         tree->data.word     =   ({\cf18 char}*) malloc(strlen(tempData.word)    *   {\cf17 sizeof}(char) + 1);\par
+91         tree->data.motto    =   ({\cf18 char}*) malloc(strlen(tempData.motto)   *   {\cf17 sizeof}(char) + 1);\par
+92         tree->data.analyze  =   ({\cf18 char}*) malloc(strlen(tempData.analyze) *   {\cf17 sizeof}(char) + 1);\par
+93 \par
+94 \par
+95         strcpy(tree->data.word,       tempData.word);\par
+96         strcpy(tree->data.motto,          tempData.motto);\par
+97         strcpy(tree->data.analyze,       tempData.analyze);\par
+98         \par
+99         tree->data.prob     =   tempData.prob;\par
+100         tree->data.totalOccurrences  =   1;\par
+101         tree->data.lenghtWord    =   strlen(tempData.word);\par
+102 \par
+103         tree->left = tree->right       =   NULL;\par
+104 \par
+107         ++*ptrTotalWords;\par
+108     \}\par
+109     {\cf19 return} tree;\par
+110 \}\par
+}
+}
+{\xe \v InsertOrCount\:library.h}
+{\xe \v library.h\:InsertOrCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b CumCol3}* InsertOrCount ({\b CumCol3} *  {\i treeClass}, {\b BTree} *  {\i tree})}}
+\par
+{\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Insere noutra Arcvore faz comparacao alfabetica. Se for maior manda pa direita, se for menor manda pa esquerda e se for igual adiciona as vezes que aparece a contagem \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 6 \{\par
+7     {\cf19 if}(treeClass)\par
+8     \{\par
+9         {\cf19 if}(strcmp(treeClass->analyze, tree->data.analyze) == 0)\par
+10             treeClass->count += tree->data.totalOccurrences;\par
+11 \par
+12         {\cf19 if}(strcmp(treeClass->analyze, tree->data.analyze) < 0)\par
+13                 treeClass->left = InsertOrCount( treeClass->left , tree );\par
+14 \par
+15         {\cf19 if}(strcmp(treeClass->analyze, tree->data.analyze) > 0)\par
+16                 treeClass->right = InsertOrCount( treeClass->right , tree );\par
+17     \}\par
+18     {\cf19 else}\par
+19     \{\par
+20         treeClass = (CumCol3 *) malloc ( {\cf17 sizeof} ( CumCol3 ) ) ;\par
+21 \par
+22         treeClass->analyze     =   ({\cf18 char}*) malloc   (strlen(tree->data.analyze)    *   {\cf17 sizeof}(char) + 1);\par
+23 \par
+24         strcpy(treeClass->analyze, tree->data.analyze);\par
+25         treeClass->count = tree->data.totalOccurrences;\par
+26         treeClass->prob = tree->data.prob;\par
+27 \par
+28         treeClass->left = treeClass->right = NULL ;\par
+29     \}\par
+30     {\cf19 return} treeClass;\par
+31 \}\par
+}
+}
+{\xe \v IsInTree\:library.h}
+{\xe \v library.h\:IsInTree}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void IsInTree ({\b BTree} *  {\i tree}, char *  {\i word}, int *  {\i ptrTotalOcurrencesLine6})}}
+\par
+{\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Line 6\par
+Verifica se a palavra inserida pelo utilizador existe\par
+Se existir, totalOcurrencesLine6 toma o valor das ocorrencias da palavra \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 6 \{\par
+7     {\cf19 if}(tree)\par
+8     \{\par
+9         {\cf19 if}(strcmp(tree->data.word, word) < 0)\par
+10             IsInTree(tree->left, word, ptrTotalOcurrencesLine6);\par
+11         \par
+12         {\cf19 if}(strcmp(tree->data.word, word) > 0)\par
+13             IsInTree(tree->right, word, ptrTotalOcurrencesLine6);\par
+14 \par
+15         {\cf19 if}(strcmp(tree->data.word, word) == 0)\par
+16             *ptrTotalOcurrencesLine6 = tree->data.totalOccurrences;\par
+17     \}\par
+18 \}\par
+}
+}
+{\xe \v Line_3_Word_Frequency_Table\:library.h}
+{\xe \v library.h\:Line_3_Word_Frequency_Table}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Line_3_Word_Frequency_Table ({\b BTree} *  {\i tree})}}
+\par
+{\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Line 3 \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+ni = total de palavras no intervalo\par
+fi = ni / N (N = TOTAL)\par
+Cum ni = ni 1 + ni 2 + ... + ni 5\par
+Cum fi = fi 1 + fi 2 + ... + fi 5\par
+Vari\'E1veis para o c\'E1lculo das frequ\'EAncias absolutas\par
+Pointers para cada vari\'E1vel de frequ\'EAncias absolutas\par
+Vari\'E1veis para o c\'E1lculo das frequ\'EAncias relativas\par
+Chama a fun\'E7\'E3o para constru\'E7\'E3o das classes, passando os pointers por par\'E2metro\par
+C\'E1lculo do total das frequ\'EAncias absolutas\par
+que dever\'E1 ser igual ao total de linhas com conte\'FAdo v\'E1lido\par
+C\'E1lculo das frequ\'EAncias relativas\par
+Tabela de frequ\'EAncias\par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 4 \{\par
+17     {\cf18 int} ni20    = 0;\par
+18     {\cf18 int} ni40    = 0;\par
+19     {\cf18 int} ni60    = 0;\par
+20     {\cf18 int} ni80    = 0;\par
+21     {\cf18 int} ni100   = 0;\par
+22     {\cf18 int} totalNi = 0;\par
+23 \par
+25     {\cf18 int} *ptr20  = &ni20;\par
+26     {\cf18 int} *ptr40  = &ni40;\par
+27     {\cf18 int} *ptr60  = &ni60;\par
+28     {\cf18 int} *ptr80  = &ni80;\par
+29     {\cf18 int} *ptr100 = &ni100;\par
+30 \par
+32     {\cf18 float} fi20;\par
+33     {\cf18 float} fi40;\par
+34     {\cf18 float} fi60;\par
+35     {\cf18 float} fi80;\par
+36     {\cf18 float} fi100;\par
+37     {\cf18 int} totalFi;\par
+38 \par
+39 \par
+41     TreeTraversal_Line_3(tree, ptr20, ptr40, ptr60, ptr80, ptr100);\par
+42 \par
+43 \par
+46     totalNi = ni20 + ni40 + ni60 + ni80 + ni100;\par
+47     \par
+48 \par
+50     fi20  = (float)ni20   / totalNi;\par
+51     fi40  = (float)ni40   / totalNi;\par
+52     fi60  = (float)ni60   / totalNi;\par
+53     fi80  = (float)ni80   / totalNi;\par
+54     fi100 = (float)ni100  / totalNi;\par
+55     totalFi = fi20 + fi40 + fi60 + fi80 + fi100;\par
+56 \par
+58     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+59     printf({\cf22 "|\\tWord Length\\t|\\tni\\t|\\t  fi\\t\\t|\\tCum ni\\t|\\tCum fi\\t\\t|\\n"});\par
+60     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+61     printf({\cf22 "|\\t[  0 ; 20  [\\t|\\t%d\\t|\\t%f\\t|\\t%d\\t|\\t%f\\t|\\n"}, ni20,   fi20,   ni20, fi20);\par
+62     printf({\cf22 "|\\t[ 20 ; 40  [\\t|\\t%d\\t|\\t%f\\t|\\t%d\\t|\\t%f\\t|\\n"}, ni40,   fi40,   ni20 + ni40, fi20 + fi40);\par
+63     printf({\cf22 "|\\t[ 40 ; 60  [\\t|\\t%d\\t|\\t%f\\t|\\t%d\\t|\\t%f\\t|\\n"}, ni60,   fi60,   ni20 + ni40 + ni60, fi20 + fi40 + fi60);\par
+64     printf({\cf22 "|\\t[ 60 ; 80  [\\t|\\t%d\\t|\\t%f\\t|\\t%d\\t|\\t%f\\t|\\n"}, ni80,   fi80,   ni20 + ni40 + ni60 + ni80, fi20 + fi40 + fi60 + fi80);\par
+65     printf({\cf22 "|\\t[ 80 ; 100 [\\t|\\t%d\\t|\\t%f\\t|\\t%d\\t|\\t%.1f\\t\\t|\\n"}, ni100,  fi100,  ni20 + ni40 + ni60 + ni80 + ni100, fi20 + fi40 + fi60 + fi80 + fi100);\par
+66     printf({\cf22 "|-------------------------------------------------------------------------------------------------------|\\n"});\par
+67     printf({\cf22 "|\\t TOTAL \\t\\t|\\t%d\\t|\\t%d\\t\\t|---------------|-----------------------|\\n"}, totalNi, totalFi);\par
+68     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+69 \}\par
+}
+}
+{\xe \v MaxCount\:library.h}
+{\xe \v library.h\:MaxCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void MaxCount ({\b BTree} *  {\i tree}, int *  {\i ptrMaxCount})}}
+\par
+{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Travessia sobre a \'E1rvore do ficheiro para\par
+verificar qual a palavra que se repete mais vezes.\par
+Para posteriormente fazer o c\'E1lculo dos quartis sobre esse n\'FAmero\par
+MaxCount toma o valor da palavra que mais se repete \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 25 \{\par
+26     {\cf19 if} (tree)\par
+27     \{\par
+28         MaxCount(tree->left, ptrMaxCount);\par
+29         {\cf19 if} (tree->data.totalOccurrences > *ptrMaxCount)\par
+30         \{\par
+31             *ptrMaxCount = tree->data.totalOccurrences;\par
+32         \}\par
+33         MaxCount(tree->right, ptrMaxCount);\par
+34     \}\par
+35 \}\par
+}
+}
+{\xe \v NewTreeAscending\:library.h}
+{\xe \v library.h\:NewTreeAscending}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b CumCol3}* NewTreeAscending ({\b CumCol3} *  {\i treeClass}, {\b CumCol3} *  {\i treeClassOcur})}}
+\par
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Ordena a arvore pelas vezes em que aparece \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 85 \{\par
+86     {\cf19 if} (treeClassOcur)\par
+87     \{\par
+88         {\cf19 if} (treeClass->count < treeClassOcur->count)\par
+89             treeClassOcur->left = NewTreeAscending(treeClass, treeClassOcur->left);\par
+90         \par
+91         {\cf19 if} (treeClass->count > treeClassOcur->count)\par
+92             treeClassOcur->right = NewTreeAscending(treeClass, treeClassOcur->right);\par
+93     \}\par
+94     {\cf19 else}\par
+95     \{\par
+96         treeClassOcur = (CumCol3 *) malloc ({\cf17 sizeof} (CumCol3));\par
+97 \par
+98         treeClassOcur->analyze = ({\cf18 char} *) malloc (strlen(treeClass->analyze) * {\cf17 sizeof}(char) + 1);\par
+99 \par
+100         strcpy(treeClassOcur->analyze, treeClass->analyze);\par
+101         treeClassOcur->count = treeClass->count;\par
+102 \par
+103         treeClassOcur->left = treeClassOcur->right = NULL;\par
+104     \}\par
+105     {\cf19 return} treeClassOcur;    \par
+106 \}\par
+}
+}
+{\xe \v Print_Tree\:library.h}
+{\xe \v library.h\:Print_Tree}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Print_Tree ({\b BTree} *  {\i tree})}}
+\par
+{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Imprime a Arvore \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 58 \{\par
+59     {\cf19 if} (tree)\par
+60     \{\par
+61         Print_Tree(tree->right);\par
+62         printf({\cf22 "%-15s %-15s %-15s\\t%f\\tAparece %d vezes e tem %d letras.\\n"}, tree->data.word, tree->data.motto, tree->data.analyze,\par
+63                                                                         tree->data.prob, tree->data.totalOccurrences, tree->data.lenghtWord);\par
+64         Print_Tree(tree->left);\par
+65     \}\par
+66 \}\par
+}
+}
+{\xe \v PrintEndTable\:library.h}
+{\xe \v library.h\:PrintEndTable}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void PrintEndTable (int  {\i totalNiLine3}, double  {\i totalFiLine3})}}
+\par
+{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Impressao do fim da tabela \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 118 \{\par
+119     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+120     printf({\cf22 "|\\tTOTAL  \\t\\t|\\t%d\\t|\\t%f\\t|               |                       |\\n"}, totalNiLine3, totalFiLine3);\par
+121     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+122 \}\par
+}
+}
+{\xe \v PrintHeadTable\:library.h}
+{\xe \v library.h\:PrintHeadTable}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void PrintHeadTable ()}}
+\par
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Impressao da cabeca da tabela \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 110 \{\par
+111     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+112     printf({\cf22 "|   Classification\\t|\\tni\\t|\\tfi\\t\\t|\\tCum ni\\t|\\tCum fi\\t\\t|\\n"});\par
+113     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+114 \}\par
+}
+}
+{\xe \v Quartiles\:library.h}
+{\xe \v library.h\:Quartiles}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Quartiles (int  {\i maxCount}, int  {\i totalOcurrencesLine6})}}
+\par
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Recebe o valor da palavra que se repete mais vezes\par
+e quantas vezes se repete a palavra inserida pelo utilizador\par
+C\'E1lculo dos quartis e retorna o quartil a que pertence a palavra \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 41 \{\par
+42     {\cf18 float} quartile_1 = (float)maxCount / 4;\par
+43     {\cf18 float} quartile_2 = (float)maxCount / 2;\par
+44     {\cf18 float} quartile_3 = (float)maxCount / 4 + quartile_2;\par
+45 \par
+46     puts({\cf22 "Quartis:"});\par
+47     printf({\cf22 "\\tQ1 -> 0 a %.0f"}, quartile_1);\par
+48     printf({\cf22 "\\n\\tQ2 -> %.0f a %.0f"}, quartile_1 + 1, quartile_2);\par
+49     printf({\cf22 "\\n\\tQ3 -> %.0f a %.0f"}, quartile_2 + 1, quartile_3);\par
+50     printf({\cf22 "\\n\\tQ4 -> %.0f a %d"}, quartile_3 + 1, maxCount);\par
+51 \par
+52     {\cf19 if} (totalOcurrencesLine6 <= quartile_1)\par
+53         {\cf19 return} 1;\par
+54 \par
+55     {\cf19 if} (totalOcurrencesLine6 > quartile_1 && totalOcurrencesLine6 <= quartile_2)\par
+56         {\cf19 return} 2;\par
+57 \par
+58     {\cf19 if} (totalOcurrencesLine6 > quartile_2 && totalOcurrencesLine6 <= quartile_3)\par
+59         {\cf19 return} 3;\par
+60     \par
+61     {\cf19 return} 4;\par
+62 \}\par
+}
+}
+{\xe \v ReadFile\:library.h}
+{\xe \v library.h\:ReadFile}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b BTree}* ReadFile ({\b BTree} *  {\i tempTree}, int *  {\i ptrTotalWords}, int *  {\i ptrTotalLines})}}
+\par
+{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+File\par
+Le o ficheiro \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 16 \{\par
+17     FILE *file;\par
+18     Data tempData;\par
+19 \par
+20     {\cf18 char} auxWord[100];\par
+21     {\cf18 char} auxMotto[100];\par
+22     {\cf18 char} auxAnalyze[100];\par
+23 \par
+24     {\cf18 int} total = 0;\par
+25 \par
+26     file = fopen(_TEXT_FILE, {\cf22 "r"});\par
+27 \par
+28     rewind(file);\par
+29 \par
+30     {\cf19 while} (fscanf(file, {\cf22 "%s %s %s %f"}, auxWord, auxMotto, auxAnalyze, &tempData.prob) != EOF)\par
+31     \{\par
+32         {\cf19 if} (Special_Characters(auxAnalyze) == 0)\par
+33         \{            \par
+34             ++total;\par
+35             Small_Letters(auxWord);\par
+36 \par
+37             tempData.word =     ({\cf18 char}*) malloc(strlen(auxWord)*{\cf17 sizeof}(char) + 1);\par
+38             tempData.motto =    ({\cf18 char}*) malloc(strlen(auxMotto)*{\cf17 sizeof}(char) + 1);\par
+39             tempData.analyze =  ({\cf18 char}*) malloc(strlen(auxAnalyze)*{\cf17 sizeof}(char) + 1);\par
+40 \par
+41             strcpy(tempData.word, auxWord);\par
+42             strcpy(tempData.motto, auxMotto);\par
+43             strcpy(tempData.analyze, auxAnalyze);\par
+44 \par
+45             tempTree = Insert_File_Tree(tempTree, tempData, ptrTotalWords);\par
+46         \}\par
+47     \}\par
+48 \par
+49     fclose(file);\par
+50 \par
+51     *ptrTotalLines = total;\par
+52     \par
+53     {\cf19 return} tempTree;\par
+54 \}\par
+}
+}
+{\xe \v Small_Letters\:library.h}
+{\xe \v library.h\:Small_Letters}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Small_Letters (char *  {\i treeWord})}}
+\par
+{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+This function is needed in more than 1 file\par
+So in this file is accessible anywhere \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 242 \{\par
+243     {\cf18 char} aux;\par
+244     {\cf18 int} i = 0;\par
+245 \par
+246     {\cf19 while} (treeWord[i] != {\cf23 '\\0'})\par
+247     \{\par
+248         aux = treeWord[i];\par
+249         {\cf19 if} (aux >= {\cf23 'A'} && aux <= {\cf23 'Z'})\par
+250         \{\par
+251             treeWord[i] = treeWord[i] + 32;\par
+252         \}\par
+253         i++;\par
+254     \}\par
+255 \}\par
+}
+}
+{\xe \v SortTree\:library.h}
+{\xe \v library.h\:SortTree}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void SortTree ({\b CumCol3} *  {\i treeClassification}, {\b CumCol3} *  {\i treeClassOcur})}}
+\par
+{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Funcao para percorrer a primeira arvore e mandar para a segunda \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 71 \{\par
+72     {\cf19 if} (treeClassification)\par
+73     \{        \par
+74         SortTree(treeClassification->left, treeClassOcur);\par
+75 \par
+76         treeClassOcur = NewTreeAscending(treeClassification, treeClassOcur);\par
+77 \par
+78         SortTree(treeClassification->right, treeClassOcur);\par
+79     \}\par
+80 \}\par
+}
+}
+{\xe \v SortTree_4_Final\:library.h}
+{\xe \v library.h\:SortTree_4_Final}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b CumCol4}* SortTree_4_Final ({\b CumCol4} *  {\i treeLine4Aux}, {\b CumCol4} *  {\i treeLine4})}}
+\par
+{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v SortTree_4_Media\:library.h}
+{\xe \v library.h\:SortTree_4_Media}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b CumCol4}* SortTree_4_Media ({\b CumCol4} *  {\i treeLine4}, {\b BTree} *  {\i tree})}}
+\par
+{\bkmkstart AAAAAAAABL}
+{\bkmkend AAAAAAAABL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Line 4\par
+percorres uma vez e ficas SUM(Probabilidade) & numero de registos Com isto encontras a media (xi - media) ^ 2\par
+Vindo da segunda arvore comeca a copiar para outra arvore \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 10 \{\par
+11     {\cf19 if}(treeLine4)\par
+12     \{\par
+13         {\cf19 if}(strcmp(treeLine4->analyze, tree->data.analyze) == 0 )\par
+14         \{\par
+15             treeLine4->count += tree->data.totalOccurrences;\par
+16             treeLine4->prob += tree->data.prob;\par
+17         \}\par
+18 \par
+19         {\cf19 if}(strcmp(treeLine4->analyze, tree->data.analyze) < 0)\par
+20                 treeLine4->left = SortTree_4_Media( treeLine4->left , tree );\par
+21 \par
+22         {\cf19 if}(strcmp(treeLine4->analyze, tree->data.analyze) > 0)\par
+23                 treeLine4->right = SortTree_4_Media( treeLine4->right , tree );\par
+24     \}\par
+25     {\cf19 else}\par
+26     \{\par
+27         treeLine4 = (CumCol4 *) malloc ( {\cf17 sizeof} ( CumCol4 ) ) ;\par
+28 \par
+29         treeLine4->analyze     =   ({\cf18 char}*) malloc   (strlen(tree->data.analyze)    *   {\cf17 sizeof}(char) + 1);\par
+30 \par
+31         strcpy(treeLine4->analyze, tree->data.analyze);\par
+32         treeLine4->count = tree->data.totalOccurrences;\par
+33         treeLine4->prob = tree->data.prob;\par
+34 \par
+35         treeLine4->left = treeLine4->right = NULL ;\par
+36     \}\par
+37     {\cf19 return} treeLine4;\par
+38 \}\par
+}
+}
+{\xe \v SortTree_4_StrDev\:library.h}
+{\xe \v library.h\:SortTree_4_StrDev}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b CumCol4}* SortTree_4_StrDev ({\b CumCol4} *  {\i treeLine4}, {\b BTree} *  {\i tree})}}
+\par
+{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Special_Characters\:library.h}
+{\xe \v library.h\:Special_Characters}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Special_Characters (char *  {\i analyzeTree})}}
+\par
+{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Ignorar pontua\'E7\'E3o\par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 4 \{\par
+6     {\cf19 if} (analyzeTree[0] == {\cf23 'F'})\par
+7     \{\par
+8         {\cf19 return} 1;\par
+9     \}\par
+10     {\cf19 return} 0;\par
+11 \}\par
+}
+}
+{\xe \v TreeTraversal_Line_3\:library.h}
+{\xe \v library.h\:TreeTraversal_Line_3}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void TreeTraversal_Line_3 ({\b BTree} *  {\i tree}, int *  {\i ptr20}, int *  {\i ptr40}, int *  {\i ptr60}, int *  {\i ptr80}, int *  {\i ptr100})}}
+\par
+{\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Travessia na \'E1rvore do ficheiro para a constru\'E7\'E3o de cada classe\par
+Como se trata de apenas 5 classes, optamos por ter uma vari\'E1vel para cada classe \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 74 \{\par
+75     {\cf19 if} (tree)\par
+76     \{\par
+77         TreeTraversal_Line_3(tree->left, ptr20, ptr40, ptr60, ptr80, ptr100);\par
+78 \par
+79         {\cf19 if} (tree->data.lenghtWord <= 20)\par
+80             *ptr20 += tree->data.totalOccurrences;\par
+81 \par
+82         {\cf19 if} (tree->data.lenghtWord > 20 && tree->data.lenghtWord <= 40)\par
+83             *ptr40 += tree->data.totalOccurrences;\par
+84 \par
+85         {\cf19 if} (tree->data.lenghtWord > 40 && tree->data.lenghtWord <= 60)\par
+86             *ptr60 += tree->data.totalOccurrences;\par
+87 \par
+88         {\cf19 if} (tree->data.lenghtWord > 60 && tree->data.lenghtWord <= 80)\par
+89             *ptr80 += tree->data.totalOccurrences;\par
+90         \par
+91         {\cf19 if} (tree->data.lenghtWord > 80)\par
+92             *ptr100 += tree->data.totalOccurrences;\par
+93 \par
+94         TreeTraversal_Line_3(tree->right, ptr20, ptr40, ptr60, ptr80, ptr100);\par
+95     \}    \par
+96 \}\par
+}
+}
+{\xe \v TreeTraversal_Mode_Letters\:library.h}
+{\xe \v library.h\:TreeTraversal_Mode_Letters}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void TreeTraversal_Mode_Letters ({\b BTree} *  {\i tree}, int  {\i wordSize}[])}}
+\par
+{\bkmkstart AAAAAAAABP}
+{\bkmkend AAAAAAAABP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Travessia da \'E1rvore do ficheiro para o c\'E1lculo da Moda \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 38 \{\par
+39     {\cf19 if} (tree != NULL)\par
+40     \{\par
+41         TreeTraversal_Mode_Letters(tree->left, wordSize);\par
+42 \par
+43         wordSize[tree->data.lenghtWord] += tree->data.totalOccurrences;\par
+44 \par
+45         TreeTraversal_Mode_Letters(tree->right, wordSize);\par
+46     \}\par
+47 \}\par
+}
+}
+{\xe \v TreeTraversal_Total_Letters\:library.h}
+{\xe \v library.h\:TreeTraversal_Total_Letters}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void TreeTraversal_Total_Letters ({\b BTree} *  {\i tree}, unsigned long int *  {\i totalLetters})}}
+\par
+{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Line 5\par
+#define SIZEHISTOGRAMA 50.0 int tamanho[128];\par
+tamanho[strlen(palavra)]++;\par
+int histograma[SIZEHISTOGRAMA];\par
+histograma[round((probabilidade *SIZEHISTOGRAMA))]++\par
+for(int i) class = i/SIZEHISTOGRAMA\par
+Travessia na \'E1rvore do ficheiro para contar o\par
+total de letras contidas em todas as palavras do ficheiro\par
+Acrescenta na vari\'E1vel totalLetters o tamanho da palavra e\par
+multiplica pelo numero de vezes que essa palavra aparece \par
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 19 \{\par
+20     {\cf19 if} (tree)\par
+21     \{\par
+22         TreeTraversal_Total_Letters(tree->left, totalLetters);\par
+23 \par
+24         *totalLetters += tree->data.lenghtWord * tree->data.totalOccurrences;\par
+25 \par
+26         TreeTraversal_Total_Letters(tree->right, totalLetters);\par
+27     \}\par
+28 \}\par
+}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+line2.c File Reference\par \pard\plain 
+{\tc\tcl2 \v line2.c}
+{\xe \v line2.c}
+{\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "library.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b CumCol3} * {\b InsertOrCount} ({\b CumCol3} *treeClass, {\b BTree} *tree)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b GenerateByClassification} ({\b BTree} *tree, {\b CumCol3} *treeClassification)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b InOrderAscending} ({\b CumCol3} *treeClassification, int *ptrTotalLines, int *totalNi, double *totalFi)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b SortTree} ({\b CumCol3} *treeClassification, {\b CumCol3} *treeClassOcur)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b CumCol3} * {\b NewTreeAscending} ({\b CumCol3} *treeClass, {\b CumCol3} *treeClassOcur)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b PrintHeadTable} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b PrintEndTable} (int totalNiLine3, double totalFiLine3)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v GenerateByClassification\:line2.c}
+{\xe \v line2.c\:GenerateByClassification}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void GenerateByClassification ({\b BTree} *  {\i tree}, {\b CumCol3} *  {\i treeClassification})}}
+\par
+{\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Funcao que percorre a arvore orginal para copiar para a segunda \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 34 \{\par
+35     {\cf19 if}(tree != NULL)\par
+36     \{\par
+37         GenerateByClassification(tree->left, treeClassification);\par
+38 \par
+39         treeClassification  = InsertOrCount(treeClassification, tree);\par
+40         \par
+41         GenerateByClassification(tree->right, treeClassification);\par
+42     \}\par
+43     \par
+44 \}\par
+}
+}
+{\xe \v InOrderAscending\:line2.c}
+{\xe \v line2.c\:InOrderAscending}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void InOrderAscending ({\b CumCol3} *  {\i treeClassification}, int *  {\i ptrTotalLines}, int *  {\i totalNi}, double *  {\i totalFi})}}
+\par
+{\bkmkstart AAAAAAAABT}
+{\bkmkend AAAAAAAABT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Imprime a arvore de forma ascendente \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Sem este if est\'E1 a imprimir o nodo que est\'E1 NULL. PORQU\'CA?\par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 48 \{\par
+49     {\cf18 double} auxFi = 0;\par
+50     {\cf18 int} auxNi = 0;\par
+51     {\cf19 if} (treeClassification)\par
+52     \{\par
+53         InOrderAscending (treeClassification->left, ptrTotalLines, totalNi, totalFi);\par
+54     \par
+56         {\cf19 if}(treeClassification->count != 0)\par
+57         \{\par
+58             auxFi = (double)treeClassification->count / *ptrTotalLines;\par
+59             auxNi = treeClassification->count;\par
+60             *totalNi = *totalNi + auxNi;\par
+61             *totalFi = *totalFi + auxFi;\par
+62             printf({\cf22 "|\\t%s\\t\\t|\\t%d\\t|\\t%f\\t| \\t%d\\t|  \\t%f\\t|\\n"}, treeClassification->analyze, auxNi, auxFi, *totalNi, *totalFi);\par
+63         \}\par
+64         InOrderAscending (treeClassification->right, ptrTotalLines, totalNi, totalFi);\par
+65         \par
+66     \}\par
+67 \}\par
+}
+}
+{\xe \v InsertOrCount\:line2.c}
+{\xe \v line2.c\:InsertOrCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b CumCol3}* InsertOrCount ({\b CumCol3} *  {\i treeClass}, {\b BTree} *  {\i tree})}}
+\par
+{\bkmkstart AAAAAAAABU}
+{\bkmkend AAAAAAAABU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Insere noutra Arcvore faz comparacao alfabetica. Se for maior manda pa direita, se for menor manda pa esquerda e se for igual adiciona as vezes que aparece a contagem \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 6 \{\par
+7     {\cf19 if}(treeClass)\par
+8     \{\par
+9         {\cf19 if}(strcmp(treeClass->analyze, tree->data.analyze) == 0)\par
+10             treeClass->count += tree->data.totalOccurrences;\par
+11 \par
+12         {\cf19 if}(strcmp(treeClass->analyze, tree->data.analyze) < 0)\par
+13                 treeClass->left = InsertOrCount( treeClass->left , tree );\par
+14 \par
+15         {\cf19 if}(strcmp(treeClass->analyze, tree->data.analyze) > 0)\par
+16                 treeClass->right = InsertOrCount( treeClass->right , tree );\par
+17     \}\par
+18     {\cf19 else}\par
+19     \{\par
+20         treeClass = (CumCol3 *) malloc ( {\cf17 sizeof} ( CumCol3 ) ) ;\par
+21 \par
+22         treeClass->analyze     =   ({\cf18 char}*) malloc   (strlen(tree->data.analyze)    *   {\cf17 sizeof}(char) + 1);\par
+23 \par
+24         strcpy(treeClass->analyze, tree->data.analyze);\par
+25         treeClass->count = tree->data.totalOccurrences;\par
+26         treeClass->prob = tree->data.prob;\par
+27 \par
+28         treeClass->left = treeClass->right = NULL ;\par
+29     \}\par
+30     {\cf19 return} treeClass;\par
+31 \}\par
+}
+}
+{\xe \v NewTreeAscending\:line2.c}
+{\xe \v line2.c\:NewTreeAscending}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b CumCol3}* NewTreeAscending ({\b CumCol3} *  {\i treeClass}, {\b CumCol3} *  {\i treeClassOcur})}}
+\par
+{\bkmkstart AAAAAAAABV}
+{\bkmkend AAAAAAAABV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Ordena a arvore pelas vezes em que aparece \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 85 \{\par
+86     {\cf19 if} (treeClassOcur)\par
+87     \{\par
+88         {\cf19 if} (treeClass->count < treeClassOcur->count)\par
+89             treeClassOcur->left = NewTreeAscending(treeClass, treeClassOcur->left);\par
+90         \par
+91         {\cf19 if} (treeClass->count > treeClassOcur->count)\par
+92             treeClassOcur->right = NewTreeAscending(treeClass, treeClassOcur->right);\par
+93     \}\par
+94     {\cf19 else}\par
+95     \{\par
+96         treeClassOcur = (CumCol3 *) malloc ({\cf17 sizeof} (CumCol3));\par
+97 \par
+98         treeClassOcur->analyze = ({\cf18 char} *) malloc (strlen(treeClass->analyze) * {\cf17 sizeof}(char) + 1);\par
+99 \par
+100         strcpy(treeClassOcur->analyze, treeClass->analyze);\par
+101         treeClassOcur->count = treeClass->count;\par
+102 \par
+103         treeClassOcur->left = treeClassOcur->right = NULL;\par
+104     \}\par
+105     {\cf19 return} treeClassOcur;    \par
+106 \}\par
+}
+}
+{\xe \v PrintEndTable\:line2.c}
+{\xe \v line2.c\:PrintEndTable}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void PrintEndTable (int  {\i totalNiLine3}, double  {\i totalFiLine3})}}
+\par
+{\bkmkstart AAAAAAAABW}
+{\bkmkend AAAAAAAABW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Impressao do fim da tabela \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 118 \{\par
+119     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+120     printf({\cf22 "|\\tTOTAL  \\t\\t|\\t%d\\t|\\t%f\\t|               |                       |\\n"}, totalNiLine3, totalFiLine3);\par
+121     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+122 \}\par
+}
+}
+{\xe \v PrintHeadTable\:line2.c}
+{\xe \v line2.c\:PrintHeadTable}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void PrintHeadTable ()}}
+\par
+{\bkmkstart AAAAAAAABX}
+{\bkmkend AAAAAAAABX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Impressao da cabeca da tabela \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 110 \{\par
+111     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+112     printf({\cf22 "|   Classification\\t|\\tni\\t|\\tfi\\t\\t|\\tCum ni\\t|\\tCum fi\\t\\t|\\n"});\par
+113     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+114 \}\par
+}
+}
+{\xe \v SortTree\:line2.c}
+{\xe \v line2.c\:SortTree}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void SortTree ({\b CumCol3} *  {\i treeClassification}, {\b CumCol3} *  {\i treeClassOcur})}}
+\par
+{\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Funcao para percorrer a primeira arvore e mandar para a segunda \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 71 \{\par
+72     {\cf19 if} (treeClassification)\par
+73     \{        \par
+74         SortTree(treeClassification->left, treeClassOcur);\par
+75 \par
+76         treeClassOcur = NewTreeAscending(treeClassification, treeClassOcur);\par
+77 \par
+78         SortTree(treeClassification->right, treeClassOcur);\par
+79     \}\par
+80 \}\par
+}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+line3.c File Reference\par \pard\plain 
+{\tc\tcl2 \v line3.c}
+{\xe \v line3.c}
+{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "library.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Line_3_Word_Frequency_Table} ({\b BTree} *tree)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b TreeTraversal_Line_3} ({\b BTree} *tree, int *ptr20, int *ptr40, int *ptr60, int *ptr80, int *ptr100)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v Line_3_Word_Frequency_Table\:line3.c}
+{\xe \v line3.c\:Line_3_Word_Frequency_Table}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Line_3_Word_Frequency_Table ({\b BTree} *  {\i tree})}}
+\par
+{\bkmkstart AAAAAAAACA}
+{\bkmkend AAAAAAAACA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Line 3 \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+ni = total de palavras no intervalo\par
+fi = ni / N (N = TOTAL)\par
+Cum ni = ni 1 + ni 2 + ... + ni 5\par
+Cum fi = fi 1 + fi 2 + ... + fi 5\par
+Vari\'E1veis para o c\'E1lculo das frequ\'EAncias absolutas\par
+Pointers para cada vari\'E1vel de frequ\'EAncias absolutas\par
+Vari\'E1veis para o c\'E1lculo das frequ\'EAncias relativas\par
+Chama a fun\'E7\'E3o para constru\'E7\'E3o das classes, passando os pointers por par\'E2metro\par
+C\'E1lculo do total das frequ\'EAncias absolutas\par
+que dever\'E1 ser igual ao total de linhas com conte\'FAdo v\'E1lido\par
+C\'E1lculo das frequ\'EAncias relativas\par
+Tabela de frequ\'EAncias\par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 4 \{\par
+17     {\cf18 int} ni20    = 0;\par
+18     {\cf18 int} ni40    = 0;\par
+19     {\cf18 int} ni60    = 0;\par
+20     {\cf18 int} ni80    = 0;\par
+21     {\cf18 int} ni100   = 0;\par
+22     {\cf18 int} totalNi = 0;\par
+23 \par
+25     {\cf18 int} *ptr20  = &ni20;\par
+26     {\cf18 int} *ptr40  = &ni40;\par
+27     {\cf18 int} *ptr60  = &ni60;\par
+28     {\cf18 int} *ptr80  = &ni80;\par
+29     {\cf18 int} *ptr100 = &ni100;\par
+30 \par
+32     {\cf18 float} fi20;\par
+33     {\cf18 float} fi40;\par
+34     {\cf18 float} fi60;\par
+35     {\cf18 float} fi80;\par
+36     {\cf18 float} fi100;\par
+37     {\cf18 int} totalFi;\par
+38 \par
+39 \par
+41     TreeTraversal_Line_3(tree, ptr20, ptr40, ptr60, ptr80, ptr100);\par
+42 \par
+43 \par
+46     totalNi = ni20 + ni40 + ni60 + ni80 + ni100;\par
+47     \par
+48 \par
+50     fi20  = (float)ni20   / totalNi;\par
+51     fi40  = (float)ni40   / totalNi;\par
+52     fi60  = (float)ni60   / totalNi;\par
+53     fi80  = (float)ni80   / totalNi;\par
+54     fi100 = (float)ni100  / totalNi;\par
+55     totalFi = fi20 + fi40 + fi60 + fi80 + fi100;\par
+56 \par
+58     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+59     printf({\cf22 "|\\tWord Length\\t|\\tni\\t|\\t  fi\\t\\t|\\tCum ni\\t|\\tCum fi\\t\\t|\\n"});\par
+60     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+61     printf({\cf22 "|\\t[  0 ; 20  [\\t|\\t%d\\t|\\t%f\\t|\\t%d\\t|\\t%f\\t|\\n"}, ni20,   fi20,   ni20, fi20);\par
+62     printf({\cf22 "|\\t[ 20 ; 40  [\\t|\\t%d\\t|\\t%f\\t|\\t%d\\t|\\t%f\\t|\\n"}, ni40,   fi40,   ni20 + ni40, fi20 + fi40);\par
+63     printf({\cf22 "|\\t[ 40 ; 60  [\\t|\\t%d\\t|\\t%f\\t|\\t%d\\t|\\t%f\\t|\\n"}, ni60,   fi60,   ni20 + ni40 + ni60, fi20 + fi40 + fi60);\par
+64     printf({\cf22 "|\\t[ 60 ; 80  [\\t|\\t%d\\t|\\t%f\\t|\\t%d\\t|\\t%f\\t|\\n"}, ni80,   fi80,   ni20 + ni40 + ni60 + ni80, fi20 + fi40 + fi60 + fi80);\par
+65     printf({\cf22 "|\\t[ 80 ; 100 [\\t|\\t%d\\t|\\t%f\\t|\\t%d\\t|\\t%.1f\\t\\t|\\n"}, ni100,  fi100,  ni20 + ni40 + ni60 + ni80 + ni100, fi20 + fi40 + fi60 + fi80 + fi100);\par
+66     printf({\cf22 "|-------------------------------------------------------------------------------------------------------|\\n"});\par
+67     printf({\cf22 "|\\t TOTAL \\t\\t|\\t%d\\t|\\t%d\\t\\t|---------------|-----------------------|\\n"}, totalNi, totalFi);\par
+68     printf({\cf22 "---------------------------------------------------------------------------------------------------------\\n"});\par
+69 \}\par
+}
+}
+{\xe \v TreeTraversal_Line_3\:line3.c}
+{\xe \v line3.c\:TreeTraversal_Line_3}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void TreeTraversal_Line_3 ({\b BTree} *  {\i tree}, int *  {\i ptr20}, int *  {\i ptr40}, int *  {\i ptr60}, int *  {\i ptr80}, int *  {\i ptr100})}}
+\par
+{\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Travessia na \'E1rvore do ficheiro para a constru\'E7\'E3o de cada classe\par
+Como se trata de apenas 5 classes, optamos por ter uma vari\'E1vel para cada classe \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 74 \{\par
+75     {\cf19 if} (tree)\par
+76     \{\par
+77         TreeTraversal_Line_3(tree->left, ptr20, ptr40, ptr60, ptr80, ptr100);\par
+78 \par
+79         {\cf19 if} (tree->data.lenghtWord <= 20)\par
+80             *ptr20 += tree->data.totalOccurrences;\par
+81 \par
+82         {\cf19 if} (tree->data.lenghtWord > 20 && tree->data.lenghtWord <= 40)\par
+83             *ptr40 += tree->data.totalOccurrences;\par
+84 \par
+85         {\cf19 if} (tree->data.lenghtWord > 40 && tree->data.lenghtWord <= 60)\par
+86             *ptr60 += tree->data.totalOccurrences;\par
+87 \par
+88         {\cf19 if} (tree->data.lenghtWord > 60 && tree->data.lenghtWord <= 80)\par
+89             *ptr80 += tree->data.totalOccurrences;\par
+90         \par
+91         {\cf19 if} (tree->data.lenghtWord > 80)\par
+92             *ptr100 += tree->data.totalOccurrences;\par
+93 \par
+94         TreeTraversal_Line_3(tree->right, ptr20, ptr40, ptr60, ptr80, ptr100);\par
+95     \}    \par
+96 \}\par
+}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+line4.c File Reference\par \pard\plain 
+{\tc\tcl2 \v line4.c}
+{\xe \v line4.c}
+{\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "library.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b CumCol4} * {\b SortTree_4_Media} ({\b CumCol4} *treeLine4, {\b BTree} *tree)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b GenerateLine4_Media} ({\b BTree} *tree, {\b CumCol4} *treeLine4)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b InOrderMedia} ({\b CumCol4} *treeLine4)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v GenerateLine4_Media\:line4.c}
+{\xe \v line4.c\:GenerateLine4_Media}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void GenerateLine4_Media ({\b BTree} *  {\i tree}, {\b CumCol4} *  {\i treeLine4})}}
+\par
+{\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Percorre a primeira arvore e manda para a segunda \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 43 \{\par
+44     {\cf19 if}(tree != NULL)\par
+45     \{\par
+46         GenerateLine4_Media(tree->left, treeLine4);\par
+47 \par
+48         treeLine4  = SortTree_4_Media(treeLine4, tree);\par
+49         \par
+50         GenerateLine4_Media(tree->right, treeLine4);\par
+51     \}\par
+52 \}\par
+}
+}
+{\xe \v InOrderMedia\:line4.c}
+{\xe \v line4.c\:InOrderMedia}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void InOrderMedia ({\b CumCol4} *  {\i treeLine4})}}
+\par
+{\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Imprime a media da categoria 3 existente \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Sem este if est\'E1 a imprimir o nodo que est\'E1 NULL. PORQU\'CA?\par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 56 \{\par
+57     {\cf19 if} (treeLine4)\par
+58     \{\par
+59         InOrderMedia (treeLine4->left);\par
+60     \par
+62         {\cf19 if}(treeLine4->count != 0)\par
+63         \{\par
+64             treeLine4->media = (float) treeLine4->prob / treeLine4->count;\par
+65             \par
+66             printf({\cf22 "%s:\\t%f\\n"}, treeLine4->analyze, treeLine4->media);\par
+67         \}\par
+68         InOrderMedia (treeLine4->right);\par
+69     \}\par
+70 \}\par
+}
+}
+{\xe \v SortTree_4_Media\:line4.c}
+{\xe \v line4.c\:SortTree_4_Media}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b CumCol4}* SortTree_4_Media ({\b CumCol4} *  {\i treeLine4}, {\b BTree} *  {\i tree})}}
+\par
+{\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+percorres uma vez e ficas SUM(Probabilidade) & numero de registos Com isto encontras a media (xi - media) ^ 2\par
+Vindo da segunda arvore comeca a copiar para outra arvore \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 10 \{\par
+11     {\cf19 if}(treeLine4)\par
+12     \{\par
+13         {\cf19 if}(strcmp(treeLine4->analyze, tree->data.analyze) == 0 )\par
+14         \{\par
+15             treeLine4->count += tree->data.totalOccurrences;\par
+16             treeLine4->prob += tree->data.prob;\par
+17         \}\par
+18 \par
+19         {\cf19 if}(strcmp(treeLine4->analyze, tree->data.analyze) < 0)\par
+20                 treeLine4->left = SortTree_4_Media( treeLine4->left , tree );\par
+21 \par
+22         {\cf19 if}(strcmp(treeLine4->analyze, tree->data.analyze) > 0)\par
+23                 treeLine4->right = SortTree_4_Media( treeLine4->right , tree );\par
+24     \}\par
+25     {\cf19 else}\par
+26     \{\par
+27         treeLine4 = (CumCol4 *) malloc ( {\cf17 sizeof} ( CumCol4 ) ) ;\par
+28 \par
+29         treeLine4->analyze     =   ({\cf18 char}*) malloc   (strlen(tree->data.analyze)    *   {\cf17 sizeof}(char) + 1);\par
+30 \par
+31         strcpy(treeLine4->analyze, tree->data.analyze);\par
+32         treeLine4->count = tree->data.totalOccurrences;\par
+33         treeLine4->prob = tree->data.prob;\par
+34 \par
+35         treeLine4->left = treeLine4->right = NULL ;\par
+36     \}\par
+37     {\cf19 return} treeLine4;\par
+38 \}\par
+}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+line5.c File Reference\par \pard\plain 
+{\tc\tcl2 \v line5.c}
+{\xe \v line5.c}
+{\bkmkstart AAAAAAAACG}
+{\bkmkend AAAAAAAACG}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "library.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b TreeTraversal_Total_Letters} ({\b BTree} *tree, unsigned long int *totalLetters)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b Average_Line_5} (unsigned long int totalLetters, int totalWords)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b TreeTraversal_Mode_Letters} ({\b BTree} *tree, int wordSize[])\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v Average_Line_5\:line5.c}
+{\xe \v line5.c\:Average_Line_5}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float Average_Line_5 (unsigned long int  {\i totalLetters}, int  {\i totalWords})}}
+\par
+{\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+C\'E1lculo da M\'E9dia do tamanho das palavras \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 32 \{\par
+33     {\cf19 return} ({\cf18 float})totalLetters / totalWords;\par
+34 \}\par
+}
+}
+{\xe \v TreeTraversal_Mode_Letters\:line5.c}
+{\xe \v line5.c\:TreeTraversal_Mode_Letters}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void TreeTraversal_Mode_Letters ({\b BTree} *  {\i tree}, int  {\i wordSize}[])}}
+\par
+{\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Travessia da \'E1rvore do ficheiro para o c\'E1lculo da Moda \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 38 \{\par
+39     {\cf19 if} (tree != NULL)\par
+40     \{\par
+41         TreeTraversal_Mode_Letters(tree->left, wordSize);\par
+42 \par
+43         wordSize[tree->data.lenghtWord] += tree->data.totalOccurrences;\par
+44 \par
+45         TreeTraversal_Mode_Letters(tree->right, wordSize);\par
+46     \}\par
+47 \}\par
+}
+}
+{\xe \v TreeTraversal_Total_Letters\:line5.c}
+{\xe \v line5.c\:TreeTraversal_Total_Letters}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void TreeTraversal_Total_Letters ({\b BTree} *  {\i tree}, unsigned long int *  {\i totalLetters})}}
+\par
+{\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+#define SIZEHISTOGRAMA 50.0 int tamanho[128];\par
+tamanho[strlen(palavra)]++;\par
+int histograma[SIZEHISTOGRAMA];\par
+histograma[round((probabilidade *SIZEHISTOGRAMA))]++\par
+for(int i) class = i/SIZEHISTOGRAMA\par
+Travessia na \'E1rvore do ficheiro para contar o\par
+total de letras contidas em todas as palavras do ficheiro\par
+Acrescenta na vari\'E1vel totalLetters o tamanho da palavra e\par
+multiplica pelo numero de vezes que essa palavra aparece \par
+ \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 19 \{\par
+20     {\cf19 if} (tree)\par
+21     \{\par
+22         TreeTraversal_Total_Letters(tree->left, totalLetters);\par
+23 \par
+24         *totalLetters += tree->data.lenghtWord * tree->data.totalOccurrences;\par
+25 \par
+26         TreeTraversal_Total_Letters(tree->right, totalLetters);\par
+27     \}\par
+28 \}\par
+}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+line6.c File Reference\par \pard\plain 
+{\tc\tcl2 \v line6.c}
+{\xe \v line6.c}
+{\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "library.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b IsInTree} ({\b BTree} *tree, char *word, int *ptrTotalOcurrencesLine6)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b MaxCount} ({\b BTree} *tree, int *ptrMaxCount)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b Quartiles} (int maxCount, int totalOcurrencesLine6)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v IsInTree\:line6.c}
+{\xe \v line6.c\:IsInTree}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void IsInTree ({\b BTree} *  {\i tree}, char *  {\i word}, int *  {\i ptrTotalOcurrencesLine6})}}
+\par
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Verifica se a palavra inserida pelo utilizador existe\par
+Se existir, totalOcurrencesLine6 toma o valor das ocorrencias da palavra \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 6 \{\par
+7     {\cf19 if}(tree)\par
+8     \{\par
+9         {\cf19 if}(strcmp(tree->data.word, word) < 0)\par
+10             IsInTree(tree->left, word, ptrTotalOcurrencesLine6);\par
+11         \par
+12         {\cf19 if}(strcmp(tree->data.word, word) > 0)\par
+13             IsInTree(tree->right, word, ptrTotalOcurrencesLine6);\par
+14 \par
+15         {\cf19 if}(strcmp(tree->data.word, word) == 0)\par
+16             *ptrTotalOcurrencesLine6 = tree->data.totalOccurrences;\par
+17     \}\par
+18 \}\par
+}
+}
+{\xe \v MaxCount\:line6.c}
+{\xe \v line6.c\:MaxCount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void MaxCount ({\b BTree} *  {\i tree}, int *  {\i ptrMaxCount})}}
+\par
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Travessia sobre a \'E1rvore do ficheiro para\par
+verificar qual a palavra que se repete mais vezes.\par
+Para posteriormente fazer o c\'E1lculo dos quartis sobre esse n\'FAmero\par
+MaxCount toma o valor da palavra que mais se repete \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 25 \{\par
+26     {\cf19 if} (tree)\par
+27     \{\par
+28         MaxCount(tree->left, ptrMaxCount);\par
+29         {\cf19 if} (tree->data.totalOccurrences > *ptrMaxCount)\par
+30         \{\par
+31             *ptrMaxCount = tree->data.totalOccurrences;\par
+32         \}\par
+33         MaxCount(tree->right, ptrMaxCount);\par
+34     \}\par
+35 \}\par
+}
+}
+{\xe \v Quartiles\:line6.c}
+{\xe \v line6.c\:Quartiles}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Quartiles (int  {\i maxCount}, int  {\i totalOcurrencesLine6})}}
+\par
+{\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Recebe o valor da palavra que se repete mais vezes\par
+e quantas vezes se repete a palavra inserida pelo utilizador\par
+C\'E1lculo dos quartis e retorna o quartil a que pertence a palavra \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 41 \{\par
+42     {\cf18 float} quartile_1 = (float)maxCount / 4;\par
+43     {\cf18 float} quartile_2 = (float)maxCount / 2;\par
+44     {\cf18 float} quartile_3 = (float)maxCount / 4 + quartile_2;\par
+45 \par
+46     puts({\cf22 "Quartis:"});\par
+47     printf({\cf22 "\\tQ1 -> 0 a %.0f"}, quartile_1);\par
+48     printf({\cf22 "\\n\\tQ2 -> %.0f a %.0f"}, quartile_1 + 1, quartile_2);\par
+49     printf({\cf22 "\\n\\tQ3 -> %.0f a %.0f"}, quartile_2 + 1, quartile_3);\par
+50     printf({\cf22 "\\n\\tQ4 -> %.0f a %d"}, quartile_3 + 1, maxCount);\par
+51 \par
+52     {\cf19 if} (totalOcurrencesLine6 <= quartile_1)\par
+53         {\cf19 return} 1;\par
+54 \par
+55     {\cf19 if} (totalOcurrencesLine6 > quartile_1 && totalOcurrencesLine6 <= quartile_2)\par
+56         {\cf19 return} 2;\par
+57 \par
+58     {\cf19 if} (totalOcurrencesLine6 > quartile_2 && totalOcurrencesLine6 <= quartile_3)\par
+59         {\cf19 return} 3;\par
+60     \par
+61     {\cf19 return} 4;\par
+62 \}\par
+}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+main.c File Reference\par \pard\plain 
+{\tc\tcl2 \v main.c}
+{\xe \v main.c}
+{\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "library.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b main} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b BTree_free} ({\b BTree} *root)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Cumcol3_free} ({\b CumCol3} *root)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b CumCol4_free} ({\b CumCol4} *root)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Small_Letters} (char *treeWord)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v BTree_free\:main.c}
+{\xe \v main.c\:BTree_free}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void BTree_free ({\b BTree} *  {\i root})}}
+\par
+{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+---------\'97 SIGNATURES ---------\'97\par
+Main \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 210 \{\par
+211     {\cf19 if} (root)\par
+212     \{\par
+213         BTree_free(root->left);\par
+214         BTree_free(root->right);\par
+215         free(root);\par
+216     \}\par
+217 \}\par
+}
+}
+{\xe \v Cumcol3_free\:main.c}
+{\xe \v main.c\:Cumcol3_free}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Cumcol3_free ({\b CumCol3} *  {\i root})}}
+\par
+{\bkmkstart AAAAAAAACQ}
+{\bkmkend AAAAAAAACQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 220 \{\par
+221     {\cf19 if} (root)\par
+222     \{\par
+223         Cumcol3_free(root->left);\par
+224         Cumcol3_free(root->right);\par
+225         free(root);\par
+226     \}\par
+227 \}\par
+}
+}
+{\xe \v CumCol4_free\:main.c}
+{\xe \v main.c\:CumCol4_free}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void CumCol4_free ({\b CumCol4} *  {\i root})}}
+\par
+{\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 230 \{\par
+231     {\cf19 if} (root)\par
+232     \{\par
+233         CumCol4_free(root->left);\par
+234         CumCol4_free(root->right);\par
+235         free(root);\par
+236     \}\par
+237 \}\par
+}
+}
+{\xe \v main\:main.c}
+{\xe \v main.c\:main}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int main ()}}
+\par
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Variaveis Line 2\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Variaveis Line 5\par
+Como sabemos que o valor \'E9 sempre positivo e se trata de muitos dados\par
+declaramos o totalLength como unsigned long int\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Variaveis Line 6\par
+Este char d\'E1-nos um warning ao compilar\par
+char *wordLine6;\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Print_Tree(tree);\par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 4 \{    \par
+5     BTree *tree = NULL;\par
+6 \par
+7     CumCol3 *treeClass = (CumCol3 *) malloc ({\cf17 sizeof}(CumCol3));\par
+8 \par
+9     CumCol3 *treeClassOcur = (CumCol3 *) malloc ({\cf17 sizeof}(CumCol3));\par
+10 \par
+11     CumCol4 *treeLine4 = (CumCol4 *) malloc ({\cf17 sizeof}(CumCol4));\par
+12 \par
+13     {\cf18 int} opMenu;\par
+14     {\cf18 int} totalWords = 0;\par
+15     {\cf18 int} *ptrTotalWords = &totalWords;\par
+16     {\cf18 int} totalLines = 0;\par
+17     {\cf18 int} *ptrTotalLines = &totalLines;\par
+18 \par
+19 \par
+21     {\cf18 int} totalNiLine2 = 0;\par
+22     {\cf18 int} *ptrTotalNiLine2 = &totalNiLine2;\par
+23     {\cf18 double} totalFiLine2 = 0;\par
+24     {\cf18 double} *ptrTotalFiLine2 = &totalFiLine2;\par
+30     {\cf18 unsigned} {\cf18 long} {\cf18 int} totalLetters = 0;\par
+31     {\cf18 unsigned} {\cf18 long} {\cf18 int} *ptrTotalLetters = &totalLetters;\par
+32     {\cf18 float} averageLength;\par
+33     \par
+34     {\cf18 int} wordSize[100];\par
+35    \par
+36     {\cf18 int} i;\par
+37     {\cf18 int} j = 0;\par
+38     {\cf18 int} moda = 0;\par
+39     {\cf18 int} mostCommonWordSize = 0;\par
+40 \par
+41     {\cf18 int} aux = 0;\par
+42     {\cf18 int} k = 0;\par
+43 \par
+44     {\cf18 int} mediane = 0;\par
+45     {\cf18 int} medianeArray[100];\par
+46 \par
+50     {\cf18 int} totalOcurrencesLine6;\par
+51     {\cf18 int} *ptrTotalOcurrencesLine6 = &totalOcurrencesLine6;\par
+52     {\cf18 int} maxCount = 0;\par
+53     {\cf18 int} *ptrMaxCount = &maxCount;\par
+56     {\cf18 char} wordLine6[100];\par
+57     {\cf18 int} quartile;\par
+60     {\cf19 do}\par
+61     \{\par
+62         totalOcurrencesLine6 = -1;\par
+63 \par
+64         puts({\cf22 ""});\par
+65         puts({\cf22 ""});\par
+66         puts({\cf22 "1 - Ler Ficheiro"});\par
+67         puts({\cf22 "2 - Tabela Frequencias - 'Categoria Gramatical'"});\par
+68         puts({\cf22 "3 - Tabela Frequencias - 'Tamanho Palavras'"});\par
+69         puts({\cf22 "4 - Media - 'Categoria Gramatical'"});\par
+70         puts({\cf22 "5 - Media / Moda / Mediana / Desvio Padrao - 'Tamanho Palavras'"});\par
+71         puts({\cf22 "6 - Quartis - 'Frequencia Palavras'"});\par
+72         puts({\cf22 "0 - Exit"});\par
+73         puts({\cf22 ""});\par
+74         printf({\cf22 "Opcao: "});\par
+75         scanf({\cf22 "%d"}, &opMenu);\par
+76     \par
+77         {\cf19 switch} (opMenu)\par
+78         \{\par
+79             {\cf19 case} 1:\par
+80                 puts({\cf22 "A ler ficheiro. Aguarde um momento."});\par
+81                 tree = ReadFile(tree, ptrTotalWords, ptrTotalLines);\par
+82                 \par
+84                 printf({\cf22 "\\n\\n|\\tFicheiro Carregado!\\t\\t\\t\\t\\t|"});\par
+85                 printf({\cf22 "\\n|\\tTotal palavras (nao inclui repeticoes):\\t%d\\t\\t|"}, totalWords);\par
+86                 printf({\cf22 "\\n|\\tTotal linhas com conteudo valido:\\t%d\\t\\t|"}, totalLines);\par
+87                 {\cf19 break};\par
+88             \par
+89             {\cf19 case} 2:\par
+90                 treeClass->analyze = ({\cf18 char}*) malloc   (strlen(tree->data.analyze)    *   {\cf17 sizeof}(char) + 1);\par
+91                 strcpy(treeClass->analyze, tree->data.analyze);\par
+92                 treeClass->count = 0;\par
+93                 treeClass->prob = tree->data.prob;\par
+94 \par
+95                 GenerateByClassification(tree, treeClass);\par
+96 \par
+97                 SortTree(treeClass, treeClassOcur);\par
+98                 PrintHeadTable();\par
+99                 InOrderAscending(treeClassOcur, ptrTotalLines, ptrTotalNiLine2, ptrTotalFiLine2);\par
+100                 PrintEndTable(totalNiLine2, totalFiLine2);\par
+101                 {\cf19 break};\par
+102 \par
+103             {\cf19 case} 3:\par
+104                 Line_3_Word_Frequency_Table(tree);\par
+105                 {\cf19 break};\par
+106 \par
+107             {\cf19 case} 4:\par
+108                 printf({\cf22 "\\n\\nTipo\\tMedia\\n\\n"});\par
+109                 treeLine4->analyze = ({\cf18 char}*) malloc   (strlen(tree->data.analyze)    *   {\cf17 sizeof}(char) + 1);\par
+110                 strcpy(treeLine4->analyze, tree->data.analyze);\par
+111                 treeLine4->count = tree->data.totalOccurrences;\par
+112                 treeLine4->prob = tree->data.prob; \par
+113                 GenerateLine4_Media(tree, treeLine4);\par
+114                 InOrderMedia(treeLine4);\par
+115                 {\cf19 break};\par
+116 \par
+117             {\cf19 case} 5:\par
+118                 TreeTraversal_Total_Letters(tree, ptrTotalLetters);\par
+119                 averageLength = Average_Line_5(totalLetters, totalLines);\par
+120 \par
+121                 printf({\cf22 "\\nTotal Letras: %lu"}, totalLetters);\par
+122                 printf({\cf22 "\\nMedia do Tamanho das Palavras: %.3f"}, averageLength);\par
+123 \par
+124 \par
+125                 {\cf19 for} (i = 0; i < 100; i++)\par
+126                     wordSize[i] = 0;\par
+127 \par
+128                 TreeTraversal_Mode_Letters(tree, wordSize);\par
+129 \par
+130                 {\cf19 for} (i = 0; i < 100; i++)\par
+131                 \{\par
+132                     {\cf19 if} (wordSize[i] > moda)\par
+133                     \{\par
+134                         mostCommonWordSize = i;\par
+135                         moda = wordSize[i];\par
+136                     \}\par
+137                 \}\par
+138                 \par
+139                 printf({\cf22 "\\nModa do tamanho das palavras: %d"}, mostCommonWordSize);\par
+140                 printf({\cf22 "\\nEste tamanho de palavra repete-se: %d"}, moda);\par
+141 \par
+142                 {\cf19 for} (i = 0; i < 100; i++)\par
+143                 \{\par
+144                     {\cf19 if} (wordSize[i] != 0)\par
+145                     \{\par
+146                         aux++;\par
+147                         printf({\cf22 "\\n%d - %d"}, aux, wordSize[i]);\par
+148 \par
+149                         medianeArray[k] = wordSize[i];\par
+150                         k++;\par
+151                     \}\par
+152                 \}\par
+153 \par
+154                 printf({\cf22 "\\nSe n par: k = n / 2"});\par
+155                 printf({\cf22 "\\nSe n impar: k = (n + 1) / 2"});\par
+156                 printf({\cf22 "\\nn = %d"}, k);\par
+157                 {\cf19 if} (k % 2 != 0)\par
+158                 \{\par
+159                     printf({\cf22 "\\nLogo k = (n + 1) / 2 , "});\par
+160                     k = (k + 1) / 2;\par
+161                 \}\par
+162                 {\cf19 else}\par
+163                 \{\par
+164                     printf({\cf22 "\\nLogo k = n / 2 , "});\par
+165                 \}\par
+166                 \par
+167                 \par
+168                 printf({\cf22 "entao k = %d"}, k);\par
+169                 printf({\cf22 "\\nMediana: %d"}, medianeArray[k - 1]);\par
+170                            \par
+171                 {\cf19 break};\par
+172 \par
+173             {\cf19 case} 6:\par
+174                 printf({\cf22 "\\nIndique a palavra: "});\par
+175                 scanf({\cf22 "%s"}, wordLine6);\par
+176 \par
+177                 Small_Letters(wordLine6);\par
+178 \par
+179                 IsInTree(tree, wordLine6, ptrTotalOcurrencesLine6);\par
+180 \par
+181                 {\cf19 if} (totalOcurrencesLine6 != -1)\par
+182                 \{\par
+183                     MaxCount(tree, ptrMaxCount);\par
+184                     quartile = Quartiles(maxCount, totalOcurrencesLine6);\par
+185 \par
+186                     printf({\cf22 "\\n\\nA palavra ' %s ' tem ' %d ' ocorrencias e pertence ao quartil ' %d '."}, wordLine6, totalOcurrencesLine6, quartile);\par
+187                 \}\par
+188                 {\cf19 else}\par
+189                     printf({\cf22 "\\nPalavra nao existe!"});\par
+190                 \par
+191                 {\cf19 break};\par
+192 \par
+193             {\cf19 case} 0:\par
+194                     BTree_free(tree);\par
+195                     Cumcol3_free(treeClass);\par
+196                     Cumcol3_free(treeClassOcur);\par
+197                     CumCol4_free(treeLine4);\par
+198                 {\cf19 break};\par
+199 \par
+200             {\cf19 default}:\par
+201                 printf({\cf22 "\\n\\nOpcao invalida!!!\\n\\n"});\par
+202                 {\cf19 break};\par
+203         \}\par
+204     \}{\cf19 while} (opMenu != 0);\par
+205 \par
+206     {\cf19 return} 0;\par
+207 \}\par
+}
+}
+{\xe \v Small_Letters\:main.c}
+{\xe \v main.c\:Small_Letters}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Small_Letters (char *  {\i treeWord})}}
+\par
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+This function is needed in more than 1 file\par
+So in this file is accessible anywhere \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 242 \{\par
+243     {\cf18 char} aux;\par
+244     {\cf18 int} i = 0;\par
+245 \par
+246     {\cf19 while} (treeWord[i] != {\cf23 '\\0'})\par
+247     \{\par
+248         aux = treeWord[i];\par
+249         {\cf19 if} (aux >= {\cf23 'A'} && aux <= {\cf23 'Z'})\par
+250         \{\par
+251             treeWord[i] = treeWord[i] + 32;\par
+252         \}\par
+253         i++;\par
+254     \}\par
+255 \}\par
+}
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

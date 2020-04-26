@@ -1,0 +1,127 @@
+\hypertarget{line3_8c}{}\doxysection{line3.\+c File Reference}
+\label{line3_8c}\index{line3.c@{line3.c}}
+{\ttfamily \#include \char`\"{}library.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{line3_8c_a69f37a6a3296e7c52338b0c8d4bf29e3}{Line\+\_\+3\+\_\+\+Word\+\_\+\+Frequency\+\_\+\+Table}} (\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$tree)
+\item 
+void \mbox{\hyperlink{line3_8c_a0cd114e4ea7b842264a10e0ad72af45d}{Tree\+Traversal\+\_\+\+Line\+\_\+3}} (\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$tree, int $\ast$ptr20, int $\ast$ptr40, int $\ast$ptr60, int $\ast$ptr80, int $\ast$ptr100)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{line3_8c_a69f37a6a3296e7c52338b0c8d4bf29e3}\label{line3_8c_a69f37a6a3296e7c52338b0c8d4bf29e3}} 
+\index{line3.c@{line3.c}!Line\_3\_Word\_Frequency\_Table@{Line\_3\_Word\_Frequency\_Table}}
+\index{Line\_3\_Word\_Frequency\_Table@{Line\_3\_Word\_Frequency\_Table}!line3.c@{line3.c}}
+\doxysubsubsection{\texorpdfstring{Line\_3\_Word\_Frequency\_Table()}{Line\_3\_Word\_Frequency\_Table()}}
+{\footnotesize\ttfamily void Line\+\_\+3\+\_\+\+Word\+\_\+\+Frequency\+\_\+\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+Line 3 ni = total de palavras no intervalo
+
+fi = ni / N (N = T\+O\+T\+AL)
+
+Cum ni = ni 1 + ni 2 + ... + ni 5
+
+Cum fi = fi 1 + fi 2 + ... + fi 5
+
+Variáveis para o cálculo das frequências absolutas
+
+Pointers para cada variável de frequências absolutas
+
+Variáveis para o cálculo das frequências relativas
+
+Chama a função para construção das classes, passando os pointers por parâmetro
+
+Cálculo do total das frequências absolutas
+
+que deverá ser igual ao total de linhas com conteúdo válido
+
+Cálculo das frequências relativas
+
+Tabela de frequências
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} ni20    = 0;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} ni40    = 0;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} ni60    = 0;}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} ni80    = 0;}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} ni100   = 0;}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} totalNi = 0;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} *ptr20  = \&ni20;}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} *ptr40  = \&ni40;}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} *ptr60  = \&ni60;}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} *ptr80  = \&ni80;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} *ptr100 = \&ni100;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{float} fi20;}
+\DoxyCodeLine{33     \textcolor{keywordtype}{float} fi40;}
+\DoxyCodeLine{34     \textcolor{keywordtype}{float} fi60;}
+\DoxyCodeLine{35     \textcolor{keywordtype}{float} fi80;}
+\DoxyCodeLine{36     \textcolor{keywordtype}{float} fi100;}
+\DoxyCodeLine{37     \textcolor{keywordtype}{int} totalFi;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{41     \mbox{\hyperlink{line3_8c_a0cd114e4ea7b842264a10e0ad72af45d}{TreeTraversal\_Line\_3}}(tree, ptr20, ptr40, ptr60, ptr80, ptr100);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{46     totalNi = ni20 + ni40 + ni60 + ni80 + ni100;}
+\DoxyCodeLine{47     }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{50     fi20  = (float)ni20   / totalNi;}
+\DoxyCodeLine{51     fi40  = (float)ni40   / totalNi;}
+\DoxyCodeLine{52     fi60  = (float)ni60   / totalNi;}
+\DoxyCodeLine{53     fi80  = (float)ni80   / totalNi;}
+\DoxyCodeLine{54     fi100 = (float)ni100  / totalNi;}
+\DoxyCodeLine{55     totalFi = fi20 + fi40 + fi60 + fi80 + fi100;}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{58     printf(\textcolor{stringliteral}{"-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"});}
+\DoxyCodeLine{59     printf(\textcolor{stringliteral}{"|\(\backslash\)tWord Length\(\backslash\)t|\(\backslash\)tni\(\backslash\)t|\(\backslash\)t  fi\(\backslash\)t\(\backslash\)t|\(\backslash\)tCum ni\(\backslash\)t|\(\backslash\)tCum fi\(\backslash\)t\(\backslash\)t|\(\backslash\)n"});}
+\DoxyCodeLine{60     printf(\textcolor{stringliteral}{"-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"});}
+\DoxyCodeLine{61     printf(\textcolor{stringliteral}{"|\(\backslash\)t[  0 ; 20  [\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t|\(\backslash\)t\%f\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t|\(\backslash\)t\%f\(\backslash\)t|\(\backslash\)n"}, ni20,   fi20,   ni20, fi20);}
+\DoxyCodeLine{62     printf(\textcolor{stringliteral}{"|\(\backslash\)t[ 20 ; 40  [\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t|\(\backslash\)t\%f\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t|\(\backslash\)t\%f\(\backslash\)t|\(\backslash\)n"}, ni40,   fi40,   ni20 + ni40, fi20 + fi40);}
+\DoxyCodeLine{63     printf(\textcolor{stringliteral}{"|\(\backslash\)t[ 40 ; 60  [\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t|\(\backslash\)t\%f\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t|\(\backslash\)t\%f\(\backslash\)t|\(\backslash\)n"}, ni60,   fi60,   ni20 + ni40 + ni60, fi20 + fi40 + fi60);}
+\DoxyCodeLine{64     printf(\textcolor{stringliteral}{"|\(\backslash\)t[ 60 ; 80  [\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t|\(\backslash\)t\%f\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t|\(\backslash\)t\%f\(\backslash\)t|\(\backslash\)n"}, ni80,   fi80,   ni20 + ni40 + ni60 + ni80, fi20 + fi40 + fi60 + fi80);}
+\DoxyCodeLine{65     printf(\textcolor{stringliteral}{"|\(\backslash\)t[ 80 ; 100 [\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t|\(\backslash\)t\%f\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t|\(\backslash\)t\%.1f\(\backslash\)t\(\backslash\)t|\(\backslash\)n"}, ni100,  fi100,  ni20 + ni40 + ni60 + ni80 + ni100, fi20 + fi40 + fi60 + fi80 + fi100);}
+\DoxyCodeLine{66     printf(\textcolor{stringliteral}{"|-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|\(\backslash\)n"});}
+\DoxyCodeLine{67     printf(\textcolor{stringliteral}{"|\(\backslash\)t TOTAL \(\backslash\)t\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t\(\backslash\)t|-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|\(\backslash\)n"}, totalNi, totalFi);}
+\DoxyCodeLine{68     printf(\textcolor{stringliteral}{"-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"});}
+\DoxyCodeLine{69 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{line3_8c_a0cd114e4ea7b842264a10e0ad72af45d}\label{line3_8c_a0cd114e4ea7b842264a10e0ad72af45d}} 
+\index{line3.c@{line3.c}!TreeTraversal\_Line\_3@{TreeTraversal\_Line\_3}}
+\index{TreeTraversal\_Line\_3@{TreeTraversal\_Line\_3}!line3.c@{line3.c}}
+\doxysubsubsection{\texorpdfstring{TreeTraversal\_Line\_3()}{TreeTraversal\_Line\_3()}}
+{\footnotesize\ttfamily void Tree\+Traversal\+\_\+\+Line\+\_\+3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{tree,  }\item[{int $\ast$}]{ptr20,  }\item[{int $\ast$}]{ptr40,  }\item[{int $\ast$}]{ptr60,  }\item[{int $\ast$}]{ptr80,  }\item[{int $\ast$}]{ptr100 }\end{DoxyParamCaption})}
+
+Travessia na árvore do ficheiro para a construção de cada classe
+
+Como se trata de apenas 5 classes, optamos por ter uma variável para cada classe 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75     \textcolor{keywordflow}{if} (tree)}
+\DoxyCodeLine{76     \{}
+\DoxyCodeLine{77         \mbox{\hyperlink{line3_8c_a0cd114e4ea7b842264a10e0ad72af45d}{TreeTraversal\_Line\_3}}(tree-\/>\mbox{\hyperlink{struct___btree_a3183c41e4d4927489c5026c7d9d2580e}{left}}, ptr20, ptr40, ptr60, ptr80, ptr100);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79         \textcolor{keywordflow}{if} (tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a46b1ed5b1c9cfd962271f82ccdc20849}{lenghtWord}} <= 20)}
+\DoxyCodeLine{80             *ptr20 += tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82         \textcolor{keywordflow}{if} (tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a46b1ed5b1c9cfd962271f82ccdc20849}{lenghtWord}} > 20 \&\& tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a46b1ed5b1c9cfd962271f82ccdc20849}{lenghtWord}} <= 40)}
+\DoxyCodeLine{83             *ptr40 += tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85         \textcolor{keywordflow}{if} (tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a46b1ed5b1c9cfd962271f82ccdc20849}{lenghtWord}} > 40 \&\& tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a46b1ed5b1c9cfd962271f82ccdc20849}{lenghtWord}} <= 60)}
+\DoxyCodeLine{86             *ptr60 += tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88         \textcolor{keywordflow}{if} (tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a46b1ed5b1c9cfd962271f82ccdc20849}{lenghtWord}} > 60 \&\& tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a46b1ed5b1c9cfd962271f82ccdc20849}{lenghtWord}} <= 80)}
+\DoxyCodeLine{89             *ptr80 += tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{90         }
+\DoxyCodeLine{91         \textcolor{keywordflow}{if} (tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a46b1ed5b1c9cfd962271f82ccdc20849}{lenghtWord}} > 80)}
+\DoxyCodeLine{92             *ptr100 += tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94         \mbox{\hyperlink{line3_8c_a0cd114e4ea7b842264a10e0ad72af45d}{TreeTraversal\_Line\_3}}(tree-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}}, ptr20, ptr40, ptr60, ptr80, ptr100);}
+\DoxyCodeLine{95     \}    }
+\DoxyCodeLine{96 \}}
+
+\end{DoxyCode}
