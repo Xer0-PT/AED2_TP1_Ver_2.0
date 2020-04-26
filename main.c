@@ -4,13 +4,11 @@ int main()
 {    
     BTree *tree = NULL;
 
-    CumCol3 *treeClass = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
+    CumCol3 *treeClass = (CumCol3 *) malloc (sizeof(CumCol3));
 
-    CumCol3 *treeClassOcur = (CumCol3 *) malloc ( sizeof ( CumCol3 ) ) ;
+    CumCol3 *treeClassOcur = (CumCol3 *) malloc (sizeof(CumCol3));
 
-    CumCol4 *treeLine4 = (CumCol4 *) malloc ( sizeof ( CumCol4 ) ) ;
-
-    BtreeMode *treeMode = (BtreeMode *) malloc ( sizeof ( BtreeMode ) );
+    CumCol4 *treeLine4 = (CumCol4 *) malloc (sizeof(CumCol4));
 
     int opMenu;
     int totalWords = 0;
@@ -32,6 +30,14 @@ int main()
     unsigned long int totalLetters = 0;
     unsigned long int *ptrTotalLetters = &totalLetters;
     float averageLength;
+    
+    int wordSize[100];
+
+    
+    int i;
+    int moda = 0;
+    int commonWordSize = 0;
+
     /* ------------------- */
 
     /* Variaveis Line 6 */
@@ -39,7 +45,9 @@ int main()
     int *ptrTotalOcurrencesLine6 = &totalOcurrencesLine6;
     int maxCount = 0;
     int *ptrMaxCount = &maxCount;
-    char *wordLine6;
+    /* Este char dá-nos um warning ao compilar */
+    /* char *wordLine6; */
+    char wordLine6[100];
     int quartile;
     /* ------------------- */
     
@@ -103,10 +111,30 @@ int main()
             case 5:
                 TreeTraversal_Total_Letters(tree, ptrTotalLetters);
                 averageLength = Average_Line_5(totalLetters, totalLines);
-                PrintResults_Line_5(totalLetters, averageLength);
-                TreeTraversal_Mode_Letters(tree, treeMode);
-                printf("\n\nTeste moda: %d", treeMode->wordCount);
-                PrintMode(treeMode);               
+                /* PrintResults_Line_5(totalLetters, averageLength); */
+
+                printf("\nTotal Letras: %lu", totalLetters);
+                printf("\nMedia Tamanho Palavras: %.3f", averageLength);
+
+
+                for (i = 0; i < 100; i++)
+                    wordSize[i] = 0;
+                
+
+                TreeTraversal_Mode_Letters(tree, wordSize);
+
+                for (i = 0; i < 100; i++)
+                {
+                    if (wordSize[i] > moda)
+                    {
+                        commonWordSize = i;
+                        moda = wordSize[i];
+                    }
+                }
+                
+                printf("\n\nModa do tamanho das palavras: %d", commonWordSize);
+                printf("\nEste tamanho de palavra repete-se: %d", moda);
+                /* PrintMode(treeMode); */               
                 break;
 
             case 6:
@@ -134,7 +162,6 @@ int main()
                     Cumcol3_free(treeClass);
                     Cumcol3_free(treeClassOcur);
                     CumCol4_free(treeLine4);
-                    BtreeMode_free(treeMode);
                 break;
 
             default:
@@ -162,16 +189,6 @@ void Cumcol3_free(CumCol3* root)
     {
         Cumcol3_free(root->left);
         Cumcol3_free(root->right);
-        free(root);
-    }
-}
-
-void BtreeMode_free(BtreeMode* root)
-{
-    if (root)
-    {
-        BtreeMode_free(root->left);
-        BtreeMode_free(root->right);
         free(root);
     }
 }

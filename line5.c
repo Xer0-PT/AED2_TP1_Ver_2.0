@@ -33,60 +33,15 @@ float Average_Line_5(unsigned long int totalLetters, int totalWords)
     return (float)totalLetters / totalWords;
 }
 
-/* Mostrar o total de letras e a média */
-void PrintResults_Line_5(unsigned long int totalLetters ,float averageLength)
-{
-    printf("\nTotal Letras: %lu", totalLetters);
-    printf("\nMedia Tamanho Palavras: %.3f\n\n", averageLength);
-}
-
 /* Travessia da árvore do ficheiro para o cálculo da Moda */
-void TreeTraversal_Mode_Letters(BTree * tree, BtreeMode * treeMode)
+void TreeTraversal_Mode_Letters(BTree * tree, int wordSize[])
 {
     if (tree != NULL)
     {
-        TreeTraversal_Mode_Letters(tree->left, treeMode);
+        TreeTraversal_Mode_Letters(tree->left, wordSize);
 
-        treeMode = ModeCalculus(tree, treeMode);
+        wordSize[tree->data.lenghtWord] ++;
 
-        TreeTraversal_Mode_Letters(tree->right, treeMode);
-    }
-}
-
-/* Árvore Auxiliar para guardar o cálculo da Moda */
-BtreeMode * ModeCalculus(BTree * tree, BtreeMode * treeMode)
-{
-    if(treeMode)
-    {
-        if(tree->data.lenghtWord == treeMode->wordLength)
-            treeMode->wordCount += tree->data.totalOccurrences;
-
-        if (tree->data.lenghtWord < treeMode->wordLength)
-            treeMode->left = ModeCalculus(tree, treeMode->left);
-
-        if (tree->data.lenghtWord > treeMode->wordLength)
-            treeMode->right = ModeCalculus(tree, treeMode->right);
-    }
-    else
-    {
-        treeMode = (BtreeMode*) malloc (sizeof(BtreeMode));
-
-        treeMode->wordLength = tree->data.lenghtWord;
-        treeMode->wordCount = tree->data.totalOccurrences;
-        treeMode->left = treeMode->right = NULL;
-    }
-    return treeMode;   
-}
-
-void PrintMode(BtreeMode *treeMode)
-{
-    if (treeMode)
-    {
-        PrintMode(treeMode->left);
-
-        printf("\nTamanho Palavra: %d", treeMode->wordLength);
-        printf("\nNumero de palavras com este tamanho: %d", treeMode->wordCount);
-
-        PrintMode(treeMode->left);
+        TreeTraversal_Mode_Letters(tree->right, wordSize);
     }
 }

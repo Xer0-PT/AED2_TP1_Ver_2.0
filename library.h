@@ -46,15 +46,6 @@ typedef struct _Btree
     struct _Btree *left, *right;
 }BTree;
 
-/* Mode Line 5 */
-typedef struct _BtreeMode
-{
-    int wordLength;
-    int wordCount;
-
-    struct _BtreeMode *left, *right;
-}BtreeMode;
-
 
 typedef struct _CumCol4
 {
@@ -72,7 +63,6 @@ typedef struct _CumCol4
 /* Main */
 void BTree_free(BTree* root);
 void Cumcol3_free(CumCol3* root);
-void BtreeMode_free(BtreeMode* root);
 void CumCol4_free(CumCol4* root);
 void Small_Letters(char *treeWord);
 
@@ -111,10 +101,7 @@ void GenerateLine4_Final(CumCol4 * treeLine4,  CumCol4 * treeLine4Aux);
 /* Line 5 */
 void TreeTraversal_Total_Letters(BTree *tree, unsigned long int *totalLength);
 float Average_Line_5(unsigned long int totalLength, int totalWords);
-void PrintResults_Line_5(unsigned long int totalLetters ,float averageLength);
-void TreeTraversal_Mode_Letters(BTree *tree, BtreeMode *treeMode);
-BtreeMode * ModeCalculus(BTree * tree, BtreeMode * treeMode);
-void PrintMode(BtreeMode *treeMode);
+void TreeTraversal_Mode_Letters(BTree * tree, int wordSize[]);
 
 
 /* Line 6 */
