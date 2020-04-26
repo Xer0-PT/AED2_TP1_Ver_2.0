@@ -32,11 +32,17 @@ int main()
     float averageLength;
     
     int wordSize[100];
-
-    
+   
     int i;
+    int j = 0;
     int moda = 0;
-    int commonWordSize = 0;
+    int mostCommonWordSize = 0;
+
+    int aux = 0;
+    int k = 0;
+
+    int mediane = 0;
+    int medianeArray[100];
 
     /* ------------------- */
 
@@ -58,11 +64,11 @@ int main()
         puts("");
         puts("");
         puts("1 - Ler Ficheiro");
-        puts("2 - Tabela Frequencias - Categoria Gramatical");
-        puts("3 - Tabela Frequencias - Tamanho Palavras");
-        puts("4 - Media - Categoria Gramatical");
-        puts("5 - Media - Tamanho Palavras");
-        puts("6 - Quartis - Frequencia Palavras");
+        puts("2 - Tabela Frequencias - 'Categoria Gramatical'");
+        puts("3 - Tabela Frequencias - 'Tamanho Palavras'");
+        puts("4 - Media - 'Categoria Gramatical'");
+        puts("5 - Media / Moda / Mediana / Desvio Padrao - 'Tamanho Palavras'");
+        puts("6 - Quartis - 'Frequencia Palavras'");
         puts("0 - Exit");
         puts("");
         printf("Opcao: ");
@@ -111,15 +117,13 @@ int main()
             case 5:
                 TreeTraversal_Total_Letters(tree, ptrTotalLetters);
                 averageLength = Average_Line_5(totalLetters, totalLines);
-                /* PrintResults_Line_5(totalLetters, averageLength); */
 
                 printf("\nTotal Letras: %lu", totalLetters);
-                printf("\nMedia Tamanho Palavras: %.3f", averageLength);
+                printf("\nMedia do Tamanho das Palavras: %.3f", averageLength);
 
 
                 for (i = 0; i < 100; i++)
                     wordSize[i] = 0;
-                
 
                 TreeTraversal_Mode_Letters(tree, wordSize);
 
@@ -127,14 +131,36 @@ int main()
                 {
                     if (wordSize[i] > moda)
                     {
-                        commonWordSize = i;
+                        mostCommonWordSize = i;
                         moda = wordSize[i];
                     }
                 }
                 
-                printf("\n\nModa do tamanho das palavras: %d", commonWordSize);
+                printf("\nModa do tamanho das palavras: %d", mostCommonWordSize);
                 printf("\nEste tamanho de palavra repete-se: %d", moda);
-                /* PrintMode(treeMode); */               
+
+                for (i = 0; i < 100; i++)
+                {
+                    if (wordSize[i] != 0)
+                    {
+                        aux++;
+                        printf("\n%d - %d", aux, wordSize[i]);
+                        
+
+                        medianeArray[k] = wordSize[i];
+                        k++;
+                    }
+                }
+                
+                if (k % 2 != 0)
+                {
+                    k = (k + 1) / 2;
+                }
+                
+
+                printf("\nk: %d", k);
+                printf("\nMediana: %d", medianeArray[k - 1]);
+                           
                 break;
 
             case 6:

@@ -40,7 +40,7 @@ void TreeTraversal_Mode_Letters(BTree * tree, int wordSize[])
     {
         TreeTraversal_Mode_Letters(tree->left, wordSize);
 
-        wordSize[tree->data.lenghtWord] ++;
+        wordSize[tree->data.lenghtWord] += tree->data.totalOccurrences;
 
         TreeTraversal_Mode_Letters(tree->right, wordSize);
     }
