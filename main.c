@@ -1,5 +1,5 @@
 #include "library.h"
-#include <math.h>
+
 int main()
 {    
     BTree *tree = NULL;
@@ -39,6 +39,10 @@ int main()
     int k = 0;
     int medianeArray[100];
 
+    /* int soma = 0;
+    float auxDesvioPadrao = 0;
+    float desvioPadrao; */
+
     /*!  ------------------- */
 
     /*!  Variaveis Line 6 */
@@ -46,8 +50,6 @@ int main()
     int *ptrTotalOcurrencesLine6 = &totalOcurrencesLine6;
     int maxCount = 0;
     int *ptrMaxCount = &maxCount;
-    /*!  Este char dá-nos um warning ao compilar */
-    /*!  char *wordLine6; */
     char wordLine6[100];
     int quartile;
     /*!  ------------------- */
@@ -62,7 +64,7 @@ int main()
         puts("2 - Tabela Frequencias - 'Categoria Gramatical'");
         puts("3 - Tabela Frequencias - 'Tamanho Palavras'");
         puts("4 - Media - 'Categoria Gramatical'");
-        puts("5 - Media / Moda / Mediana / Desvio Padrao - 'Tamanho Palavras'");
+        puts("5 - Media / Moda / Mediana - 'Tamanho Palavras'");
         puts("6 - Quartis - 'Frequencia Palavras'");
         puts("0 - Exit");
         puts("");
@@ -117,9 +119,10 @@ int main()
                 printf("\tMedia\n");
                 puts("-----------------------");
                 printf("\nTotal Letras: %lu", totalLetters);
+                printf("\nTotal Palavras: %d", totalLines);
                 printf("\nMedia do Tamanho das Palavras: %.3f\n\n", averageLength);
 
-                /* Percorre o array wordSize para colocar todas as posições a zero */
+                /*! Percorre o array wordSize para colocar todas as posições a zero */
                 for (i = 0; i < 100; i++)
                     wordSize[i] = 0;
 
@@ -127,8 +130,8 @@ int main()
                 TreeTraversal_Mode_Letters(tree, wordSize);
 
 
-                /* Percorre o array wordsize à procura do valor mais alto */
-                /* que nos diz qual é a Moda  */
+                /*! Percorre o array wordsize à procura do valor mais alto */
+                /*! que nos diz qual é a Moda  */
                 for (i = 0; i < 100; i++)
                 {
                     if (wordSize[i] > moda)
@@ -144,15 +147,14 @@ int main()
                 printf("\nModa do tamanho das palavras: %d", mostCommonWordSize);
                 printf("\nEste tamanho de palavra repete-se: %d\n\n", moda);
 
-                /* Limpar o array wordSize de espaços vazios */
-                /* Contamos o numero de linhas com valores */
-                /* para dividir em 2, assim o valor que estiver no meio é a Mediana */
+                /*! Limpar o array wordSize de espaços vazios */
+                /*! Contamos o numero de linhas com valores para dividir em 2, */
+                /*! assim o valor que estiver no meio é a Mediana */
                 for (i = 0; i < 100; i++)
                 {
                     if (wordSize[i] != 0)
                     {
                         medianeArray[n] = wordSize[i];
-
                         n++;
                     }
                 }
@@ -178,6 +180,8 @@ int main()
                 printf("entao k = %d", k);
                 printf("\nMediana: %d", medianeArray[k - 1]);
 
+/*! Falta desvio padrao */
+/*! 
                 for (i = 0; i < 100; i++)
                 {
                     if (wordSize[i] != 0)
@@ -185,14 +189,15 @@ int main()
                         soma = soma + ((i - averageLength) * (i - averageLength));
                     }
                 }
-                
-                desvioPadrao = soma / n;
+ */
+/*!             
+                auxDesvioPadrao = soma / n;
 
-                raiz = sqrt((double)desvioPadrao);
+                desvioPadrao = sqrt(desvioPadrao);
 
-
-                printf("\nDesvio Padrao = %f\n", raiz);
-
+                printf("\nauxDesvioPadrao = %f\n", auxDesvioPadrao);
+                printf("\nDesvio Padrao = %f\n", desvioPadrao);
+*/
                            
                 break;
 
@@ -262,8 +267,7 @@ void CumCol4_free(CumCol4* root)
     }
 }
 
-/*!  This function is needed in more than 1 file */
-/*!  So in this file is accessible anywhere */
+/*! Função para colocar as palavras em minusculas */
 void Small_Letters(char *treeWord)
 {
     char aux;
