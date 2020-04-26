@@ -22,7 +22,7 @@ line5.o:
 	gcc -g -o line5.o line5.c -c -W -Wall -ansi -pedantic
 
 line6.o:
-	gcc -g -o line6.o line6.c -c -W -Wall -ansi -pedantic	
+	gcc -g -o line6.o line6.c -c -W -Wall -ansi -pedantic
 
 clean:
 	rm -rf *.o

@@ -1,5 +1,5 @@
 #include "library.h"
-
+#include <math.h>
 int main()
 {    
     BTree *tree = NULL;
@@ -32,17 +32,16 @@ int main()
     float averageLength;
     
     int wordSize[100];
-   
     int i;
-    int j = 0;
     int moda = 0;
     int mostCommonWordSize = 0;
-
-    int aux = 0;
+    int n = 0;
     int k = 0;
-
-    int mediane = 0;
     int medianeArray[100];
+
+    int soma = 0;
+    double desvioPadrao;
+    double raiz;
 
     /* ------------------- */
 
@@ -51,8 +50,6 @@ int main()
     int *ptrTotalOcurrencesLine6 = &totalOcurrencesLine6;
     int maxCount = 0;
     int *ptrMaxCount = &maxCount;
-    /* Este char dá-nos um warning ao compilar */
-    /* char *wordLine6; */
     char wordLine6[100];
     int quartile;
     /* ------------------- */
@@ -118,15 +115,22 @@ int main()
                 TreeTraversal_Total_Letters(tree, ptrTotalLetters);
                 averageLength = Average_Line_5(totalLetters, totalLines);
 
+                puts("-----------------------");
+                printf("\tMedia\n");
+                puts("-----------------------");
                 printf("\nTotal Letras: %lu", totalLetters);
-                printf("\nMedia do Tamanho das Palavras: %.3f", averageLength);
+                printf("\nMedia do Tamanho das Palavras: %.3f\n\n", averageLength);
 
-
+                /* Percorre o array wordSize para colocar todas as posições a zero */
                 for (i = 0; i < 100; i++)
                     wordSize[i] = 0;
 
+
                 TreeTraversal_Mode_Letters(tree, wordSize);
 
+
+                /* Percorre o array wordsize à procura do valor mais alto */
+                /* que nos diz qual é a Moda  */
                 for (i = 0; i < 100; i++)
                 {
                     if (wordSize[i] > moda)
@@ -136,37 +140,61 @@ int main()
                     }
                 }
                 
+                puts("-----------------------");
+                printf("\tModa\n");
+                puts("-----------------------");
                 printf("\nModa do tamanho das palavras: %d", mostCommonWordSize);
-                printf("\nEste tamanho de palavra repete-se: %d", moda);
+                printf("\nEste tamanho de palavra repete-se: %d\n\n", moda);
+
+                /* Limpar o array wordSize de espaços vazios */
+                /* Contamos o numero de linhas com valores */
+                /* para dividir em 2, assim o valor que estiver no meio é a Mediana */
+                for (i = 0; i < 100; i++)
+                {
+                    if (wordSize[i] != 0)
+                    {
+                        medianeArray[n] = wordSize[i];
+
+                        n++;
+                    }
+                }
+
+                puts("-----------------------");
+                printf("\tMediana\n");
+                puts("-----------------------");
+                printf("\nSe n par: k = n / 2");
+                printf("\nSe n impar: k = (n + 1) / 2");
+                printf("\nn = %d", n);
+                
+                if (n % 2 != 0)
+                {
+                    printf("\nLogo k = (n + 1) / 2 , ");
+                    k = (n + 1) / 2;
+                }
+                else
+                {
+                    printf("\nLogo k = n / 2 , ");
+                    k = n / 2;
+                }
+                
+                printf("entao k = %d", k);
+                printf("\nMediana: %d", medianeArray[k - 1]);
 
                 for (i = 0; i < 100; i++)
                 {
                     if (wordSize[i] != 0)
                     {
-                        aux++;
-                        printf("\n%d - %d", aux, wordSize[i]);
-
-                        medianeArray[k] = wordSize[i];
-                        k++;
+                        soma = soma + ((i - averageLength) * (i - averageLength));
                     }
                 }
+                
+                desvioPadrao = soma / n;
 
-                printf("\nSe n par: k = n / 2");
-                printf("\nSe n impar: k = (n + 1) / 2");
-                printf("\nn = %d", k);
-                if (k % 2 != 0)
-                {
-                    printf("\nLogo k = (n + 1) / 2 , ");
-                    k = (k + 1) / 2;
-                }
-                else
-                {
-                    printf("\nLogo k = n / 2 , ");
-                }
-                
-                
-                printf("entao k = %d", k);
-                printf("\nMediana: %d", medianeArray[k - 1]);
+                raiz = sqrt((double)desvioPadrao);
+
+
+                printf("\nDesvio Padrao = %f\n", raiz);
+
                            
                 break;
 

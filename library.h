@@ -7,6 +7,7 @@
 #include <stdlib.h>
 
 
+
 /* File Constant */
 
 /* #define _TEXT_FILE "teste_alinea_5.txt" */

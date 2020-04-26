@@ -2,8 +2,6 @@
 /* 
 #define SIZEHISTOGRAMA 50.0 int tamanho[128];
 
-tamanho[strlen(palavra)]++;
-
 int histograma[SIZEHISTOGRAMA];
 
 histograma[round((probabilidade *SIZEHISTOGRAMA))]++ 
