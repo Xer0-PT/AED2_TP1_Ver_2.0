@@ -2,7 +2,7 @@
 
 void Line_3_Word_Frequency_Table(BTree *tree)
 {
-    /* 
+    /*!  
         ni = total de palavras no intervalo
         
         fi = ni / N      (N = TOTAL)
@@ -13,7 +13,7 @@ void Line_3_Word_Frequency_Table(BTree *tree)
 
     */
 
-    /* Variáveis para o cálculo das frequências absolutas */
+    /*!  Variáveis para o cálculo das frequências absolutas */
     int ni20    = 0;
     int ni40    = 0;
     int ni60    = 0;
@@ -21,14 +21,14 @@ void Line_3_Word_Frequency_Table(BTree *tree)
     int ni100   = 0;
     int totalNi = 0;
 
-    /* Pointers para cada variável de frequências absolutas */
+    /*!  Pointers para cada variável de frequências absolutas */
     int *ptr20  = &ni20;
     int *ptr40  = &ni40;
     int *ptr60  = &ni60;
     int *ptr80  = &ni80;
     int *ptr100 = &ni100;
 
-    /* Variáveis para o cálculo das frequências relativas */
+    /*!  Variáveis para o cálculo das frequências relativas */
     float fi20;
     float fi40;
     float fi60;
@@ -37,16 +37,16 @@ void Line_3_Word_Frequency_Table(BTree *tree)
     int totalFi;
 
 
-    /* Chama a função para construção das classes, passando os pointers por parâmetro */
+    /*!  Chama a função para construção das classes, passando os pointers por parâmetro */
     TreeTraversal_Line_3(tree, ptr20, ptr40, ptr60, ptr80, ptr100);
 
 
-    /* Cálculo do total das frequências absolutas */
-    /* que deverá ser igual ao total de linhas com conteúdo válido */
+    /*!  Cálculo do total das frequências absolutas */
+    /*!  que deverá ser igual ao total de linhas com conteúdo válido */
     totalNi = ni20 + ni40 + ni60 + ni80 + ni100;
     
 
-    /* Cálculo das frequências relativas */
+    /*!  Cálculo das frequências relativas */
     fi20  = (float)ni20   / totalNi;
     fi40  = (float)ni40   / totalNi;
     fi60  = (float)ni60   / totalNi;
@@ -54,7 +54,7 @@ void Line_3_Word_Frequency_Table(BTree *tree)
     fi100 = (float)ni100  / totalNi;
     totalFi = fi20 + fi40 + fi60 + fi80 + fi100;
 
-    /* Tabela de frequências */
+    /*!  Tabela de frequências */
     printf("---------------------------------------------------------------------------------------------------------\n");
     printf("|\tWord Length\t|\tni\t|\t  fi\t\t|\tCum ni\t|\tCum fi\t\t|\n");
     printf("---------------------------------------------------------------------------------------------------------\n");
@@ -68,8 +68,8 @@ void Line_3_Word_Frequency_Table(BTree *tree)
     printf("---------------------------------------------------------------------------------------------------------\n");
 }
 
-/* Travessia na árvore do ficheiro para a construção de cada classe */
-/* Como se trata de apenas 5 classes, optamos por ter uma variável para cada classe */
+/*!  Travessia na árvore do ficheiro para a construção de cada classe */
+/*!  Como se trata de apenas 5 classes, optamos por ter uma variável para cada classe */
 void TreeTraversal_Line_3(BTree *tree, int *ptr20, int *ptr40, int *ptr60, int *ptr80, int *ptr100)
 {
     if (tree)

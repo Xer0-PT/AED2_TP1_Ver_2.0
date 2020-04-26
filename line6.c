@@ -1,7 +1,7 @@
 #include "library.h"
 
-/* Verifica se a palavra inserida pelo utilizador existe*/
-/* Se existir, totalOcurrencesLine6 toma o valor das ocorrencias da palavra */
+/*! Verifica se a palavra inserida pelo utilizador existe*/
+/*! Se existir, totalOcurrencesLine6 toma o valor das ocorrencias da palavra */
 void IsInTree(BTree *tree, char *word, int *ptrTotalOcurrencesLine6)
 {
     if(tree)
@@ -17,10 +17,10 @@ void IsInTree(BTree *tree, char *word, int *ptrTotalOcurrencesLine6)
     }
 }
 
-/* Travessia sobre a árvore do ficheiro para */ 
-/* verificar qual a palavra que se repete mais vezes. */
-/* Para posteriormente fazer o cálculo dos quartis sobre esse número */
-/* MaxCount toma o valor da palavra que mais se repete */
+/*! Travessia sobre a árvore do ficheiro para */ 
+/*! verificar qual a palavra que se repete mais vezes. */
+/*! Para posteriormente fazer o cálculo dos quartis sobre esse número */
+/*! MaxCount toma o valor da palavra que mais se repete */
 void MaxCount(BTree *tree, int *ptrMaxCount)
 {
     if (tree)
@@ -34,9 +34,9 @@ void MaxCount(BTree *tree, int *ptrMaxCount)
     }
 }
 
-/* Recebe o valor da palavra que se repete mais vezes */
-/* e quantas vezes se repete a palavra inserida pelo utilizador */
-/* Cálculo dos quartis e retorna o quartil a que pertence a palavra */
+/*! Recebe o valor da palavra que se repete mais vezes */
+/*! e quantas vezes se repete a palavra inserida pelo utilizador */
+/*! Cálculo dos quartis e retorna o quartil a que pertence a palavra */
 int Quartiles(int maxCount, int totalOcurrencesLine6)
 {
     float quartile_1 = (float)maxCount / 4;

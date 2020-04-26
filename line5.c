@@ -1,5 +1,5 @@
 #include "library.h"
-/* 
+/*!  
 #define SIZEHISTOGRAMA 50.0 int tamanho[128];
 
 tamanho[strlen(palavra)]++;
@@ -11,10 +11,10 @@ histograma[round((probabilidade *SIZEHISTOGRAMA))]++
 for(int i) class = i/SIZEHISTOGRAMA
  */
 
-/* Travessia na árvore do ficheiro para contar o */
-/* total de letras contidas em todas as palavras do ficheiro */
-/* Acrescenta na variável totalLetters o tamanho da palavra e */
-/* multiplica pelo numero de vezes que essa palavra aparece  */
+/*!  Travessia na árvore do ficheiro para contar o */
+/*!  total de letras contidas em todas as palavras do ficheiro */
+/*!  Acrescenta na variável totalLetters o tamanho da palavra e */
+/*!  multiplica pelo numero de vezes que essa palavra aparece  */
 void TreeTraversal_Total_Letters(BTree *tree, unsigned long int *totalLetters)
 {
     if (tree)
@@ -27,13 +27,13 @@ void TreeTraversal_Total_Letters(BTree *tree, unsigned long int *totalLetters)
     }
 }
 
-/* Cálculo da Média do tamanho das palavras */
+/*!  Cálculo da Média do tamanho das palavras */
 float Average_Line_5(unsigned long int totalLetters, int totalWords)
 {
     return (float)totalLetters / totalWords;
 }
 
-/* Travessia da árvore do ficheiro para o cálculo da Moda */
+/*!  Travessia da árvore do ficheiro para o cálculo da Moda */
 void TreeTraversal_Mode_Letters(BTree * tree, int wordSize[])
 {
     if (tree != NULL)
