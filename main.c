@@ -145,20 +145,27 @@ int main()
                     {
                         aux++;
                         printf("\n%d - %d", aux, wordSize[i]);
-                        
 
                         medianeArray[k] = wordSize[i];
                         k++;
                     }
                 }
-                
+
+                printf("\nSe n par: k = n / 2");
+                printf("\nSe n impar: k = (n + 1) / 2");
+                printf("\nn = %d", k);
                 if (k % 2 != 0)
                 {
+                    printf("\nLogo k = (n + 1) / 2 , ");
                     k = (k + 1) / 2;
                 }
+                else
+                {
+                    printf("\nLogo k = n / 2 , ");
+                }
                 
-
-                printf("\nk: %d", k);
+                
+                printf("entao k = %d", k);
                 printf("\nMediana: %d", medianeArray[k - 1]);
                            
                 break;
