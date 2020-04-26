@@ -1,8 +1,7 @@
 #ifndef LIBRARY_H_
 #define LIBRARY_H_
 
-/* Includes */
-
+/* Include Libraries */
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -14,7 +13,6 @@
 /* #define _TEXT_FILE "slate-tagged.txt" */
 /* #define _TEXT_FILE "ficheiro_teste_1M.txt" */
 #define _TEXT_FILE "texto.txt"
-
 
 
 /* Data Structures */
@@ -69,24 +67,6 @@ typedef struct _CumCol4
     struct _CumCol4 *left, *right;
 } CumCol4;
 
-/* This function is needed in more than 1 file */
-/* So in this file is accessible anywhere */
-void Small_Letters(char *treeWord)
-{
-    char aux;
-    int i = 0;
-
-    while (treeWord[i] != '\0')
-    {
-        aux = treeWord[i];
-        if (aux >= 'A' && aux <= 'Z')
-        {
-            treeWord[i] = treeWord[i] + 32;
-        }
-        i++;
-    }
-}
-
 /* ------------ SIGNATURES ------------ */
 
 /* Main */
@@ -94,6 +74,7 @@ void BTree_free(BTree* root);
 void Cumcol3_free(CumCol3* root);
 void BtreeMode_free(BtreeMode* root);
 void CumCol4_free(CumCol4* root);
+void Small_Letters(char *treeWord);
 
 /* File */
 BTree *ReadFile(BTree *tempTree, int *ptrTotalWords, int *ptrTotalLines);
@@ -140,5 +121,7 @@ void PrintMode(BtreeMode *treeMode);
 void IsInTree(BTree *tree, char *word, int *ptrLine6);
 void MaxCount(BTree *tree, int *ptrMaxCount);
 int Quartiles(int maxCount, int totalOcurrencesLine6);
+
+
 
 #endif

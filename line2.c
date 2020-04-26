@@ -1,6 +1,3 @@
-#ifndef LINE2_H
-#define LINE2_H
-
 #include "library.h"
 
 /*Insere noutra Arcvore faz comparacao alfabetica. Se for maior manda pa direita, se for menor manda pa esquerda e se for igual
@@ -123,5 +120,3 @@ void PrintEndTable(int totalNiLine3, double totalFiLine3)
     printf("|\tTOTAL  \t\t|\t%d\t|\t%f\t|               |                       |\n", totalNiLine3, totalFiLine3);
     printf("---------------------------------------------------------------------------------------------------------\n");
 }
-
-#endif

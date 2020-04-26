@@ -1,6 +1,3 @@
-#ifndef LINE3_H
-#define LINE3_H
-
 #include "library.h"
 
 void Line_3_Word_Frequency_Table(BTree *tree)
@@ -97,5 +94,3 @@ void TreeTraversal_Line_3(BTree *tree, int *ptr20, int *ptr40, int *ptr60, int *
         TreeTraversal_Line_3(tree->right, ptr20, ptr40, ptr60, ptr80, ptr100);
     }    
 }
-
-#endif

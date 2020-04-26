@@ -1,6 +1,3 @@
-#ifndef LINE_4_H
-#define LINE_4_H
-
 #include "library.h"
 
 /*Vindo da segunda arvore comeca a copiar para outra arvore*/
@@ -66,5 +63,3 @@ void InOrderMedia(CumCol4 * treeLine4)
         InOrderMedia (treeLine4->right);
 	}
 }
-
-#endif

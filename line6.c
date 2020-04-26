@@ -1,6 +1,3 @@
-#ifndef LINE6_H
-#define LINE6_H
-
 #include "library.h"
 
 /* Verifica se a palavra inserida pelo utilizador existe*/
@@ -63,5 +60,3 @@ int Quartiles(int maxCount, int totalOcurrencesLine6)
     
     return 4;
 }
-
-#endif

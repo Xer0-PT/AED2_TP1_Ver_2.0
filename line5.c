@@ -1,6 +1,3 @@
-#ifndef LINE5_H
-#define LINE5_H
-
 #include "library.h"
 
 /* Travessia na árvore do ficheiro para contar o */
@@ -82,5 +79,3 @@ void PrintMode(BtreeMode *treeMode)
         PrintMode(treeMode->left);
     }
 }
-
-#endif

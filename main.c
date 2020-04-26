@@ -1,9 +1,4 @@
-#include "file.h"
-#include "line2.h"
-#include "line3.h"
-#include "line4.h"
-#include "line5.h"
-#include "line6.h"
+#include "library.h"
 
 int main()
 {    
@@ -187,5 +182,23 @@ void CumCol4_free(CumCol4* root)
         CumCol4_free(root->left);
         CumCol4_free(root->right);
         free(root);
+    }
+}
+
+/* This function is needed in more than 1 file */
+/* So in this file is accessible anywhere */
+void Small_Letters(char *treeWord)
+{
+    char aux;
+    int i = 0;
+
+    while (treeWord[i] != '\0')
+    {
+        aux = treeWord[i];
+        if (aux >= 'A' && aux <= 'Z')
+        {
+            treeWord[i] = treeWord[i] + 32;
+        }
+        i++;
     }
 }

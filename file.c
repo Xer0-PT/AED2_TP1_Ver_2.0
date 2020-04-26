@@ -107,7 +107,4 @@ BTree *Insert_File_Tree(BTree *tree, Data tempData, int *ptrTotalWords)
         ++*ptrTotalWords;
     }
     return tree;
-
-
-
 }
