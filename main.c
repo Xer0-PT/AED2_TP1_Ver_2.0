@@ -63,6 +63,7 @@ int main()
         switch (opMenu)
         {
             case 1:
+                puts("A ler ficheiro. Aguarde um momento.");
                 tree = ReadFile(tree, ptrTotalWords, ptrTotalLines);
                 
                 /* Print_Tree(tree); */

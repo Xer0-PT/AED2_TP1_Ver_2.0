@@ -1,14 +1,15 @@
 #include "library.h"
-
-/* #define SIZEHISTOGRAMA 50.0/* int tamanho[128];
+/* 
+#define SIZEHISTOGRAMA 50.0 int tamanho[128];
 
 tamanho[strlen(palavra)]++;
 
 int histograma[SIZEHISTOGRAMA];
 
-histograma[round((probabilidade *SIZEHISTOGRAMA))]++  */
+histograma[round((probabilidade *SIZEHISTOGRAMA))]++ 
 
-/* for(int i) class = i/SIZEHISTOGRAMA */
+for(int i) class = i/SIZEHISTOGRAMA
+ */
 
 /* Travessia na árvore do ficheiro para contar o */
 /* total de letras contidas em todas as palavras do ficheiro */
