@@ -1,0 +1,85 @@
+\hypertarget{line5_8c}{}\doxysection{line5.\+c File Reference}
+\label{line5_8c}\index{line5.c@{line5.c}}
+{\ttfamily \#include \char`\"{}library.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{line5_8c_a646945dcd35338adf4b5e1ddad60e855}{Tree\+Traversal\+\_\+\+Total\+\_\+\+Letters}} (\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$tree, unsigned long int $\ast$total\+Letters)
+\item 
+float \mbox{\hyperlink{line5_8c_a48b14bc904530e778e35497f9840f222}{Average\+\_\+\+Line\+\_\+5}} (unsigned long int total\+Letters, int total\+Words)
+\item 
+void \mbox{\hyperlink{line5_8c_a223630d42cbc863c1759ad53e8829eb0}{Tree\+Traversal\+\_\+\+Mode\+\_\+\+Letters}} (\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$tree, int word\+Size\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{line5_8c_a48b14bc904530e778e35497f9840f222}\label{line5_8c_a48b14bc904530e778e35497f9840f222}} 
+\index{line5.c@{line5.c}!Average\_Line\_5@{Average\_Line\_5}}
+\index{Average\_Line\_5@{Average\_Line\_5}!line5.c@{line5.c}}
+\doxysubsubsection{\texorpdfstring{Average\_Line\_5()}{Average\_Line\_5()}}
+{\footnotesize\ttfamily float Average\+\_\+\+Line\+\_\+5 (\begin{DoxyParamCaption}\item[{unsigned long int}]{total\+Letters,  }\item[{int}]{total\+Words }\end{DoxyParamCaption})}
+
+Cálculo da Média do tamanho das palavras 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{33     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{float})totalLetters / totalWords;}
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{line5_8c_a223630d42cbc863c1759ad53e8829eb0}\label{line5_8c_a223630d42cbc863c1759ad53e8829eb0}} 
+\index{line5.c@{line5.c}!TreeTraversal\_Mode\_Letters@{TreeTraversal\_Mode\_Letters}}
+\index{TreeTraversal\_Mode\_Letters@{TreeTraversal\_Mode\_Letters}!line5.c@{line5.c}}
+\doxysubsubsection{\texorpdfstring{TreeTraversal\_Mode\_Letters()}{TreeTraversal\_Mode\_Letters()}}
+{\footnotesize\ttfamily void Tree\+Traversal\+\_\+\+Mode\+\_\+\+Letters (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{tree,  }\item[{int}]{word\+Size\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Travessia da árvore do ficheiro para o cálculo da Moda 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39     \textcolor{keywordflow}{if} (tree != NULL)}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         \mbox{\hyperlink{line5_8c_a223630d42cbc863c1759ad53e8829eb0}{TreeTraversal\_Mode\_Letters}}(tree-\/>\mbox{\hyperlink{struct___btree_a3183c41e4d4927489c5026c7d9d2580e}{left}}, wordSize);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43         wordSize[tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a46b1ed5b1c9cfd962271f82ccdc20849}{lenghtWord}}] += tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45         \mbox{\hyperlink{line5_8c_a223630d42cbc863c1759ad53e8829eb0}{TreeTraversal\_Mode\_Letters}}(tree-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}}, wordSize);}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{line5_8c_a646945dcd35338adf4b5e1ddad60e855}\label{line5_8c_a646945dcd35338adf4b5e1ddad60e855}} 
+\index{line5.c@{line5.c}!TreeTraversal\_Total\_Letters@{TreeTraversal\_Total\_Letters}}
+\index{TreeTraversal\_Total\_Letters@{TreeTraversal\_Total\_Letters}!line5.c@{line5.c}}
+\doxysubsubsection{\texorpdfstring{TreeTraversal\_Total\_Letters()}{TreeTraversal\_Total\_Letters()}}
+{\footnotesize\ttfamily void Tree\+Traversal\+\_\+\+Total\+\_\+\+Letters (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{tree,  }\item[{unsigned long int $\ast$}]{total\+Letters }\end{DoxyParamCaption})}
+
+\#define S\+I\+Z\+E\+H\+I\+S\+T\+O\+G\+R\+A\+MA 50.\+0 int tamanho\mbox{[}128\mbox{]};
+
+tamanho\mbox{[}strlen(palavra)\mbox{]}++;
+
+int histograma\mbox{[}S\+I\+Z\+E\+H\+I\+S\+T\+O\+G\+R\+A\+MA\mbox{]};
+
+histograma\mbox{[}round((probabilidade $\ast$\+S\+I\+Z\+E\+H\+I\+S\+T\+O\+G\+R\+A\+M\+A))\mbox{]}++
+
+for(int i) class = i/\+S\+I\+Z\+E\+H\+I\+S\+T\+O\+G\+R\+A\+MA
+
+Travessia na árvore do ficheiro para contar o
+
+total de letras contidas em todas as palavras do ficheiro
+
+Acrescenta na variável total\+Letters o tamanho da palavra e
+
+multiplica pelo numero de vezes que essa palavra aparece ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \textcolor{keywordflow}{if} (tree)}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22         \mbox{\hyperlink{line5_8c_a646945dcd35338adf4b5e1ddad60e855}{TreeTraversal\_Total\_Letters}}(tree-\/>\mbox{\hyperlink{struct___btree_a3183c41e4d4927489c5026c7d9d2580e}{left}}, totalLetters);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24         *totalLetters += tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a46b1ed5b1c9cfd962271f82ccdc20849}{lenghtWord}} * tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         \mbox{\hyperlink{line5_8c_a646945dcd35338adf4b5e1ddad60e855}{TreeTraversal\_Total\_Letters}}(tree-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}}, totalLetters);}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,103 @@
+\hypertarget{line6_8c}{}\doxysection{line6.\+c File Reference}
+\label{line6_8c}\index{line6.c@{line6.c}}
+{\ttfamily \#include \char`\"{}library.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{line6_8c_ad1d39b007d619c6c29794c78efba6d4d}{Is\+In\+Tree}} (\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$tree, char $\ast$word, int $\ast$ptr\+Total\+Ocurrences\+Line6)
+\item 
+void \mbox{\hyperlink{line6_8c_ae434cb8939a369e4fda9ac2a212023cc}{Max\+Count}} (\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$tree, int $\ast$ptr\+Max\+Count)
+\item 
+int \mbox{\hyperlink{line6_8c_a0d06d9a196e5cdd93323f8d2ecf9e3fc}{Quartiles}} (int max\+Count, int total\+Ocurrences\+Line6)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{line6_8c_ad1d39b007d619c6c29794c78efba6d4d}\label{line6_8c_ad1d39b007d619c6c29794c78efba6d4d}} 
+\index{line6.c@{line6.c}!IsInTree@{IsInTree}}
+\index{IsInTree@{IsInTree}!line6.c@{line6.c}}
+\doxysubsubsection{\texorpdfstring{IsInTree()}{IsInTree()}}
+{\footnotesize\ttfamily void Is\+In\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{tree,  }\item[{char $\ast$}]{word,  }\item[{int $\ast$}]{ptr\+Total\+Ocurrences\+Line6 }\end{DoxyParamCaption})}
+
+Verifica se a palavra inserida pelo utilizador existe
+
+Se existir, total\+Ocurrences\+Line6 toma o valor das ocorrencias da palavra 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7     \textcolor{keywordflow}{if}(tree)}
+\DoxyCodeLine{8     \{}
+\DoxyCodeLine{9         \textcolor{keywordflow}{if}(strcmp(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}, word) < 0)}
+\DoxyCodeLine{10             \mbox{\hyperlink{line6_8c_ad1d39b007d619c6c29794c78efba6d4d}{IsInTree}}(tree-\/>\mbox{\hyperlink{struct___btree_a3183c41e4d4927489c5026c7d9d2580e}{left}}, word, ptrTotalOcurrencesLine6);}
+\DoxyCodeLine{11         }
+\DoxyCodeLine{12         \textcolor{keywordflow}{if}(strcmp(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}, word) > 0)}
+\DoxyCodeLine{13             \mbox{\hyperlink{line6_8c_ad1d39b007d619c6c29794c78efba6d4d}{IsInTree}}(tree-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}}, word, ptrTotalOcurrencesLine6);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15         \textcolor{keywordflow}{if}(strcmp(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}, word) == 0)}
+\DoxyCodeLine{16             *ptrTotalOcurrencesLine6 = tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{17     \}}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{line6_8c_ae434cb8939a369e4fda9ac2a212023cc}\label{line6_8c_ae434cb8939a369e4fda9ac2a212023cc}} 
+\index{line6.c@{line6.c}!MaxCount@{MaxCount}}
+\index{MaxCount@{MaxCount}!line6.c@{line6.c}}
+\doxysubsubsection{\texorpdfstring{MaxCount()}{MaxCount()}}
+{\footnotesize\ttfamily void Max\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{tree,  }\item[{int $\ast$}]{ptr\+Max\+Count }\end{DoxyParamCaption})}
+
+Travessia sobre a árvore do ficheiro para
+
+verificar qual a palavra que se repete mais vezes.
+
+Para posteriormente fazer o cálculo dos quartis sobre esse número
+
+Max\+Count toma o valor da palavra que mais se repete 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26     \textcolor{keywordflow}{if} (tree)}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         \mbox{\hyperlink{line6_8c_ae434cb8939a369e4fda9ac2a212023cc}{MaxCount}}(tree-\/>\mbox{\hyperlink{struct___btree_a3183c41e4d4927489c5026c7d9d2580e}{left}}, ptrMaxCount);}
+\DoxyCodeLine{29         \textcolor{keywordflow}{if} (tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}} > *ptrMaxCount)}
+\DoxyCodeLine{30         \{}
+\DoxyCodeLine{31             *ptrMaxCount = tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{32         \}}
+\DoxyCodeLine{33         \mbox{\hyperlink{line6_8c_ae434cb8939a369e4fda9ac2a212023cc}{MaxCount}}(tree-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}}, ptrMaxCount);}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{line6_8c_a0d06d9a196e5cdd93323f8d2ecf9e3fc}\label{line6_8c_a0d06d9a196e5cdd93323f8d2ecf9e3fc}} 
+\index{line6.c@{line6.c}!Quartiles@{Quartiles}}
+\index{Quartiles@{Quartiles}!line6.c@{line6.c}}
+\doxysubsubsection{\texorpdfstring{Quartiles()}{Quartiles()}}
+{\footnotesize\ttfamily int Quartiles (\begin{DoxyParamCaption}\item[{int}]{max\+Count,  }\item[{int}]{total\+Ocurrences\+Line6 }\end{DoxyParamCaption})}
+
+Recebe o valor da palavra que se repete mais vezes
+
+e quantas vezes se repete a palavra inserida pelo utilizador
+
+Cálculo dos quartis e retorna o quartil a que pertence a palavra 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42     \textcolor{keywordtype}{float} quartile\_1 = (float)maxCount / 4;}
+\DoxyCodeLine{43     \textcolor{keywordtype}{float} quartile\_2 = (float)maxCount / 2;}
+\DoxyCodeLine{44     \textcolor{keywordtype}{float} quartile\_3 = (float)maxCount / 4 + quartile\_2;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     puts(\textcolor{stringliteral}{"Quartis:"});}
+\DoxyCodeLine{47     printf(\textcolor{stringliteral}{"\(\backslash\)tQ1 -\/> 0 a \%.0f"}, quartile\_1);}
+\DoxyCodeLine{48     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tQ2 -\/> \%.0f a \%.0f"}, quartile\_1 + 1, quartile\_2);}
+\DoxyCodeLine{49     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tQ3 -\/> \%.0f a \%.0f"}, quartile\_2 + 1, quartile\_3);}
+\DoxyCodeLine{50     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)tQ4 -\/> \%.0f a \%d"}, quartile\_3 + 1, maxCount);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{keywordflow}{if} (totalOcurrencesLine6 <= quartile\_1)}
+\DoxyCodeLine{53         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{keywordflow}{if} (totalOcurrencesLine6 > quartile\_1 \&\& totalOcurrencesLine6 <= quartile\_2)}
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} 2;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{keywordflow}{if} (totalOcurrencesLine6 > quartile\_2 \&\& totalOcurrencesLine6 <= quartile\_3)}
+\DoxyCodeLine{59         \textcolor{keywordflow}{return} 3;}
+\DoxyCodeLine{60     }
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} 4;}
+\DoxyCodeLine{62 \}}
+
+\end{DoxyCode}

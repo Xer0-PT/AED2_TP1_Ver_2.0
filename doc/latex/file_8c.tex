@@ -1,0 +1,152 @@
+\hypertarget{file_8c}{}\doxysection{file.\+c File Reference}
+\label{file_8c}\index{file.c@{file.c}}
+{\ttfamily \#include \char`\"{}library.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{file_8c_a77ef52b1c3c406fa4f91524bdca3a7e4}{Special\+\_\+\+Characters}} (char $\ast$analyze\+Tree)
+\item 
+\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$ \mbox{\hyperlink{file_8c_adffc3624073f36f7e8de9ed842fc2a93}{Read\+File}} (\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$temp\+Tree, int $\ast$ptr\+Total\+Words, int $\ast$ptr\+Total\+Lines)
+\item 
+void \mbox{\hyperlink{file_8c_a517618d4a3d058a087737726236931ce}{Print\+\_\+\+Tree}} (\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$tree)
+\item 
+\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$ \mbox{\hyperlink{file_8c_af45ec7b643eb80bcd722b103157ea4f9}{Insert\+\_\+\+File\+\_\+\+Tree}} (\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$tree, \mbox{\hyperlink{library_8h_aaa99c0766395c8c2a88946185b5c5683}{Data}} temp\+Data, int $\ast$ptr\+Total\+Words)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{file_8c_af45ec7b643eb80bcd722b103157ea4f9}\label{file_8c_af45ec7b643eb80bcd722b103157ea4f9}} 
+\index{file.c@{file.c}!Insert\_File\_Tree@{Insert\_File\_Tree}}
+\index{Insert\_File\_Tree@{Insert\_File\_Tree}!file.c@{file.c}}
+\doxysubsubsection{\texorpdfstring{Insert\_File\_Tree()}{Insert\_File\_Tree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}}$\ast$ Insert\+\_\+\+File\+\_\+\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{tree,  }\item[{\mbox{\hyperlink{library_8h_aaa99c0766395c8c2a88946185b5c5683}{Data}}}]{temp\+Data,  }\item[{int $\ast$}]{ptr\+Total\+Words }\end{DoxyParamCaption})}
+
+Insere o ficheiro na Arvore Se entra aqui é porque é uma word diferente.
+
+Então vamos incrementar o total de words.
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71 \{}
+\DoxyCodeLine{72     \textcolor{keywordflow}{if} (tree)}
+\DoxyCodeLine{73     \{}
+\DoxyCodeLine{74         \textcolor{keywordflow}{if} (strcmp(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}, tempData.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}) < 0)}
+\DoxyCodeLine{75             tree-\/>\mbox{\hyperlink{struct___btree_a3183c41e4d4927489c5026c7d9d2580e}{left}} = \mbox{\hyperlink{file_8c_af45ec7b643eb80bcd722b103157ea4f9}{Insert\_File\_Tree}}(tree-\/>\mbox{\hyperlink{struct___btree_a3183c41e4d4927489c5026c7d9d2580e}{left}}, tempData, ptrTotalWords);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77         \textcolor{keywordflow}{if} (strcmp(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}, tempData.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}) > 0)}
+\DoxyCodeLine{78             tree-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}} = \mbox{\hyperlink{file_8c_af45ec7b643eb80bcd722b103157ea4f9}{Insert\_File\_Tree}}(tree-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}}, tempData, ptrTotalWords);}
+\DoxyCodeLine{79         }
+\DoxyCodeLine{80         \textcolor{keywordflow}{if} ((strcmp(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}, tempData.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}) == 0) \&\& (strcmp(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, tempData.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}) == 0))}
+\DoxyCodeLine{81             tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}} ++;}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83         \textcolor{keywordflow}{if} ((strcmp(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}, tempData.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}) == 0) \&\& (strcmp(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, tempData.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}) != 0))}
+\DoxyCodeLine{84             tree-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}} = \mbox{\hyperlink{file_8c_af45ec7b643eb80bcd722b103157ea4f9}{Insert\_File\_Tree}}(tree-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}}, tempData, ptrTotalWords);}
+\DoxyCodeLine{85     \}}
+\DoxyCodeLine{86     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{87     \{}
+\DoxyCodeLine{88         tree = (\mbox{\hyperlink{struct___btree}{BTree}}*) malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct___btree}{BTree}}));}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90         tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}     =   (\textcolor{keywordtype}{char}*) malloc(strlen(tempData.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}})    *   \textcolor{keyword}{sizeof}(char) + 1);}
+\DoxyCodeLine{91         tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a6ae909f3de1677b46e8065e95f8f5b79}{motto}}    =   (\textcolor{keywordtype}{char}*) malloc(strlen(tempData.\mbox{\hyperlink{struct___data_a6ae909f3de1677b46e8065e95f8f5b79}{motto}})   *   \textcolor{keyword}{sizeof}(char) + 1);}
+\DoxyCodeLine{92         tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}  =   (\textcolor{keywordtype}{char}*) malloc(strlen(tempData.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}) *   \textcolor{keyword}{sizeof}(char) + 1);}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95         strcpy(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}},       tempData.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}});}
+\DoxyCodeLine{96         strcpy(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a6ae909f3de1677b46e8065e95f8f5b79}{motto}},          tempData.\mbox{\hyperlink{struct___data_a6ae909f3de1677b46e8065e95f8f5b79}{motto}});}
+\DoxyCodeLine{97         strcpy(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}},       tempData.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}});}
+\DoxyCodeLine{98         }
+\DoxyCodeLine{99         tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a149e6cc3136eaec95ef986c41b548b91}{prob}}     =   tempData.\mbox{\hyperlink{struct___data_a149e6cc3136eaec95ef986c41b548b91}{prob}};}
+\DoxyCodeLine{100         tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}}  =   1;}
+\DoxyCodeLine{101         tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a46b1ed5b1c9cfd962271f82ccdc20849}{lenghtWord}}    =   strlen(tempData.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}});}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103         tree-\/>\mbox{\hyperlink{struct___btree_a3183c41e4d4927489c5026c7d9d2580e}{left}} = tree-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}}       =   NULL;}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{107         ++*ptrTotalWords;}
+\DoxyCodeLine{108     \}}
+\DoxyCodeLine{109     \textcolor{keywordflow}{return} tree;}
+\DoxyCodeLine{110 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file_8c_a517618d4a3d058a087737726236931ce}\label{file_8c_a517618d4a3d058a087737726236931ce}} 
+\index{file.c@{file.c}!Print\_Tree@{Print\_Tree}}
+\index{Print\_Tree@{Print\_Tree}!file.c@{file.c}}
+\doxysubsubsection{\texorpdfstring{Print\_Tree()}{Print\_Tree()}}
+{\footnotesize\ttfamily void Print\+\_\+\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+Imprime a Arvore 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58 \{}
+\DoxyCodeLine{59     \textcolor{keywordflow}{if} (tree)}
+\DoxyCodeLine{60     \{}
+\DoxyCodeLine{61         \mbox{\hyperlink{file_8c_a517618d4a3d058a087737726236931ce}{Print\_Tree}}(tree-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}});}
+\DoxyCodeLine{62         printf(\textcolor{stringliteral}{"\%-\/15s \%-\/15s \%-\/15s\(\backslash\)t\%f\(\backslash\)tAparece \%d vezes e tem \%d letras.\(\backslash\)n"}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a6ae909f3de1677b46e8065e95f8f5b79}{motto}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}},}
+\DoxyCodeLine{63                                                                         tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a149e6cc3136eaec95ef986c41b548b91}{prob}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a46b1ed5b1c9cfd962271f82ccdc20849}{lenghtWord}});}
+\DoxyCodeLine{64         \mbox{\hyperlink{file_8c_a517618d4a3d058a087737726236931ce}{Print\_Tree}}(tree-\/>\mbox{\hyperlink{struct___btree_a3183c41e4d4927489c5026c7d9d2580e}{left}});}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file_8c_adffc3624073f36f7e8de9ed842fc2a93}\label{file_8c_adffc3624073f36f7e8de9ed842fc2a93}} 
+\index{file.c@{file.c}!ReadFile@{ReadFile}}
+\index{ReadFile@{ReadFile}!file.c@{file.c}}
+\doxysubsubsection{\texorpdfstring{ReadFile()}{ReadFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}}$\ast$ Read\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{temp\+Tree,  }\item[{int $\ast$}]{ptr\+Total\+Words,  }\item[{int $\ast$}]{ptr\+Total\+Lines }\end{DoxyParamCaption})}
+
+Le o ficheiro 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     FILE *file;}
+\DoxyCodeLine{18     \mbox{\hyperlink{struct___data}{Data}} tempData;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordtype}{char} auxWord[100];}
+\DoxyCodeLine{21     \textcolor{keywordtype}{char} auxMotto[100];}
+\DoxyCodeLine{22     \textcolor{keywordtype}{char} auxAnalyze[100];}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} total = 0;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     file = fopen(\mbox{\hyperlink{library_8h_a25e8eb79c381e3e1daaeddeab5c28e76}{\_TEXT\_FILE}}, \textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     rewind(file);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keywordflow}{while} (fscanf(file, \textcolor{stringliteral}{"\%s \%s \%s \%f"}, auxWord, auxMotto, auxAnalyze, \&tempData.\mbox{\hyperlink{struct___data_a149e6cc3136eaec95ef986c41b548b91}{prob}}) != EOF)}
+\DoxyCodeLine{31     \{}
+\DoxyCodeLine{32         \textcolor{keywordflow}{if} (\mbox{\hyperlink{file_8c_a77ef52b1c3c406fa4f91524bdca3a7e4}{Special\_Characters}}(auxAnalyze) == 0)}
+\DoxyCodeLine{33         \{            }
+\DoxyCodeLine{34             ++total;}
+\DoxyCodeLine{35             \mbox{\hyperlink{library_8h_aac1bb8ccec82f89738d2e03aa0897d35}{Small\_Letters}}(auxWord);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37             tempData.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}} =     (\textcolor{keywordtype}{char}*) malloc(strlen(auxWord)*\textcolor{keyword}{sizeof}(char) + 1);}
+\DoxyCodeLine{38             tempData.\mbox{\hyperlink{struct___data_a6ae909f3de1677b46e8065e95f8f5b79}{motto}} =    (\textcolor{keywordtype}{char}*) malloc(strlen(auxMotto)*\textcolor{keyword}{sizeof}(char) + 1);}
+\DoxyCodeLine{39             tempData.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}} =  (\textcolor{keywordtype}{char}*) malloc(strlen(auxAnalyze)*\textcolor{keyword}{sizeof}(char) + 1);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41             strcpy(tempData.\mbox{\hyperlink{struct___data_ac00a4258bfdabd98aca279382135ec92}{word}}, auxWord);}
+\DoxyCodeLine{42             strcpy(tempData.\mbox{\hyperlink{struct___data_a6ae909f3de1677b46e8065e95f8f5b79}{motto}}, auxMotto);}
+\DoxyCodeLine{43             strcpy(tempData.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, auxAnalyze);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45             tempTree = \mbox{\hyperlink{file_8c_af45ec7b643eb80bcd722b103157ea4f9}{Insert\_File\_Tree}}(tempTree, tempData, ptrTotalWords);}
+\DoxyCodeLine{46         \}}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     fclose(file);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     *ptrTotalLines = total;}
+\DoxyCodeLine{52     }
+\DoxyCodeLine{53     \textcolor{keywordflow}{return} tempTree;}
+\DoxyCodeLine{54 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file_8c_a77ef52b1c3c406fa4f91524bdca3a7e4}\label{file_8c_a77ef52b1c3c406fa4f91524bdca3a7e4}} 
+\index{file.c@{file.c}!Special\_Characters@{Special\_Characters}}
+\index{Special\_Characters@{Special\_Characters}!file.c@{file.c}}
+\doxysubsubsection{\texorpdfstring{Special\_Characters()}{Special\_Characters()}}
+{\footnotesize\ttfamily int Special\+\_\+\+Characters (\begin{DoxyParamCaption}\item[{char $\ast$}]{analyze\+Tree }\end{DoxyParamCaption})}
+
+Ignorar pontuação
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{6     \textcolor{keywordflow}{if} (analyzeTree[0] == \textcolor{charliteral}{'F'})}
+\DoxyCodeLine{7     \{}
+\DoxyCodeLine{8         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{9     \}}
+\DoxyCodeLine{10     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{11 \}}
+
+\end{DoxyCode}

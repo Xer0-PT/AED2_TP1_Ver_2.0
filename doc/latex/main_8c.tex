@@ -1,0 +1,324 @@
+\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+{\ttfamily \#include \char`\"{}library.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a07d8e8455fe6ffa9eacdc7a70124a237}{B\+Tree\+\_\+free}} (\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$root)
+\item 
+void \mbox{\hyperlink{main_8c_adf0c5cb88c678a99d90a4d3e6ce4df10}{Cumcol3\+\_\+free}} (\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$root)
+\item 
+void \mbox{\hyperlink{main_8c_afa6b1a7a32813af179afe2156818f20d}{Cum\+Col4\+\_\+free}} (\mbox{\hyperlink{library_8h_a935d02ac61f7a51f66d7acd66c9b4505}{Cum\+Col4}} $\ast$root)
+\item 
+void \mbox{\hyperlink{main_8c_aac1bb8ccec82f89738d2e03aa0897d35}{Small\+\_\+\+Letters}} (char $\ast$tree\+Word)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a07d8e8455fe6ffa9eacdc7a70124a237}\label{main_8c_a07d8e8455fe6ffa9eacdc7a70124a237}} 
+\index{main.c@{main.c}!BTree\_free@{BTree\_free}}
+\index{BTree\_free@{BTree\_free}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{BTree\_free()}{BTree\_free()}}
+{\footnotesize\ttfamily void B\+Tree\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/--- S\+I\+G\+N\+A\+T\+U\+R\+ES -\/-\/-\/-\/-\/-\/-\/-\/-\/---
+
+Main 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{210 \{}
+\DoxyCodeLine{211     \textcolor{keywordflow}{if} (root)}
+\DoxyCodeLine{212     \{}
+\DoxyCodeLine{213         \mbox{\hyperlink{main_8c_a07d8e8455fe6ffa9eacdc7a70124a237}{BTree\_free}}(root-\/>\mbox{\hyperlink{struct___btree_a3183c41e4d4927489c5026c7d9d2580e}{left}});}
+\DoxyCodeLine{214         \mbox{\hyperlink{main_8c_a07d8e8455fe6ffa9eacdc7a70124a237}{BTree\_free}}(root-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}});}
+\DoxyCodeLine{215         free(root);}
+\DoxyCodeLine{216     \}}
+\DoxyCodeLine{217 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8c_adf0c5cb88c678a99d90a4d3e6ce4df10}\label{main_8c_adf0c5cb88c678a99d90a4d3e6ce4df10}} 
+\index{main.c@{main.c}!Cumcol3\_free@{Cumcol3\_free}}
+\index{Cumcol3\_free@{Cumcol3\_free}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Cumcol3\_free()}{Cumcol3\_free()}}
+{\footnotesize\ttfamily void Cumcol3\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{220 \{}
+\DoxyCodeLine{221     \textcolor{keywordflow}{if} (root)}
+\DoxyCodeLine{222     \{}
+\DoxyCodeLine{223         \mbox{\hyperlink{main_8c_adf0c5cb88c678a99d90a4d3e6ce4df10}{Cumcol3\_free}}(root-\/>\mbox{\hyperlink{struct___cum_col3_aa56c41d3a7cad4f2b98b4385eb6a2b66}{left}});}
+\DoxyCodeLine{224         \mbox{\hyperlink{main_8c_adf0c5cb88c678a99d90a4d3e6ce4df10}{Cumcol3\_free}}(root-\/>\mbox{\hyperlink{struct___cum_col3_ad0fd7781a6faaa1e7c85f3cda22c93f4}{right}});}
+\DoxyCodeLine{225         free(root);}
+\DoxyCodeLine{226     \}}
+\DoxyCodeLine{227 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8c_afa6b1a7a32813af179afe2156818f20d}\label{main_8c_afa6b1a7a32813af179afe2156818f20d}} 
+\index{main.c@{main.c}!CumCol4\_free@{CumCol4\_free}}
+\index{CumCol4\_free@{CumCol4\_free}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{CumCol4\_free()}{CumCol4\_free()}}
+{\footnotesize\ttfamily void Cum\+Col4\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a935d02ac61f7a51f66d7acd66c9b4505}{Cum\+Col4}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{230 \{}
+\DoxyCodeLine{231     \textcolor{keywordflow}{if} (root)}
+\DoxyCodeLine{232     \{}
+\DoxyCodeLine{233         \mbox{\hyperlink{main_8c_afa6b1a7a32813af179afe2156818f20d}{CumCol4\_free}}(root-\/>\mbox{\hyperlink{struct___cum_col4_ae39164c6a5cf74bebf018f1981c9b1b9}{left}});}
+\DoxyCodeLine{234         \mbox{\hyperlink{main_8c_afa6b1a7a32813af179afe2156818f20d}{CumCol4\_free}}(root-\/>\mbox{\hyperlink{struct___cum_col4_ad8d586986991f7584eebddd097f5a07f}{right}});}
+\DoxyCodeLine{235         free(root);}
+\DoxyCodeLine{236     \}}
+\DoxyCodeLine{237 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Variaveis Line 2
+
+\DoxyHorRuler{0}
+
+
+Variaveis Line 5
+
+Como sabemos que o valor é sempre positivo e se trata de muitos dados
+
+declaramos o total\+Length como unsigned long int
+
+\DoxyHorRuler{0}
+
+
+Variaveis Line 6
+
+Este char dá-\/nos um warning ao compilar
+
+char $\ast$word\+Line6;
+
+\DoxyHorRuler{0}
+
+
+Print\+\_\+\+Tree(tree);
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \{    }
+\DoxyCodeLine{5     \mbox{\hyperlink{struct___btree}{BTree}} *tree = NULL;}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7     \mbox{\hyperlink{struct___cum_col3}{CumCol3}} *treeClass = (\mbox{\hyperlink{struct___cum_col3}{CumCol3}} *) malloc (\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct___cum_col3}{CumCol3}}));}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9     \mbox{\hyperlink{struct___cum_col3}{CumCol3}} *treeClassOcur = (\mbox{\hyperlink{struct___cum_col3}{CumCol3}} *) malloc (\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct___cum_col3}{CumCol3}}));}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11     \mbox{\hyperlink{struct___cum_col4}{CumCol4}} *treeLine4 = (\mbox{\hyperlink{struct___cum_col4}{CumCol4}} *) malloc (\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct___cum_col4}{CumCol4}}));}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} opMenu;}
+\DoxyCodeLine{14     \textcolor{keywordtype}{int} totalWords = 0;}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} *ptrTotalWords = \&totalWords;}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} totalLines = 0;}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} *ptrTotalLines = \&totalLines;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} totalNiLine2 = 0;}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} *ptrTotalNiLine2 = \&totalNiLine2;}
+\DoxyCodeLine{23     \textcolor{keywordtype}{double} totalFiLine2 = 0;}
+\DoxyCodeLine{24     \textcolor{keywordtype}{double} *ptrTotalFiLine2 = \&totalFiLine2;}
+\DoxyCodeLine{30     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} totalLetters = 0;}
+\DoxyCodeLine{31     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} *ptrTotalLetters = \&totalLetters;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{float} averageLength;}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} wordSize[100];}
+\DoxyCodeLine{35    }
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{37     \textcolor{keywordtype}{int} j = 0;}
+\DoxyCodeLine{38     \textcolor{keywordtype}{int} moda = 0;}
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} mostCommonWordSize = 0;}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{int} aux = 0;}
+\DoxyCodeLine{42     \textcolor{keywordtype}{int} k = 0;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{int} mediane = 0;}
+\DoxyCodeLine{45     \textcolor{keywordtype}{int} medianeArray[100];}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{int} totalOcurrencesLine6;}
+\DoxyCodeLine{51     \textcolor{keywordtype}{int} *ptrTotalOcurrencesLine6 = \&totalOcurrencesLine6;}
+\DoxyCodeLine{52     \textcolor{keywordtype}{int} maxCount = 0;}
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} *ptrMaxCount = \&maxCount;}
+\DoxyCodeLine{56     \textcolor{keywordtype}{char} wordLine6[100];}
+\DoxyCodeLine{57     \textcolor{keywordtype}{int} quartile;}
+\DoxyCodeLine{60     \textcolor{keywordflow}{do}}
+\DoxyCodeLine{61     \{}
+\DoxyCodeLine{62         totalOcurrencesLine6 = -\/1;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         puts(\textcolor{stringliteral}{""});}
+\DoxyCodeLine{65         puts(\textcolor{stringliteral}{""});}
+\DoxyCodeLine{66         puts(\textcolor{stringliteral}{"1 -\/ Ler Ficheiro"});}
+\DoxyCodeLine{67         puts(\textcolor{stringliteral}{"2 -\/ Tabela Frequencias -\/ 'Categoria Gramatical'"});}
+\DoxyCodeLine{68         puts(\textcolor{stringliteral}{"3 -\/ Tabela Frequencias -\/ 'Tamanho Palavras'"});}
+\DoxyCodeLine{69         puts(\textcolor{stringliteral}{"4 -\/ Media -\/ 'Categoria Gramatical'"});}
+\DoxyCodeLine{70         puts(\textcolor{stringliteral}{"5 -\/ Media / Moda / Mediana / Desvio Padrao -\/ 'Tamanho Palavras'"});}
+\DoxyCodeLine{71         puts(\textcolor{stringliteral}{"6 -\/ Quartis -\/ 'Frequencia Palavras'"});}
+\DoxyCodeLine{72         puts(\textcolor{stringliteral}{"0 -\/ Exit"});}
+\DoxyCodeLine{73         puts(\textcolor{stringliteral}{""});}
+\DoxyCodeLine{74         printf(\textcolor{stringliteral}{"Opcao: "});}
+\DoxyCodeLine{75         scanf(\textcolor{stringliteral}{"\%d"}, \&opMenu);}
+\DoxyCodeLine{76     }
+\DoxyCodeLine{77         \textcolor{keywordflow}{switch} (opMenu)}
+\DoxyCodeLine{78         \{}
+\DoxyCodeLine{79             \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{80                 puts(\textcolor{stringliteral}{"A ler ficheiro. Aguarde um momento."});}
+\DoxyCodeLine{81                 tree = \mbox{\hyperlink{file_8c_adffc3624073f36f7e8de9ed842fc2a93}{ReadFile}}(tree, ptrTotalWords, ptrTotalLines);}
+\DoxyCodeLine{82                 }
+\DoxyCodeLine{84                 printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n|\(\backslash\)tFicheiro Carregado!\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|"});}
+\DoxyCodeLine{85                 printf(\textcolor{stringliteral}{"\(\backslash\)n|\(\backslash\)tTotal palavras (nao inclui repeticoes):\(\backslash\)t\%d\(\backslash\)t\(\backslash\)t|"}, totalWords);}
+\DoxyCodeLine{86                 printf(\textcolor{stringliteral}{"\(\backslash\)n|\(\backslash\)tTotal linhas com conteudo valido:\(\backslash\)t\%d\(\backslash\)t\(\backslash\)t|"}, totalLines);}
+\DoxyCodeLine{87                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{88             }
+\DoxyCodeLine{89             \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{90                 treeClass-\/>\mbox{\hyperlink{struct___cum_col3_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}} = (\textcolor{keywordtype}{char}*) malloc   (strlen(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}})    *   \textcolor{keyword}{sizeof}(char) + 1);}
+\DoxyCodeLine{91                 strcpy(treeClass-\/>\mbox{\hyperlink{struct___cum_col3_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}});}
+\DoxyCodeLine{92                 treeClass-\/>\mbox{\hyperlink{struct___cum_col3_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} = 0;}
+\DoxyCodeLine{93                 treeClass-\/>\mbox{\hyperlink{struct___cum_col3_a149e6cc3136eaec95ef986c41b548b91}{prob}} = tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a149e6cc3136eaec95ef986c41b548b91}{prob}};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95                 \mbox{\hyperlink{library_8h_a1b7052fc709ecf44cf999b1c727b60c9}{GenerateByClassification}}(tree, treeClass);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97                 \mbox{\hyperlink{library_8h_a6dfcb1eb080fd44fd9b757b4e5ad5be3}{SortTree}}(treeClass, treeClassOcur);}
+\DoxyCodeLine{98                 \mbox{\hyperlink{library_8h_abd0c074e9e1da524122eee28717e8e2e}{PrintHeadTable}}();}
+\DoxyCodeLine{99                 \mbox{\hyperlink{library_8h_a981211b4f3fe84828879a65413666731}{InOrderAscending}}(treeClassOcur, ptrTotalLines, ptrTotalNiLine2, ptrTotalFiLine2);}
+\DoxyCodeLine{100                 \mbox{\hyperlink{library_8h_aa37a19a57e79dba86fe5e5b820a66d09}{PrintEndTable}}(totalNiLine2, totalFiLine2);}
+\DoxyCodeLine{101                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103             \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{104                 \mbox{\hyperlink{library_8h_a69f37a6a3296e7c52338b0c8d4bf29e3}{Line\_3\_Word\_Frequency\_Table}}(tree);}
+\DoxyCodeLine{105                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107             \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{108                 printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nTipo\(\backslash\)tMedia\(\backslash\)n\(\backslash\)n"});}
+\DoxyCodeLine{109                 treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}} = (\textcolor{keywordtype}{char}*) malloc   (strlen(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}})    *   \textcolor{keyword}{sizeof}(char) + 1);}
+\DoxyCodeLine{110                 strcpy(treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}});}
+\DoxyCodeLine{111                 treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} = tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{112                 treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_a149e6cc3136eaec95ef986c41b548b91}{prob}} = tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a149e6cc3136eaec95ef986c41b548b91}{prob}}; }
+\DoxyCodeLine{113                 \mbox{\hyperlink{library_8h_a1a0a93cc905813b7a7f26ea68ce7084e}{GenerateLine4\_Media}}(tree, treeLine4);}
+\DoxyCodeLine{114                 \mbox{\hyperlink{library_8h_a4df3eca5cf12d3ad27f2867cb0f43457}{InOrderMedia}}(treeLine4);}
+\DoxyCodeLine{115                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117             \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{118                 \mbox{\hyperlink{library_8h_a036ed6c9039cea619f64b8eb2bc3d354}{TreeTraversal\_Total\_Letters}}(tree, ptrTotalLetters);}
+\DoxyCodeLine{119                 averageLength = \mbox{\hyperlink{library_8h_abe0ee3a5c9f0fc153a6c82c1937d4a9c}{Average\_Line\_5}}(totalLetters, totalLines);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121                 printf(\textcolor{stringliteral}{"\(\backslash\)nTotal Letras: \%lu"}, totalLetters);}
+\DoxyCodeLine{122                 printf(\textcolor{stringliteral}{"\(\backslash\)nMedia do Tamanho das Palavras: \%.3f"}, averageLength);}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125                 \textcolor{keywordflow}{for} (i = 0; i < 100; i++)}
+\DoxyCodeLine{126                     wordSize[i] = 0;}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128                 \mbox{\hyperlink{library_8h_a223630d42cbc863c1759ad53e8829eb0}{TreeTraversal\_Mode\_Letters}}(tree, wordSize);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130                 \textcolor{keywordflow}{for} (i = 0; i < 100; i++)}
+\DoxyCodeLine{131                 \{}
+\DoxyCodeLine{132                     \textcolor{keywordflow}{if} (wordSize[i] > moda)}
+\DoxyCodeLine{133                     \{}
+\DoxyCodeLine{134                         mostCommonWordSize = i;}
+\DoxyCodeLine{135                         moda = wordSize[i];}
+\DoxyCodeLine{136                     \}}
+\DoxyCodeLine{137                 \}}
+\DoxyCodeLine{138                 }
+\DoxyCodeLine{139                 printf(\textcolor{stringliteral}{"\(\backslash\)nModa do tamanho das palavras: \%d"}, mostCommonWordSize);}
+\DoxyCodeLine{140                 printf(\textcolor{stringliteral}{"\(\backslash\)nEste tamanho de palavra repete-\/se: \%d"}, moda);}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142                 \textcolor{keywordflow}{for} (i = 0; i < 100; i++)}
+\DoxyCodeLine{143                 \{}
+\DoxyCodeLine{144                     \textcolor{keywordflow}{if} (wordSize[i] != 0)}
+\DoxyCodeLine{145                     \{}
+\DoxyCodeLine{146                         aux++;}
+\DoxyCodeLine{147                         printf(\textcolor{stringliteral}{"\(\backslash\)n\%d -\/ \%d"}, aux, wordSize[i]);}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149                         medianeArray[k] = wordSize[i];}
+\DoxyCodeLine{150                         k++;}
+\DoxyCodeLine{151                     \}}
+\DoxyCodeLine{152                 \}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154                 printf(\textcolor{stringliteral}{"\(\backslash\)nSe n par: k = n / 2"});}
+\DoxyCodeLine{155                 printf(\textcolor{stringliteral}{"\(\backslash\)nSe n impar: k = (n + 1) / 2"});}
+\DoxyCodeLine{156                 printf(\textcolor{stringliteral}{"\(\backslash\)nn = \%d"}, k);}
+\DoxyCodeLine{157                 \textcolor{keywordflow}{if} (k \% 2 != 0)}
+\DoxyCodeLine{158                 \{}
+\DoxyCodeLine{159                     printf(\textcolor{stringliteral}{"\(\backslash\)nLogo k = (n + 1) / 2 , "});}
+\DoxyCodeLine{160                     k = (k + 1) / 2;}
+\DoxyCodeLine{161                 \}}
+\DoxyCodeLine{162                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{163                 \{}
+\DoxyCodeLine{164                     printf(\textcolor{stringliteral}{"\(\backslash\)nLogo k = n / 2 , "});}
+\DoxyCodeLine{165                 \}}
+\DoxyCodeLine{166                 }
+\DoxyCodeLine{167                 }
+\DoxyCodeLine{168                 printf(\textcolor{stringliteral}{"entao k = \%d"}, k);}
+\DoxyCodeLine{169                 printf(\textcolor{stringliteral}{"\(\backslash\)nMediana: \%d"}, medianeArray[k -\/ 1]);}
+\DoxyCodeLine{170                            }
+\DoxyCodeLine{171                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173             \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{174                 printf(\textcolor{stringliteral}{"\(\backslash\)nIndique a palavra: "});}
+\DoxyCodeLine{175                 scanf(\textcolor{stringliteral}{"\%s"}, wordLine6);}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177                 \mbox{\hyperlink{main_8c_aac1bb8ccec82f89738d2e03aa0897d35}{Small\_Letters}}(wordLine6);}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179                 \mbox{\hyperlink{library_8h_a2beb2daa3e7f77b798ce7c5fdc70bbfd}{IsInTree}}(tree, wordLine6, ptrTotalOcurrencesLine6);}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181                 \textcolor{keywordflow}{if} (totalOcurrencesLine6 != -\/1)}
+\DoxyCodeLine{182                 \{}
+\DoxyCodeLine{183                     \mbox{\hyperlink{library_8h_ae434cb8939a369e4fda9ac2a212023cc}{MaxCount}}(tree, ptrMaxCount);}
+\DoxyCodeLine{184                     quartile = \mbox{\hyperlink{library_8h_a0d06d9a196e5cdd93323f8d2ecf9e3fc}{Quartiles}}(maxCount, totalOcurrencesLine6);}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186                     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nA palavra ' \%s ' tem ' \%d ' ocorrencias e pertence ao quartil ' \%d '."}, wordLine6, totalOcurrencesLine6, quartile);}
+\DoxyCodeLine{187                 \}}
+\DoxyCodeLine{188                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{189                     printf(\textcolor{stringliteral}{"\(\backslash\)nPalavra nao existe!"});}
+\DoxyCodeLine{190                 }
+\DoxyCodeLine{191                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193             \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{194                     \mbox{\hyperlink{main_8c_a07d8e8455fe6ffa9eacdc7a70124a237}{BTree\_free}}(tree);}
+\DoxyCodeLine{195                     \mbox{\hyperlink{main_8c_adf0c5cb88c678a99d90a4d3e6ce4df10}{Cumcol3\_free}}(treeClass);}
+\DoxyCodeLine{196                     \mbox{\hyperlink{main_8c_adf0c5cb88c678a99d90a4d3e6ce4df10}{Cumcol3\_free}}(treeClassOcur);}
+\DoxyCodeLine{197                     \mbox{\hyperlink{main_8c_afa6b1a7a32813af179afe2156818f20d}{CumCol4\_free}}(treeLine4);}
+\DoxyCodeLine{198                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{201                 printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nOpcao invalida!!!\(\backslash\)n\(\backslash\)n"});}
+\DoxyCodeLine{202                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{203         \}}
+\DoxyCodeLine{204     \}\textcolor{keywordflow}{while} (opMenu != 0);}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{207 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8c_aac1bb8ccec82f89738d2e03aa0897d35}\label{main_8c_aac1bb8ccec82f89738d2e03aa0897d35}} 
+\index{main.c@{main.c}!Small\_Letters@{Small\_Letters}}
+\index{Small\_Letters@{Small\_Letters}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Small\_Letters()}{Small\_Letters()}}
+{\footnotesize\ttfamily void Small\+\_\+\+Letters (\begin{DoxyParamCaption}\item[{char $\ast$}]{tree\+Word }\end{DoxyParamCaption})}
+
+This function is needed in more than 1 file
+
+So in this file is accessible anywhere 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{242 \{}
+\DoxyCodeLine{243     \textcolor{keywordtype}{char} aux;}
+\DoxyCodeLine{244     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246     \textcolor{keywordflow}{while} (treeWord[i] != \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{247     \{}
+\DoxyCodeLine{248         aux = treeWord[i];}
+\DoxyCodeLine{249         \textcolor{keywordflow}{if} (aux >= \textcolor{charliteral}{'A'} \&\& aux <= \textcolor{charliteral}{'Z'})}
+\DoxyCodeLine{250         \{}
+\DoxyCodeLine{251             treeWord[i] = treeWord[i] + 32;}
+\DoxyCodeLine{252         \}}
+\DoxyCodeLine{253         i++;}
+\DoxyCodeLine{254     \}}
+\DoxyCodeLine{255 \}}
+
+\end{DoxyCode}

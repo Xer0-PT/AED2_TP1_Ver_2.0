@@ -1,0 +1,191 @@
+\hypertarget{line2_8c}{}\doxysection{line2.\+c File Reference}
+\label{line2_8c}\index{line2.c@{line2.c}}
+{\ttfamily \#include \char`\"{}library.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$ \mbox{\hyperlink{line2_8c_a93b49d1887b072eb892ec9c4d375fdf2}{Insert\+Or\+Count}} (\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$tree\+Class, \mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$tree)
+\item 
+void \mbox{\hyperlink{line2_8c_a1b7052fc709ecf44cf999b1c727b60c9}{Generate\+By\+Classification}} (\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$tree, \mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$tree\+Classification)
+\item 
+void \mbox{\hyperlink{line2_8c_a981211b4f3fe84828879a65413666731}{In\+Order\+Ascending}} (\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$tree\+Classification, int $\ast$ptr\+Total\+Lines, int $\ast$total\+Ni, double $\ast$total\+Fi)
+\item 
+void \mbox{\hyperlink{line2_8c_a6dfcb1eb080fd44fd9b757b4e5ad5be3}{Sort\+Tree}} (\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$tree\+Classification, \mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$tree\+Class\+Ocur)
+\item 
+\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$ \mbox{\hyperlink{line2_8c_a0d18a1ad79d3e9c9e308f24428340151}{New\+Tree\+Ascending}} (\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$tree\+Class, \mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$tree\+Class\+Ocur)
+\item 
+void \mbox{\hyperlink{line2_8c_abd0c074e9e1da524122eee28717e8e2e}{Print\+Head\+Table}} ()
+\item 
+void \mbox{\hyperlink{line2_8c_aa37a19a57e79dba86fe5e5b820a66d09}{Print\+End\+Table}} (int total\+Ni\+Line3, double total\+Fi\+Line3)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{line2_8c_a1b7052fc709ecf44cf999b1c727b60c9}\label{line2_8c_a1b7052fc709ecf44cf999b1c727b60c9}} 
+\index{line2.c@{line2.c}!GenerateByClassification@{GenerateByClassification}}
+\index{GenerateByClassification@{GenerateByClassification}!line2.c@{line2.c}}
+\doxysubsubsection{\texorpdfstring{GenerateByClassification()}{GenerateByClassification()}}
+{\footnotesize\ttfamily void Generate\+By\+Classification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{tree,  }\item[{\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$}]{tree\+Classification }\end{DoxyParamCaption})}
+
+Funcao que percorre a arvore orginal para copiar para a segunda 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{if}(tree != NULL)}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37         \mbox{\hyperlink{line2_8c_a1b7052fc709ecf44cf999b1c727b60c9}{GenerateByClassification}}(tree-\/>\mbox{\hyperlink{struct___btree_a3183c41e4d4927489c5026c7d9d2580e}{left}}, treeClassification);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39         treeClassification  = \mbox{\hyperlink{line2_8c_a93b49d1887b072eb892ec9c4d375fdf2}{InsertOrCount}}(treeClassification, tree);}
+\DoxyCodeLine{40         }
+\DoxyCodeLine{41         \mbox{\hyperlink{line2_8c_a1b7052fc709ecf44cf999b1c727b60c9}{GenerateByClassification}}(tree-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}}, treeClassification);}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43     }
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{line2_8c_a981211b4f3fe84828879a65413666731}\label{line2_8c_a981211b4f3fe84828879a65413666731}} 
+\index{line2.c@{line2.c}!InOrderAscending@{InOrderAscending}}
+\index{InOrderAscending@{InOrderAscending}!line2.c@{line2.c}}
+\doxysubsubsection{\texorpdfstring{InOrderAscending()}{InOrderAscending()}}
+{\footnotesize\ttfamily void In\+Order\+Ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$}]{tree\+Classification,  }\item[{int $\ast$}]{ptr\+Total\+Lines,  }\item[{int $\ast$}]{total\+Ni,  }\item[{double $\ast$}]{total\+Fi }\end{DoxyParamCaption})}
+
+Imprime a arvore de forma ascendente Sem este if está a imprimir o nodo que está N\+U\+LL. P\+O\+R\+Q\+UÊ?
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49     \textcolor{keywordtype}{double} auxFi = 0;}
+\DoxyCodeLine{50     \textcolor{keywordtype}{int} auxNi = 0;}
+\DoxyCodeLine{51     \textcolor{keywordflow}{if} (treeClassification)}
+\DoxyCodeLine{52     \{}
+\DoxyCodeLine{53         \mbox{\hyperlink{line2_8c_a981211b4f3fe84828879a65413666731}{InOrderAscending}} (treeClassification-\/>\mbox{\hyperlink{struct___cum_col3_aa56c41d3a7cad4f2b98b4385eb6a2b66}{left}}, ptrTotalLines, totalNi, totalFi);}
+\DoxyCodeLine{54     }
+\DoxyCodeLine{56         \textcolor{keywordflow}{if}(treeClassification-\/>\mbox{\hyperlink{struct___cum_col3_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} != 0)}
+\DoxyCodeLine{57         \{}
+\DoxyCodeLine{58             auxFi = (double)treeClassification-\/>\mbox{\hyperlink{struct___cum_col3_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} / *ptrTotalLines;}
+\DoxyCodeLine{59             auxNi = treeClassification-\/>\mbox{\hyperlink{struct___cum_col3_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}};}
+\DoxyCodeLine{60             *totalNi = *totalNi + auxNi;}
+\DoxyCodeLine{61             *totalFi = *totalFi + auxFi;}
+\DoxyCodeLine{62             printf(\textcolor{stringliteral}{"|\(\backslash\)t\%s\(\backslash\)t\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t|\(\backslash\)t\%f\(\backslash\)t| \(\backslash\)t\%d\(\backslash\)t|  \(\backslash\)t\%f\(\backslash\)t|\(\backslash\)n"}, treeClassification-\/>\mbox{\hyperlink{struct___cum_col3_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, auxNi, auxFi, *totalNi, *totalFi);}
+\DoxyCodeLine{63         \}}
+\DoxyCodeLine{64         \mbox{\hyperlink{line2_8c_a981211b4f3fe84828879a65413666731}{InOrderAscending}} (treeClassification-\/>\mbox{\hyperlink{struct___cum_col3_ad0fd7781a6faaa1e7c85f3cda22c93f4}{right}}, ptrTotalLines, totalNi, totalFi);}
+\DoxyCodeLine{65         }
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{line2_8c_a93b49d1887b072eb892ec9c4d375fdf2}\label{line2_8c_a93b49d1887b072eb892ec9c4d375fdf2}} 
+\index{line2.c@{line2.c}!InsertOrCount@{InsertOrCount}}
+\index{InsertOrCount@{InsertOrCount}!line2.c@{line2.c}}
+\doxysubsubsection{\texorpdfstring{InsertOrCount()}{InsertOrCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}}$\ast$ Insert\+Or\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$}]{tree\+Class,  }\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+Insere noutra Arcvore faz comparacao alfabetica. Se for maior manda pa direita, se for menor manda pa esquerda e se for igual adiciona as vezes que aparece a contagem 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7     \textcolor{keywordflow}{if}(treeClass)}
+\DoxyCodeLine{8     \{}
+\DoxyCodeLine{9         \textcolor{keywordflow}{if}(strcmp(treeClass-\/>\mbox{\hyperlink{struct___cum_col3_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}) == 0)}
+\DoxyCodeLine{10             treeClass-\/>\mbox{\hyperlink{struct___cum_col3_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} += tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12         \textcolor{keywordflow}{if}(strcmp(treeClass-\/>\mbox{\hyperlink{struct___cum_col3_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}) < 0)}
+\DoxyCodeLine{13                 treeClass-\/>\mbox{\hyperlink{struct___cum_col3_aa56c41d3a7cad4f2b98b4385eb6a2b66}{left}} = \mbox{\hyperlink{line2_8c_a93b49d1887b072eb892ec9c4d375fdf2}{InsertOrCount}}( treeClass-\/>\mbox{\hyperlink{struct___cum_col3_aa56c41d3a7cad4f2b98b4385eb6a2b66}{left}} , tree );}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15         \textcolor{keywordflow}{if}(strcmp(treeClass-\/>\mbox{\hyperlink{struct___cum_col3_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}) > 0)}
+\DoxyCodeLine{16                 treeClass-\/>\mbox{\hyperlink{struct___cum_col3_ad0fd7781a6faaa1e7c85f3cda22c93f4}{right}} = \mbox{\hyperlink{line2_8c_a93b49d1887b072eb892ec9c4d375fdf2}{InsertOrCount}}( treeClass-\/>\mbox{\hyperlink{struct___cum_col3_ad0fd7781a6faaa1e7c85f3cda22c93f4}{right}} , tree );}
+\DoxyCodeLine{17     \}}
+\DoxyCodeLine{18     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{19     \{}
+\DoxyCodeLine{20         treeClass = (\mbox{\hyperlink{struct___cum_col3}{CumCol3}} *) malloc ( \textcolor{keyword}{sizeof} ( \mbox{\hyperlink{struct___cum_col3}{CumCol3}} ) ) ;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22         treeClass-\/>\mbox{\hyperlink{struct___cum_col3_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}     =   (\textcolor{keywordtype}{char}*) malloc   (strlen(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}})    *   \textcolor{keyword}{sizeof}(char) + 1);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24         strcpy(treeClass-\/>\mbox{\hyperlink{struct___cum_col3_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}});}
+\DoxyCodeLine{25         treeClass-\/>\mbox{\hyperlink{struct___cum_col3_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} = tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{26         treeClass-\/>\mbox{\hyperlink{struct___cum_col3_a149e6cc3136eaec95ef986c41b548b91}{prob}} = tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a149e6cc3136eaec95ef986c41b548b91}{prob}};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28         treeClass-\/>\mbox{\hyperlink{struct___cum_col3_aa56c41d3a7cad4f2b98b4385eb6a2b66}{left}} = treeClass-\/>\mbox{\hyperlink{struct___cum_col3_ad0fd7781a6faaa1e7c85f3cda22c93f4}{right}} = NULL ;}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30     \textcolor{keywordflow}{return} treeClass;}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{line2_8c_a0d18a1ad79d3e9c9e308f24428340151}\label{line2_8c_a0d18a1ad79d3e9c9e308f24428340151}} 
+\index{line2.c@{line2.c}!NewTreeAscending@{NewTreeAscending}}
+\index{NewTreeAscending@{NewTreeAscending}!line2.c@{line2.c}}
+\doxysubsubsection{\texorpdfstring{NewTreeAscending()}{NewTreeAscending()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}}$\ast$ New\+Tree\+Ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$}]{tree\+Class,  }\item[{\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$}]{tree\+Class\+Ocur }\end{DoxyParamCaption})}
+
+Ordena a arvore pelas vezes em que aparece 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85 \{}
+\DoxyCodeLine{86     \textcolor{keywordflow}{if} (treeClassOcur)}
+\DoxyCodeLine{87     \{}
+\DoxyCodeLine{88         \textcolor{keywordflow}{if} (treeClass-\/>\mbox{\hyperlink{struct___cum_col3_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} < treeClassOcur-\/>\mbox{\hyperlink{struct___cum_col3_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}})}
+\DoxyCodeLine{89             treeClassOcur-\/>\mbox{\hyperlink{struct___cum_col3_aa56c41d3a7cad4f2b98b4385eb6a2b66}{left}} = \mbox{\hyperlink{line2_8c_a0d18a1ad79d3e9c9e308f24428340151}{NewTreeAscending}}(treeClass, treeClassOcur-\/>\mbox{\hyperlink{struct___cum_col3_aa56c41d3a7cad4f2b98b4385eb6a2b66}{left}});}
+\DoxyCodeLine{90         }
+\DoxyCodeLine{91         \textcolor{keywordflow}{if} (treeClass-\/>\mbox{\hyperlink{struct___cum_col3_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} > treeClassOcur-\/>\mbox{\hyperlink{struct___cum_col3_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}})}
+\DoxyCodeLine{92             treeClassOcur-\/>\mbox{\hyperlink{struct___cum_col3_ad0fd7781a6faaa1e7c85f3cda22c93f4}{right}} = \mbox{\hyperlink{line2_8c_a0d18a1ad79d3e9c9e308f24428340151}{NewTreeAscending}}(treeClass, treeClassOcur-\/>\mbox{\hyperlink{struct___cum_col3_ad0fd7781a6faaa1e7c85f3cda22c93f4}{right}});}
+\DoxyCodeLine{93     \}}
+\DoxyCodeLine{94     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{95     \{}
+\DoxyCodeLine{96         treeClassOcur = (\mbox{\hyperlink{struct___cum_col3}{CumCol3}} *) malloc (\textcolor{keyword}{sizeof} (\mbox{\hyperlink{struct___cum_col3}{CumCol3}}));}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98         treeClassOcur-\/>\mbox{\hyperlink{struct___cum_col3_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}} = (\textcolor{keywordtype}{char} *) malloc (strlen(treeClass-\/>\mbox{\hyperlink{struct___cum_col3_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}) * \textcolor{keyword}{sizeof}(char) + 1);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100         strcpy(treeClassOcur-\/>\mbox{\hyperlink{struct___cum_col3_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, treeClass-\/>\mbox{\hyperlink{struct___cum_col3_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}});}
+\DoxyCodeLine{101         treeClassOcur-\/>\mbox{\hyperlink{struct___cum_col3_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} = treeClass-\/>\mbox{\hyperlink{struct___cum_col3_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103         treeClassOcur-\/>\mbox{\hyperlink{struct___cum_col3_aa56c41d3a7cad4f2b98b4385eb6a2b66}{left}} = treeClassOcur-\/>\mbox{\hyperlink{struct___cum_col3_ad0fd7781a6faaa1e7c85f3cda22c93f4}{right}} = NULL;}
+\DoxyCodeLine{104     \}}
+\DoxyCodeLine{105     \textcolor{keywordflow}{return} treeClassOcur;    }
+\DoxyCodeLine{106 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{line2_8c_aa37a19a57e79dba86fe5e5b820a66d09}\label{line2_8c_aa37a19a57e79dba86fe5e5b820a66d09}} 
+\index{line2.c@{line2.c}!PrintEndTable@{PrintEndTable}}
+\index{PrintEndTable@{PrintEndTable}!line2.c@{line2.c}}
+\doxysubsubsection{\texorpdfstring{PrintEndTable()}{PrintEndTable()}}
+{\footnotesize\ttfamily void Print\+End\+Table (\begin{DoxyParamCaption}\item[{int}]{total\+Ni\+Line3,  }\item[{double}]{total\+Fi\+Line3 }\end{DoxyParamCaption})}
+
+Impressao do fim da tabela 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{118 \{}
+\DoxyCodeLine{119     printf(\textcolor{stringliteral}{"-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"});}
+\DoxyCodeLine{120     printf(\textcolor{stringliteral}{"|\(\backslash\)tTOTAL  \(\backslash\)t\(\backslash\)t|\(\backslash\)t\%d\(\backslash\)t|\(\backslash\)t\%f\(\backslash\)t|               |                       |\(\backslash\)n"}, totalNiLine3, totalFiLine3);}
+\DoxyCodeLine{121     printf(\textcolor{stringliteral}{"-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"});}
+\DoxyCodeLine{122 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{line2_8c_abd0c074e9e1da524122eee28717e8e2e}\label{line2_8c_abd0c074e9e1da524122eee28717e8e2e}} 
+\index{line2.c@{line2.c}!PrintHeadTable@{PrintHeadTable}}
+\index{PrintHeadTable@{PrintHeadTable}!line2.c@{line2.c}}
+\doxysubsubsection{\texorpdfstring{PrintHeadTable()}{PrintHeadTable()}}
+{\footnotesize\ttfamily void Print\+Head\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Impressao da cabeca da tabela 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{110 \{}
+\DoxyCodeLine{111     printf(\textcolor{stringliteral}{"-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"});}
+\DoxyCodeLine{112     printf(\textcolor{stringliteral}{"|   Classification\(\backslash\)t|\(\backslash\)tni\(\backslash\)t|\(\backslash\)tfi\(\backslash\)t\(\backslash\)t|\(\backslash\)tCum ni\(\backslash\)t|\(\backslash\)tCum fi\(\backslash\)t\(\backslash\)t|\(\backslash\)n"});}
+\DoxyCodeLine{113     printf(\textcolor{stringliteral}{"-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"});}
+\DoxyCodeLine{114 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{line2_8c_a6dfcb1eb080fd44fd9b757b4e5ad5be3}\label{line2_8c_a6dfcb1eb080fd44fd9b757b4e5ad5be3}} 
+\index{line2.c@{line2.c}!SortTree@{SortTree}}
+\index{SortTree@{SortTree}!line2.c@{line2.c}}
+\doxysubsubsection{\texorpdfstring{SortTree()}{SortTree()}}
+{\footnotesize\ttfamily void Sort\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$}]{tree\+Classification,  }\item[{\mbox{\hyperlink{library_8h_ad86733ae75e1b8b6e36a59f9e0388630}{Cum\+Col3}} $\ast$}]{tree\+Class\+Ocur }\end{DoxyParamCaption})}
+
+Funcao para percorrer a primeira arvore e mandar para a segunda 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71 \{}
+\DoxyCodeLine{72     \textcolor{keywordflow}{if} (treeClassification)}
+\DoxyCodeLine{73     \{        }
+\DoxyCodeLine{74         \mbox{\hyperlink{line2_8c_a6dfcb1eb080fd44fd9b757b4e5ad5be3}{SortTree}}(treeClassification-\/>\mbox{\hyperlink{struct___cum_col3_aa56c41d3a7cad4f2b98b4385eb6a2b66}{left}}, treeClassOcur);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76         treeClassOcur = \mbox{\hyperlink{line2_8c_a0d18a1ad79d3e9c9e308f24428340151}{NewTreeAscending}}(treeClassification, treeClassOcur);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78         \mbox{\hyperlink{line2_8c_a6dfcb1eb080fd44fd9b757b4e5ad5be3}{SortTree}}(treeClassification-\/>\mbox{\hyperlink{struct___cum_col3_ad0fd7781a6faaa1e7c85f3cda22c93f4}{right}}, treeClassOcur);}
+\DoxyCodeLine{79     \}}
+\DoxyCodeLine{80 \}}
+
+\end{DoxyCode}

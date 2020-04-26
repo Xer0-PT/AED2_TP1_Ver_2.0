@@ -1,0 +1,100 @@
+\hypertarget{line4_8c}{}\doxysection{line4.\+c File Reference}
+\label{line4_8c}\index{line4.c@{line4.c}}
+{\ttfamily \#include \char`\"{}library.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{library_8h_a935d02ac61f7a51f66d7acd66c9b4505}{Cum\+Col4}} $\ast$ \mbox{\hyperlink{line4_8c_a8e7b75f3e9977a7c634f1ca979485adc}{Sort\+Tree\+\_\+4\+\_\+\+Media}} (\mbox{\hyperlink{library_8h_a935d02ac61f7a51f66d7acd66c9b4505}{Cum\+Col4}} $\ast$tree\+Line4, \mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$tree)
+\item 
+void \mbox{\hyperlink{line4_8c_a1a0a93cc905813b7a7f26ea68ce7084e}{Generate\+Line4\+\_\+\+Media}} (\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$tree, \mbox{\hyperlink{library_8h_a935d02ac61f7a51f66d7acd66c9b4505}{Cum\+Col4}} $\ast$tree\+Line4)
+\item 
+void \mbox{\hyperlink{line4_8c_a4df3eca5cf12d3ad27f2867cb0f43457}{In\+Order\+Media}} (\mbox{\hyperlink{library_8h_a935d02ac61f7a51f66d7acd66c9b4505}{Cum\+Col4}} $\ast$tree\+Line4)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{line4_8c_a1a0a93cc905813b7a7f26ea68ce7084e}\label{line4_8c_a1a0a93cc905813b7a7f26ea68ce7084e}} 
+\index{line4.c@{line4.c}!GenerateLine4\_Media@{GenerateLine4\_Media}}
+\index{GenerateLine4\_Media@{GenerateLine4\_Media}!line4.c@{line4.c}}
+\doxysubsubsection{\texorpdfstring{GenerateLine4\_Media()}{GenerateLine4\_Media()}}
+{\footnotesize\ttfamily void Generate\+Line4\+\_\+\+Media (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{tree,  }\item[{\mbox{\hyperlink{library_8h_a935d02ac61f7a51f66d7acd66c9b4505}{Cum\+Col4}} $\ast$}]{tree\+Line4 }\end{DoxyParamCaption})}
+
+Percorre a primeira arvore e manda para a segunda 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43 \{}
+\DoxyCodeLine{44     \textcolor{keywordflow}{if}(tree != NULL)}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         \mbox{\hyperlink{line4_8c_a1a0a93cc905813b7a7f26ea68ce7084e}{GenerateLine4\_Media}}(tree-\/>\mbox{\hyperlink{struct___btree_a3183c41e4d4927489c5026c7d9d2580e}{left}}, treeLine4);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48         treeLine4  = \mbox{\hyperlink{line4_8c_a8e7b75f3e9977a7c634f1ca979485adc}{SortTree\_4\_Media}}(treeLine4, tree);}
+\DoxyCodeLine{49         }
+\DoxyCodeLine{50         \mbox{\hyperlink{line4_8c_a1a0a93cc905813b7a7f26ea68ce7084e}{GenerateLine4\_Media}}(tree-\/>\mbox{\hyperlink{struct___btree_aab60f31b4a1d4a267c4b17cb85060684}{right}}, treeLine4);}
+\DoxyCodeLine{51     \}}
+\DoxyCodeLine{52 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{line4_8c_a4df3eca5cf12d3ad27f2867cb0f43457}\label{line4_8c_a4df3eca5cf12d3ad27f2867cb0f43457}} 
+\index{line4.c@{line4.c}!InOrderMedia@{InOrderMedia}}
+\index{InOrderMedia@{InOrderMedia}!line4.c@{line4.c}}
+\doxysubsubsection{\texorpdfstring{InOrderMedia()}{InOrderMedia()}}
+{\footnotesize\ttfamily void In\+Order\+Media (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a935d02ac61f7a51f66d7acd66c9b4505}{Cum\+Col4}} $\ast$}]{tree\+Line4 }\end{DoxyParamCaption})}
+
+Imprime a media da categoria 3 existente Sem este if está a imprimir o nodo que está N\+U\+LL. P\+O\+R\+Q\+UÊ?
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57     \textcolor{keywordflow}{if} (treeLine4)}
+\DoxyCodeLine{58     \{}
+\DoxyCodeLine{59         \mbox{\hyperlink{line4_8c_a4df3eca5cf12d3ad27f2867cb0f43457}{InOrderMedia}} (treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_ae39164c6a5cf74bebf018f1981c9b1b9}{left}});}
+\DoxyCodeLine{60     }
+\DoxyCodeLine{62         \textcolor{keywordflow}{if}(treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} != 0)}
+\DoxyCodeLine{63         \{}
+\DoxyCodeLine{64             treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_a240bf360934ac08e193b32db865ac905}{media}} = (float) treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_a149e6cc3136eaec95ef986c41b548b91}{prob}} / treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}};}
+\DoxyCodeLine{65             }
+\DoxyCodeLine{66             printf(\textcolor{stringliteral}{"\%s:\(\backslash\)t\%f\(\backslash\)n"}, treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_a240bf360934ac08e193b32db865ac905}{media}});}
+\DoxyCodeLine{67         \}}
+\DoxyCodeLine{68         \mbox{\hyperlink{line4_8c_a4df3eca5cf12d3ad27f2867cb0f43457}{InOrderMedia}} (treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_ad8d586986991f7584eebddd097f5a07f}{right}});}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{line4_8c_a8e7b75f3e9977a7c634f1ca979485adc}\label{line4_8c_a8e7b75f3e9977a7c634f1ca979485adc}} 
+\index{line4.c@{line4.c}!SortTree\_4\_Media@{SortTree\_4\_Media}}
+\index{SortTree\_4\_Media@{SortTree\_4\_Media}!line4.c@{line4.c}}
+\doxysubsubsection{\texorpdfstring{SortTree\_4\_Media()}{SortTree\_4\_Media()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{library_8h_a935d02ac61f7a51f66d7acd66c9b4505}{Cum\+Col4}}$\ast$ Sort\+Tree\+\_\+4\+\_\+\+Media (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{library_8h_a935d02ac61f7a51f66d7acd66c9b4505}{Cum\+Col4}} $\ast$}]{tree\+Line4,  }\item[{\mbox{\hyperlink{library_8h_a53f0da8aadbfa303d115dd2618d27dde}{B\+Tree}} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+percorres uma vez e ficas S\+U\+M(\+Probabilidade) \& numero de registos Com isto encontras a media (xi -\/ media) $^\wedge$ 2
+
+Vindo da segunda arvore comeca a copiar para outra arvore 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     \textcolor{keywordflow}{if}(treeLine4)}
+\DoxyCodeLine{12     \{}
+\DoxyCodeLine{13         \textcolor{keywordflow}{if}(strcmp(treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}) == 0 )}
+\DoxyCodeLine{14         \{}
+\DoxyCodeLine{15             treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} += tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{16             treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_a149e6cc3136eaec95ef986c41b548b91}{prob}} += tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a149e6cc3136eaec95ef986c41b548b91}{prob}};}
+\DoxyCodeLine{17         \}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19         \textcolor{keywordflow}{if}(strcmp(treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}) < 0)}
+\DoxyCodeLine{20                 treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_ae39164c6a5cf74bebf018f1981c9b1b9}{left}} = \mbox{\hyperlink{line4_8c_a8e7b75f3e9977a7c634f1ca979485adc}{SortTree\_4\_Media}}( treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_ae39164c6a5cf74bebf018f1981c9b1b9}{left}} , tree );}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22         \textcolor{keywordflow}{if}(strcmp(treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}) > 0)}
+\DoxyCodeLine{23                 treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_ad8d586986991f7584eebddd097f5a07f}{right}} = \mbox{\hyperlink{line4_8c_a8e7b75f3e9977a7c634f1ca979485adc}{SortTree\_4\_Media}}( treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_ad8d586986991f7584eebddd097f5a07f}{right}} , tree );}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         treeLine4 = (\mbox{\hyperlink{struct___cum_col4}{CumCol4}} *) malloc ( \textcolor{keyword}{sizeof} ( \mbox{\hyperlink{struct___cum_col4}{CumCol4}} ) ) ;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29         treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}     =   (\textcolor{keywordtype}{char}*) malloc   (strlen(tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}})    *   \textcolor{keyword}{sizeof}(char) + 1);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31         strcpy(treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}}, tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_af0eb3883c24bb89ae83d2fc97d3f71fc}{analyze}});}
+\DoxyCodeLine{32         treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} = tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a1ba625463c8110fdc9d277c833539c03}{totalOccurrences}};}
+\DoxyCodeLine{33         treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_a149e6cc3136eaec95ef986c41b548b91}{prob}} = tree-\/>\mbox{\hyperlink{struct___btree_a6cd5475316bf41a2c56ffcc5de826b99}{data}}.\mbox{\hyperlink{struct___data_a149e6cc3136eaec95ef986c41b548b91}{prob}};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_ae39164c6a5cf74bebf018f1981c9b1b9}{left}} = treeLine4-\/>\mbox{\hyperlink{struct___cum_col4_ad8d586986991f7584eebddd097f5a07f}{right}} = NULL ;}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} treeLine4;}
+\DoxyCodeLine{38 \}}
+
+\end{DoxyCode}
